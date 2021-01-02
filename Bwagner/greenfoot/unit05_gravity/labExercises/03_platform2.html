@@ -1,0 +1,49 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Platform2</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/PlatForm2.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Platform2</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Platform2</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Platform2 Scenario, and click Open.</p></li>
+</ol>
+
+<h1>Method properPlatformLanding</h1>
+<p>When running the platform game in lesson 1 you might have noticed a problem when the frog attempted a "landing" on a platform. 
+   If any part of the frog's body was touching the top of the platform the frog made a successful landing on the platform. 
+   This problem is illustrated below where a frog makes a successful landing simple by touching the platform with the tip of its nose.</p>
+   <div><img src="greenfoot/images/Platform2_01.png"></div>
+   
+<p>This problem is fixed by the method <strong>properPlatformLanding</strong> shown below.</p> 
+  <div><img src="greenfoot/images/Platform2_02.png"></div>
+  
+<p>This method uses the <strong>distance formula</strong> to calculate the distance between the center of the frog and the center of the
+   platform. This distance is then used to calculate how much of the frog's body is on the platform. If at least 40% of the frog is
+   on the platform the method returns true; otherwise it returns false. The method also returns false if the frog's center is
+   not above the platform's center when the frog touches the platform.</p>
+   
+<h1>Method platFormTest</h1>
+<p>To incorporate <strong>properPlatformLanding</strong> into the program we modify the <strong>platformTest</strong> method implemented in lesson 1.</p>
+   <div><img src="greenfoot/images/Platform2_03.png"></div>
+<p>Now if the frog does not land on the platform with at least 40% of its body touching the platform it will simply fall straight down.</p>
+
+<br><br><hr>
+
+<h1>Program Modifications</h1>
+<ol id="csList">
+<li><p>Modify the <strong>MyWorld</strong> class constructor so that when the game starts the frog is on top of the middle platform.</p>
+<div><img src="greenfoot/images/Platform2_04.png"></div>
+</li>
+<li><p>Add a new method to the <strong>Frog</strong> class named <strong>endGameTest</strong>. This method should cause the 
+   game to stop when the frog "falls" to the ground.</p>
+   <p>Look in the documentation for the <strong>Greenfoot</strong> class to find a method you can use to stop the program (end the game).</p></li>
+</ol>
+
+
+
+	<br>
+</div>

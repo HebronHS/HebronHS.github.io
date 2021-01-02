@@ -1,0 +1,319 @@
+<practice>
+    <problem>
+        <question><![CDATA[<pre>What replaces <*1> in the code to
+the right so that the body of the
+while loop is skipped if char c
+has been found in String s?</pre>]]></question>
+        <code><![CDATA[<pre>public int findChar(String s,
+                    char c,
+                    int start){
+  int result = -1;
+  int index = start;
+  while( <*1> && index < s.length() ){
+    if( s.charAt(index) == c )
+       result = index;
+    index++;
+  }
+  return result;
+}</pre>]]></code>
+        <a><![CDATA[<pre>result</pre>]]></a>
+        <b><![CDATA[<pre>!result</pre>]]></b>
+        <c><![CDATA[<pre>result == -1</pre>]]></c>
+        <d><![CDATA[<pre>result != -1</pre>]]></d>
+        <e><![CDATA[<pre>continue</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Which searching algorithm does method findChar use?</pre>]]></question>
+        <code><![CDATA[<pre>public int findChar(String s,
+                    char c,
+                    int start){
+  int result = -1;
+  int index = start;
+  while( <*1> && index < s.length() ){
+    if( s.charAt(index) == c )
+       result = index;
+    index++;
+  }
+  return result;
+}</pre>]]></code>
+        <a><![CDATA[<pre>hash</pre>]]></a>
+        <b><![CDATA[<pre>binary</pre>]]></b>
+        <c><![CDATA[<pre>tree</pre>]]></c>
+        <d><![CDATA[<pre>heap</pre>]]></d>
+        <e><![CDATA[<pre>sequential</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Method search to the right implements the binary search algorithm.
+If list.length is 256 what is the largest possible value the method
+will print out at the line of code marked // line 1?</pre>]]></question>
+        <code><![CDATA[<pre>// pre: list != null and
+// elements in list are sorted in
+// ascending order.
+public int search(int[] list, int tgt){
+  int res = -1;
+  int low = 0;
+  int hi = list.length - 1;
+  int count = 0;
+  while( res == -1 && low <= hi ){
+    count++;
+    int mid = (low + hi) / 2;
+    if( list[mid] == tgt )
+      res = mid;
+    else if( list[mid] < tgt )
+      low = mid + 1;
+    else
+      hi = mid -1;
+  }
+  System.out.println( count ); // line 1
+  return res;
+}</pre>]]></code>
+        <a><![CDATA[<pre>1</pre>]]></a>
+        <b><![CDATA[<pre>6</pre>]]></b>
+        <c><![CDATA[<pre>9</pre>]]></c>
+        <d><![CDATA[<pre>25</pre>]]></d>
+        <e><![CDATA[<pre>257</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to 
+the right when method search 
+is called?</pre>]]></question>
+        <code><![CDATA[<pre>// pre: list != null and
+// elements in list are sorted in
+// ascending order.
+public int search(List<Integer> d,
+                            int tgt){
+  Integer t = new Integer(tgt);
+  int res = -1;
+  int low = 0;
+  int hi = d.size() - 1;
+  int count = 0;
+  while( res == -1 && low <= hi ){
+    count++;
+    int mid = (low + hi) / 2;
+    int diff = t.compareTo( d.get(mid) );
+    if( diff == 0 )
+      res = mid;
+    else if( diff > 0 )
+      low = mid + 1;
+    else
+      hi = mid -1;
+  }
+  return res;
+}
+//////////////////////////////////////////
+// client code
+ArrayList<Integer> t;
+t = new ArrayList<Integer>();
+for(int i = 0; i < 1000; i++)
+  t.add( 0 );
+System.out.print(search(t, 0));</pre>]]></code>
+        <a><![CDATA[<pre>0</pre>]]></a>
+        <b><![CDATA[<pre>1000</pre>]]></b>
+        <c><![CDATA[<pre>499</pre>]]></c>
+        <d><![CDATA[<pre>999</pre>]]></d>
+        <e><![CDATA[<pre>500</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to 
+the right when method first is called?</pre>]]></question>
+        <code><![CDATA[<pre>/* pre: data != null, elements of data are
+sorted in ascending order.
+*/
+public static int find(int tgt, int[] data){
+  int en = data.length - 1;
+  return help(0, en, tgt, data);
+}
+
+private static int help(int st, int en,
+                  int tgt, int[] data){
+  int result = -1;
+  int md, val;
+  if( st <= en ){
+    md = (st + en) / 2;
+    val = data[ md ];
+    if( val == tgt )
+      result = md;
+    else if( tgt < val )
+      result = help(st, md - 1, tgt, data);
+    else
+      result = help(md + 1, en, tgt, data);
+  }
+  return result;
+}
+public static void first(){
+  int[] data = {0, 5, 19, 100};
+  System.out.print( find(5, data) );
+}</pre>]]></code>
+        <a><![CDATA[<pre>1</pre>]]></a>
+        <b><![CDATA[<pre>0</pre>]]></b>
+        <c><![CDATA[<pre>2</pre>]]></c>
+        <d><![CDATA[<pre>5</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to a runtime error</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What searching algorithm is
+implemented by methods find and help?</pre>]]></question>
+        <code><![CDATA[<pre>/* pre: data != null, elements of data are
+sorted in ascending order.
+*/
+public static int find(int tgt, int[] data){
+  int en = data.length - 1;
+  return help(0, en, tgt, data);
+}
+
+private static int help(int st, int en,
+                  int tgt, int[] data){
+  int result = -1;
+  int md, val;
+  if( st <= en ){
+    md = (st + en) / 2;
+    val = data[ md ];
+    if( val == tgt )
+      result = md;
+    else if( tgt < val )
+      result = help(st, md - 1, tgt, data);
+    else
+      result = help(md + 1, en, tgt, data);
+  }
+  return result;
+}
+public static void first(){
+  int[] data = {0, 5, 19, 100};
+  System.out.print( find(5, data) );
+}</pre>]]></code>
+        <a><![CDATA[<pre>linear search</pre>]]></a>
+        <b><![CDATA[<pre>interpolation search</pre>]]></b>
+        <c><![CDATA[<pre>random search</pre>]]></c>
+        <d><![CDATA[<pre>comb search</pre>]]></d>
+        <e><![CDATA[<pre>binary search</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to
+the right when method test
+is called?</pre>]]></question>
+        <code><![CDATA[<pre>public static int find(int[] data,
+                       int tgt){
+  int loc = -1;
+  int i = 0;
+  while( loc == -1 && i < data.length ){
+    if( data[i] == tgt )
+      loc = i;
+    i++;
+  }
+  return loc;
+}
+
+public static void test(){
+  int[] data = {3, 1, 5};
+  System.out.print( find(data, 7) );
+}</pre>]]></code>
+        <a><![CDATA[<pre>0</pre>]]></a>
+        <b><![CDATA[<pre>-1</pre>]]></b>
+        <c><![CDATA[<pre>1</pre>]]></c>
+        <d><![CDATA[<pre>5</pre>]]></d>
+        <e><![CDATA[<pre>3</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<preWhich searching algorithm does method find implement?></pre>]]></question>
+        <code><![CDATA[<pre>public static int find(int[] data,
+                       int tgt){
+  int loc = -1;
+  int i = 0;
+  while( loc == -1 && i < data.length ){
+    if( data[i] == tgt )
+      loc = i;
+    i++;
+  }
+  return loc;
+}
+
+public static void test(){
+  int[] data = {3, 1, 5};
+  System.out.print( find(data, 7) );
+}</pre>]]></code>
+        <a><![CDATA[<pre>Binary search</pre>]]></a>
+        <b><![CDATA[<pre>Stack search</pre>]]></b>
+        <c><![CDATA[<pre>Interpolation search</pre>]]></c>
+        <d><![CDATA[<pre>Gnome search</pre>]]></d>
+        <e><![CDATA[<pre>Sequential search</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Which searching algorithm does
+method search implement?</pre>]]></question>
+        <code><![CDATA[<pre>/* pre: ?
+   post: return an index in data
+     that contains tgt.
+     If tgt is not present return -1.
+*/
+public static int search(int tgt,
+                         int[] data){
+  int high = data.length - 1;
+  int low = 0;
+  int mid = (low + high) / 2;
+  while( data[mid] != tgt && low <= high){
+    if( data[mid] > tgt )
+      low = mid + 1;
+    else
+      high = mid - 1;
+    mid = (low + high) / 2;
+  }
+
+  if( data[mid] == tgt )
+    return mid;
+  else
+    return -1;
+}</pre>]]></code>
+        <a><![CDATA[<pre>sequential search</pre>]]></a>
+        <b><![CDATA[<pre>insertion search</pre>]]></b>
+        <c><![CDATA[<pre>binary search</pre>]]></c>
+        <d><![CDATA[<pre>merge search</pre>]]></d>
+        <e><![CDATA[<pre>fibonacci search</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What must the pre-condition for
+method search be so that it always
+fulfills its post-condition?</pre>]]></question>
+        <code><![CDATA[<pre>/* 
+   post: return an index in data
+     that contains tgt.
+     If tgt is not present return -1.
+*/
+public static int search(int tgt,
+                         int[] data){
+  int high = data.length - 1;
+  int low = 0;
+  int mid = (low + high) / 2;
+  while( data[mid] != tgt && low <= high){
+    if( data[mid] > tgt )
+      low = mid + 1;
+    else
+      high = mid - 1;
+    mid = (low + high) / 2;
+  }
+
+  if( data[mid] == tgt )
+    return mid;
+  else
+    return -1;
+}</pre>]]></code>
+        <a><![CDATA[<pre>The elements of data must be
+in ascending order.</pre>]]></a>
+        <b><![CDATA[<pre>The elements of data must be
+in descending order.</pre>]]></b>
+        <c><![CDATA[<pre>The elements of data must be
+distinct. There can't
+be any duplicated values.</pre>]]></c>
+        <d><![CDATA[<pre>The length of data must be even.</pre>]]></d>
+        <e><![CDATA[<pre>More than one of these.</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+</practice>

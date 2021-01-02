@@ -1,0 +1,33 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">AlienAttack2</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the scenario: <a href="greenfoot/scenarios/AlienAttack2.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >AlienAttack2</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>AlienAttack2</strong> and paste it in your <strong>myGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the AlienAttack2 scenario, and click Open.</p></li>
+</ol>
+<br>
+<p>In this lesson we update the AlienAttack game implemented in the previous unit by adding explosion animations.</p>
+
+<h1>AnimatedActor and Explosion Classes</h1> 
+<p>The <strong>AnimatedActor</strong> class has been added to the scenario. An <strong>Explosion</strong> class that is a subclass of AnimatedActor has also been added.</p>
+ <h1>Program Modifications</h1> 
+ <ol id="csList">
+ <li><p>Add the following code to the <strong>Phaser</strong> class so that when a phaser hits an alien an explosion animation appears. I will 
+        leave it to you figure out where to place the code.</p></li>
+ 
+ <div id="csCode" style="width: 550px"><pre>Explosion explosion = new Explosion("explosionSheet.gif", 11, 64, 64);
+explosion.setAutoAdvance(true);
+explosion.setAdvanceSpeed(2);
+getWorld().addObject(explosion, actor.getX(), actor.getY());   // actor is a reference to the alien
+ </pre></div>
+ <li><p>Add an explosion animation to the <strong>Fort</strong> class so that an explosion occurs when the fort is hit by a bomb.</p></li>
+ </ol>
+	<br>
+</div>	
+

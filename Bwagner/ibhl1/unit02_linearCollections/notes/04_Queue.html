@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Computer Science</title>
+<BASE href="http://bwagner.dentonisd.org">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csHeader">Linear Collection: Queue</div>
+	<div id="obj">
+		<table>
+			<tr><th>What You Will Learn</th></tr>
+			<tr>
+			    <td>
+					<ul>		
+          				<li></li>
+						<li></li>
+						<li></li>		
+					</ul>
+				</td>
+			</tr>		
+		</table>
+</div>	
+<div id="csContent"> 	
+<h1>Linear Collection: Queue and Priority Queue</h1>
+
+  <h3>Queues</h3>
+      <p>Like stacks, <strong>queues</strong> are linear collections. However, 
+        insertions in a queue are restricted to one end, called the <strong>rear</strong>, 
+        and removals are restricted to the other end, called the <strong>front</strong>. 
+        A queue thus supports a first-in, first-out protocol (FIFO). Queues occur 
+        in everyday life from checkout lines in stores, to highway tollboth lines, 
+        and airport baggage check-in lines. A queue is used whenever people or 
+        things are lined up for processing on a first-come, first-serve basis.</p>
+      <p>Queues have two fundamental opertions: <strong>add</strong>, which adds 
+        an item to the rear of a queue, and <strong>remove</strong>, which removes 
+        an item from the front. (The traditional names of these operations are 
+        enqueue and dequeue)</p>
+      <h3>Priority Queues</h3>
+      <p>Related to queues is an ADT (Abstract Data Type) called a <strong>priority 
+        queue</strong>. A priority queue is essentially a list of items in which 
+        each item has associated with it a priority. In general, different items 
+        may have different priorities and we speak of one item having a higher 
+        priority than another. Given such a list we can determine which is the 
+        highest (or the lowest) priority item in the list. Items are inserted 
+        into a priority queue in any, arbitrary order. However, items are withdrawn 
+        from a priority queue in order of their priorities starting with the highest 
+        priority item first. </p>
+      <p>Most examples of queues in computer science involve scheduling access 
+        to shared resources, for instance, </p>
+      <div id="csList"><ul>
+        <li>CPU access - Processes are queued for access to a shared CPU.</li>
+        <li>Disk access - Processes are queued for access to shared secondary 
+          storage device.</li>
+        <li>Printer access - Print jobs are queued for access to a shared printer.</li>
+      </ul></div>
+      <h3>Interfaces and Implementing Classes</h3>
+      <p>interface java.util.Queue&lt;E&gt;</p>
+      <table id="csTable">
+        <tr>
+          <td>boolean <strong>add</strong>(E obj)</font></td>
+          <td>enqueues obj at the end of the queue; returns true</td>
+        </tr>
+        <tr> 
+          <td>E <strong>remove</strong>()</td>
+          <td>dequeues and returns the element at the front of the queue</td>
+        </tr>
+        <tr> 
+          <td>E <strong>peek</strong>()</td>
+          <td>returns the element at the front of the queue; 
+            null if the queue is empty</td>
+        </tr>
+        <tr> 
+          <td>boolean <strong>isEmpty</strong>()</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+	  
+      <h3>class java.util.LinkedList &lt;E&gt; implements java.util.List&lt;E&gt;, 
+        java.util.Queue&lt;E&gt;</h3>
+      <p><strong>Note</strong>: use <strong>LinkedList</strong> class to create 
+        a queue</p>
+      <p>&nbsp;</p>
+      <h3>class java.util.PriorityQueue&lt;E&gt;</h3>
+      <table id="csTable">
+        <tr> 
+          <td>boolean <strong>add</strong>(E obj)</td>
+          <td>adds obj to the priority queue; returns true</td>
+        </tr>
+        <tr> 
+          <td>E <strong>remove</strong>()</td>
+          <td>removes and returns the minimal element from 
+            the priority queue</td>
+        </tr>
+        <tr> 
+          <td>E <strong>peek</strong>()</td>
+          <td>returns the minimal element from the priority queue</td>
+        </tr>
+        <tr> 
+          <td>boolean <strong>isEmpty</strong>()</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+	  
+      <p><strong>Note:</strong> <strong>E</strong> should implement <em>Comparable</em> 
+        interface<br>
+      </p>
+      <h1>Using a Queue</h1>
+      <p>To create a queue use the <strong>LinkedList</strong> class which implements 
+        the <strong>Queue</strong> interface. </p>
+		
+      <h3>Creating a Linked List Object</h3>
+      <div id="csCode"><pre>
+LinkedList&lt;Integer&gt; queue = new LinkedList(); <font color="#006600"> // create queue</font></pre></td>
+        </pre>
+      </div>
+      <p>or</p>
+    <div id="csCode"><pre>
+List&lt;Integer&gt; queue = new LinkedList(); <font color="#006600">// create queue</font></pre></td>
+        </pre>
+      </pre>
+	  
+      <h3>Adding an Object to a Queue</h3>
+      <div id="csCode">
+        <pre> 
+queue.add(57);  <font color="#006600">// adds item to rear of queue</font>
+        </pre>
+</div>
+
+      <h3>Removing an Object from a Queue</h3>
+      <div id="csCode"><pre>
+int num = queue.remove();  <font color="#006600">// removes item from front of queue</font>
+     </pre>
+    </div>
+	
+      <h3>Viewing the Top of a Queue</h3>
+      <div id="csCode">
+        <pre> 
+int num = queue.peek();  <font color="#006600">// does not remove the item</font>
+        </pre>
+      </div>
+	  
+      <h3>Traversing a Queue</h3>
+      <div id="csCode"><pre>
+while(!queue.isEmpty())
+{
+   System.out.println(queue.remove());
+}</pre>
+      </div>
+      <p>&nbsp;</p>
+      <h1>Using a Priority Queue</h1>
+      <p>To create a Priority Queue use the <strong>Priority Queue</strong> class.</p>
+      <h3>Creating a Linked List Object</h3>
+      <div id="csCode"><pre>
+PriorityQueue&lt;Integer&gt; queue = new PriorityQueue(); <font color="#006600"> // create priority queue</font>
+       </pre>
+        </div>
+      <h3>Adding an Object to a Queue</h3>
+      <div id="csCode"><pre>
+queue.add(57);  <font color="#006600">// adds item to queue</font>
+      </pre>
+    </div>
+	
+      <h3>Removing an Object from a Queue</h3>
+      <div id="csCode"><pre>
+int num = queue.remove();  <font color="#006600">// removes minimal value from queue</font>
+      </pre>
+      </div>
+      <h3>Viewing the Top of a Queue</h3>
+      <div id="caCode"><pre>int num = queue.peek();  <font color="#006600">// returns minimal value from queue</font>
+        </pre>
+      </div>
+	  
+      <h3>Traversing a Queue</h3>
+      <div id="csCode"><pre>
+while(!queue.isEmpty())
+{
+   System.out.println(queue.remove());
+}</pre>
+</div>
+
+
+<br>
+</div>

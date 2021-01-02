@@ -1,0 +1,104 @@
+<practice>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>double val = -2.5;
+System.out.print( Math.floor(val) );</pre>]]></code>
+        <a><![CDATA[<pre>-3.0</pre>]]></a>
+        <b><![CDATA[<pre>0</pre>]]></b>
+        <c><![CDATA[<pre>-2</pre>]]></c>
+        <d><![CDATA[<pre>-3</pre>]]></d>
+        <e><![CDATA[<pre>-2.0</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>double a2 = 1.05;
+System.out.print( Math.ceil(a2) );</pre>]]></code>
+        <a><![CDATA[<pre>1.0</pre>]]></a>
+        <b><![CDATA[<pre>0</pre>]]></b>
+        <c><![CDATA[<pre>0.0</pre>]]></c>
+        <d><![CDATA[<pre>2.0</pre>]]></d>
+        <e><![CDATA[<pre>1</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int x = 10;
+System.out.print( Math.max(x, (x / 2)) );</pre>]]></code>
+        <a><![CDATA[<pre>5</pre>]]></a>
+        <b><![CDATA[<pre>2</pre>]]></b>
+        <c><![CDATA[<pre>0</pre>]]></c>
+        <d><![CDATA[<pre>20</pre>]]></d>
+        <e><![CDATA[<pre>10</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>System.out.println( Math.min(14, 7) );</pre>]]></code>
+        <a><![CDATA[<pre>7.0</pre>]]></a>
+        <b><![CDATA[<pre>14</pre>]]></b>
+        <c><![CDATA[<pre>7</pre>]]></c>
+        <d><![CDATA[<pre>14.0</pre>]]></d>
+        <e><![CDATA[<pre>2</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int x = 12;
+System.out.print( Math.abs(x) + x );</pre>]]></code>
+        <a><![CDATA[<pre>0</pre>]]></a>
+        <b><![CDATA[<pre>24</pre>]]></b>
+        <c><![CDATA[<pre>12</pre>]]></c>
+        <d><![CDATA[<pre>36</pre>]]></d>
+        <e><![CDATA[<pre>-12</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is the output by the code to the right?]]></question>
+        <code><![CDATA[<pre>double x;
+x = Math.abs(Math.floor(-4.2));
+out.println(x);</pre>]]></code>
+        <a><![CDATA[<pre>5.0</pre>]]></a>
+        <b><![CDATA[<pre>0.0</pre>]]></b>
+        <c><![CDATA[<pre>4.0</pre>]]></c>
+        <d><![CDATA[<pre>-5.0</pre>]]></d>
+        <e><![CDATA[<pre>-4.0</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>The code to the right contains a syntax error.
+Which of the following best explains the reason
+for the syntax error?</pre>]]></question>
+        <code><![CDATA[<pre>double b2 = -2.55;
+int x = Math.round( b2 );</pre>]]></code>
+        <a><![CDATA[<pre>Variable b2 has not been initialized.</pre>]]></a>
+        <b><![CDATA[<pre>The Math.round method does not exist.</pre>]]></b>
+        <c><![CDATA[<pre>longs may not be stored in int variables without
+casting.</pre>]]></c>
+        <d><![CDATA[<pre>Arguments to the Math.round method cannot be
+less than 0.</pre>]]></d>
+        <e><![CDATA[<pre>doubles may not be stored in int variables
+without casting.</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>System.out.println( Math.pow( 2.0, 0.0 ) );</pre>]]></code>
+        <a><![CDATA[<pre>1.0</pre>]]></a>
+        <b><![CDATA[<pre>1</pre>]]></b>
+        <c><![CDATA[<pre>2</pre>]]></c>
+        <d><![CDATA[<pre>0.0</pre>]]></d>
+        <e><![CDATA[<pre>NaN</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>System.out.println(Math.sqrt(121));</pre>]]></code>
+        <a><![CDATA[<pre>12</pre>]]></a>
+        <b><![CDATA[<pre>11.0</pre>]]></b>
+        <c><![CDATA[<pre>13.0</pre>]]></c>
+        <d><![CDATA[<pre>13</pre>]]></d>
+        <e><![CDATA[<pre>12.0</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+</practice>

@@ -1,0 +1,49 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Circles Background</div>
+
+<div id="csContent"> 
+<h1>Create New Scenario</h1>
+<p>In this assignment you are going to create a new world that's background consists of 50 random circles with each circle having a 
+   random location, with a random color, and a random level of transparency.</p>
+<ol id="csList">
+<li><p>Open the Greenfoot Environment.</p></li>
+<li><p>From the <strong>Scenario</strong> menu select <strong>New</strong>.</p></li>
+<li><p>Navigate to your <strong>MyGreenfoot</strong> folder and type <strong>Circles</strong> in the <strong>Folder name</strong> box.</p></li>
+<div><img src="greenfoot/images/Circles_01.png"></div>
+<li><p>Click the <strong>Create</strong> button.</p></li>
+</ol>
+<h1>Make a CircleWorld Class</h1>
+<ol id="csList">
+<li><p>Right-click on the World class and select <strong>New subclass...</strong></p></li>
+<div><img src="greenfoot/images/MyFirst2.png"></div>
+<li><p>In the New class name box type <strong>CircleWorld</strong> and click Ok.</p></li>
+<div><img src="greenfoot/images/Circles_02.png"></div>
+</ol>
+<h1>Draw CircleWorld Background</h1>
+<ol id="csList">
+<li><p>Double-click on the CircleWorld class to view its code.</p></li>
+<p>Add code to the CircleWorld constructor that will draw the random circles.</p>
+<li><p>Add the following line of code below the super command in the constructor.</p></li>
+<div id="csCode" style="width:620px"><pre>GreenfootImage bk = getBackground();   // Step 1: get the background image</pre></div>
+<li>Create a <strong>for loop</strong> that loops 50 times.</li>
+<p>The following code should placed inside the for loop.</p>
+<li><p>Create 4 integer variables named <strong>red</strong>, <strong>green</strong>, <strong>blue</strong>, and <strong>alpha</strong>. (Alpha will be used to assign a transparency level. This variable can be assigned a value in the range 0 to 100. 
+       0 is completely transparent (invisible) and 100 is completely opaque.)</p></li>
+<li><p>Assign a random number to each of the 3 color variables in the range of 0 to 255 inclusive. Reminder: to create a random number use the Greenfoot class's <strong>getRandomNumber</strong> method.</p></li>
+<li><p>Assign the <strong>alpha</strong> variable a random between 1 and 100 inclusive.</p></li>
+<li><p>To change the drawing color add the following code.</p></li>
+<div id="csCode" style="width:620px"><pre>bk.setColor(new Color(red, green, blue, alpha));</pre></div>
+<li><p>Create 3 integer variables named <strong>x</strong>, <strong>y</strong>, and <strong>width</strong>.</p></li>
+<li><p>Assign the <strong>x</strong> variable a random number between 0 and 600 inclusive.</p></li>
+<li><p>Assign the <strong>y</strong> variable a random number between 0 and 400 inclusive.</p></li>
+<li><p>Subtract 150 from the x variable. (x -= 150)</p></li>
+<li><p>Subtract 100 from the y variable. ( y -= 100)</p></li>
+<li><p>Assign the <strong>width</strong> variable a random number between 1 and 400 inclusive.</p></li>
+<li><p>Add the following code to draw a circle.</p></li>
+<div id="csCode" style="width:620px"><pre>bk.fillOval(x,y,width,width);</pre></div>
+<li><p>Compile the program and watch the background change.</p></li>
+</ol>
+	<br>
+</div>	
+

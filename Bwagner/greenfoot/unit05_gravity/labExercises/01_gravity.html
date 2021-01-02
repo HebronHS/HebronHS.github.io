@@ -1,0 +1,89 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Gravity</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/Gravity.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Gravity</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Gravity</strong> and paste it in your <strong>myGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Gravity Scenario, and click Open.</p></li>
+</ol>
+
+<h1>Linear Motion</h1>
+<p>Add a <strong>Ball1</strong> object to the top of the world and press the <strong>Run</strong> button.</p>
+<p>Ball1 is an example of <strong>linear motion</strong>. Linear motion is movement that occurs at a constant rate. Look at the
+   code for the Ball1 class.</p>
+<div><img src="greenfoot/images/Gravity_01.png"></div>
+<p>The class defines a variable named <strong>dy</strong> that represents the ball's vertical velocity. Linear movement is created
+   by updating the ball's vertical position by dy each time the act method is executed. Since dy has a value of 2 the ball's vertical 
+   position changes by 2 units each time it moves.</p>
+
+<div id="csNote"><h2 style="text-align: center">Delta</h2>
+    <p>When velocity was introduced in Unit 1 the variables vx and vy were used to represent
+    an actor's horizontal and vertical velocities. In this unit I use the variable names
+    <strong>dx</strong> and <strong>dy</strong> to represent these values. The reason for
+    this change is that the letter <strong>d</strong> stands for <strong>delta</strong> which in the Math world
+    implies a change or difference in some quantity. Slope is an example from Math that can be
+    represented using delta values.</p>
+    <img src="greenfoot/images/Gravity_04.png" style="display: block;margin-left: auto;margin-right: auto; width: 220px">
+    <p>The formula shows that the difference between  x<sub>2</sub> and x<sub>1</sub> is delta x (delta is represented by a triangle)
+    and the difference between y<sub>2</sub> and y<sub>1</sub> is delta y.</p>
+    <p><strong>Velocity</strong> can also be represented as a delta value because
+    it indicates the <strong>change</strong> in an object's location in a specific direction over time.
+    Obviously the use
+    of the variable names dx and dy is not a requirement. The names vx and vy are equally
+    valid.</p>
+</div>
+   
+<h1>Gravity</h1>
+<p>Add a <strong>Ball2</strong> object to the top of the world and press the <strong>Run</strong> button.</p>
+
+<p>Notice as Ball2 moves down its velocity increases. Ball2 exhibits <strong>quadratic motion</strong> instead of linear motion because its 
+   velocity changes as opposed to being constant. This downward accelerating movement can be used to simulate <strong>gravity</strong>.
+   Look at the code for the Ball2 class.</p>
+   <div><img src="greenfoot/images/Gravity_02.png"></div>
+<p>The Ball2 class defines a variable named <strong>gravity</strong>. In the act method the ball's vertical velocity(dy) is increased
+   by the value of gravity. The table below shows a ball's vertical velocity(dy) and vertical position(y) after the act method has been executed 10 
+   times. Assume the ball starts with a vertical position(y) of 0 (The top of the world).</P>  
+   <div><img src="greenfoot/images/Gravity_03.png"></div>
+   
+ <h1>Initial Velocity</h1>
+ <p>Add a <strong>Ball3</strong> object to the bottom of the world and press the <strong>Run</strong> button.</p>
+ 
+ <p>The Ball3 class defines a variable named <strong>initialVelocity</strong>. This value is assigned to dy before the ball moves.
+    By starting dy with a negative value the ball's movement is upward, but as the force of gravity is continually applied to dy the ball 
+	eventually begins to move down as dy's value becomes positive. </p>
+	<p><strong>Add</strong> the following code to Ball3's <strong>act</strong> method:</p>
+	<div id="csCode"><pre>
+if(getY() &gt;= getWorld().getHeight() && dy &gt; 0)  // if at bottom of world
+{
+    initialVelocity = initialVelocity * .8;   // decrease by 20%
+    dy = (int)initialVelocity;    // cast initialVelocity to an int      
+}</pre></div>
+<p>This code causes Ball3 to continually bounce up and down until it eventually comes to rest. Each bounce is calculated to be 20% less than the previous bounce.
+   Notice that the variable <strong>initialVelocity</strong> was declared a <strong>double</strong> so that the calculation for 
+   reduction in bounce could be achieved.</p>
+	
+<h1>Horizontal Velocity</h1>
+<p>Add a <strong>Ball4</strong> object to bottom left side of the world and press the <strong>Run</strong> button.</p>
+<p>In Ball4 we add a variable named <strong>dx</strong> which represents a ball's horizontal velocity. </p>
+<p>Change <strong>dx's</strong> value to 2 and compile and run the program again to see how the new value effects the ball's trajectory.</p>	
+<p>Change <strong>dx's</strong> value to 20 and run the program again.</p>
+	
+<h1>Precise Movements</h1>
+<p>Add a <strong>Ball5</strong> object to bottom left side of the world and press the <strong>Run</strong> button.</p>	
+<p>In Ball5 all of the variables are declared <strong>double</strong> which allows us to create more precise movements.</p>
+<p>Change some of the variables values and watch how the ball's movement is effected.</p>
+<h3>Casting</h3>
+<p>Look at the following line of code from Ball5's act method:</p>
+<div id="csCode"><pre>setLocation(<div id="csHighlight"><pre>(int)</pre></div>(getX() + dx), <div id="csHighlight"><pre>(int)</pre></div>(getY() + dy));</pre></div>
+<p>An object's location within a world is always stored as a pair of integer values (x, y). Since our dx and dy values are doubles the 
+   results of the calculations 
+   inside the parentheses must be <strong>cast</strong> to integers before they can be passed to the setLocation method.</p>
+
+	<br>
+</div>	
+

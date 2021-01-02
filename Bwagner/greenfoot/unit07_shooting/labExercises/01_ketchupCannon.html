@@ -1,0 +1,59 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Ketchup Cannon</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the scenario: <a href="greenfoot/scenarios/Ketchup Cannon.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Ketchup Cannon</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Ketchup Cannon</strong> and paste it in your <strong>myGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Ketchup Cannon scenario, and click Open.</p></li>
+</ol>
+<br>
+<p>In this lesson we learn how to make an actor shoot by demonstrating how to make a Ketchup Cannon.</p>
+
+<h1>MyWorld Class</h1>
+<p>The MyWorld class adds a Cannon object to the middle of the world.</p>
+<div><img src="greenfoot/images/KetchupCannon_01.png"></div>
+ 
+<h1>Cannon Class</h1>
+<p>The cannon shoots a KetchupBall when the left mouse button is pressed. The cannon moves by tracking the mouse's current
+   location. All of the code for the Cannon is in its act method. Study this code until you understand how it works.</p>
+ <div><img src="greenfoot/images/KetchupCannon_02.png"></div>
+ 
+ <h1>Program Modifications</h1>
+  <p>Modify the KetchupBall class's act method so that when the ball has traveled 
+    more than 150 units it is removed from the world and replaced with a Splat 
+    object. When the Splat appears on the screen play the bloop sound. To accomplish 
+    this do the following:</p>
+  <ol id="csList">
+  <li>
+      <p>Create an if statement that becomes true when the <strong>distance</strong> 
+        variable is greater than 150. The rest of the code discussed below should 
+        be placed inside this if statement.</p>
+    </li>
+  <li><p>Before we delete the KetchupBall from the world we need to store some of its information so that it
+      is not lost when it is deleted. Inorder to replace the KetchupBall with a Splat object the Splat object 
+	  needs to know where the KetchupBall was located when it was deleted and it also needs a reference to the
+	  world the KetchupBall belonged. To do this add the following code to the KetchupBall's act method.</p>
+	  <div id="csCode"><pre>int x = getX();              // store current x value
+int y = getY();              // store current y value
+World world = getWorld();    // store reference to world it is in</pre></div>
+	  </li>
+	  <li><p>Add the following code to the act method that will remove the KetchupBall from the world.</p>
+<div id="csCode" style="width:500px"><pre>getWorld().removeObject(this);    // this means this object</pre></div>
+</li>
+	  <li><p>Create a Splat object named <strong>splat</strong>.</p></li>
+	  <li><p>Add the splat object to the world using the World class's <strong>addObject</strong> method. The
+	  addObject method requires three parameters: the object you want to add to the world and the x and y 
+	  coordinates of the place you would like the object to appear. Since at this point in the code the KetchupBall
+	  no longer exists you cannot use its getWorld() method any longer. That is why the <strong>world</strong>
+	  variable was created. Use it to access the world instead:  <strong>world.addObject(...)</strong>.
+	  Note: the three dots should be replaced by the three parameters addObject requires.</p></li>
+  <li><p>Add the bloop sound to the world so that the bloop sound is played when the splat object appears.</p></li>
+  </ol>
+	<br>
+</div>	
+

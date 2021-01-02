@@ -1,0 +1,143 @@
+<practice>
+    <problem>
+        <question><![CDATA[<pre>How bytes of memory does a variable of type double occupy?</pre>]]></question>
+        <code><![CDATA[<pre> </pre>]]></code>
+        <a><![CDATA[<pre>1</pre>]]></a>
+        <b><![CDATA[<pre>2</pre>]]></b>
+        <c><![CDATA[<pre>4</pre>]]></c>
+        <d><![CDATA[<pre>6</pre>]]></d>
+        <e><![CDATA[<pre>8</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Which of the following data types reserves 2 bytes of memory?</pre>]]></question>
+        <code><![CDATA[<pre></pre>]]></code>
+        <a><![CDATA[<pre>byte</pre>]]></a>
+        <b><![CDATA[<pre>short</pre>]]></b>
+        <c><![CDATA[<pre>int</pre>]]></c>
+        <d><![CDATA[<pre>long</pre>]]></d>
+        <e><![CDATA[<pre>float</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code at right?</pre>]]></question>
+        <code><![CDATA[<pre>byte num = 127;
+num++;
+System.out.println(num);</pre>]]></code>
+        <a><![CDATA[<pre>-128</pre>]]></a>
+        <b><![CDATA[<pre>128</pre>]]></b>
+        <c><![CDATA[<pre>-1</pre>]]></c>
+        <d><![CDATA[<pre>No output due to syntax error</pre>]]></d>
+        <e><![CDATA[<pre>No output due to runtime error</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code at right?</pre>]]></question>
+        <code><![CDATA[<pre>int num = Integer.MIN_VALUE;
+num--;
+System.out.println(num);</pre>]]></code>
+        <a><![CDATA[<pre>Integer.MIN_VALUE</pre>]]></a>
+        <b><![CDATA[<pre>Integer.MAX_VALUE</pre>]]></b>
+        <c><![CDATA[<pre>0</pre>]]></c>
+        <d><![CDATA[<pre>-1</pre>]]></d>
+        <e><![CDATA[<pre>1</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code at right?</pre>]]></question>
+        <code><![CDATA[<pre>char ch = 66;
+System.out.println(ch);</pre>]]></code>
+        <a><![CDATA[<pre>66</pre>]]></a>
+        <b><![CDATA[<pre>A</pre>]]></b>
+        <c><![CDATA[<pre>B</pre>]]></c>
+        <d><![CDATA[<pre>b</pre>]]></d>
+        <e><![CDATA[<pre>0</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code at right?</pre>]]></question>
+        <code><![CDATA[<pre>System.out.println('a' - 'A');</pre>]]></code>
+        <a><![CDATA[<pre>0</pre>]]></a>
+        <b><![CDATA[<pre>b</pre>]]></b>
+        <c><![CDATA[<pre>32</pre>]]></c>
+        <d><![CDATA[<pre>No output due to syntax error</pre>]]></d>
+        <e><![CDATA[<pre>No output due to runtime error</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code at right?</pre>]]></question>
+        <code><![CDATA[<pre>byte num = 255;
+System.out.println(num);</pre>]]></code>
+        <a><![CDATA[<pre>255</pre>]]></a>
+        <b><![CDATA[<pre>0</pre>]]></b>
+        <c><![CDATA[<pre>Byte.MAX_VALUE</pre>]]></c>
+        <d><![CDATA[<pre>No output due to syntax error</pre>]]></d>
+        <e><![CDATA[<pre>No output due to runtime error</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code at right?</pre>]]></question>
+        <code><![CDATA[<pre>float f1 = 1.5;
+float f2 = 2.5;
+System.out.println(f1 + f2);</pre>]]></code>
+        <a><![CDATA[<pre>4</pre>]]></a>
+        <b><![CDATA[<pre>4.0</pre>]]></b>
+        <c><![CDATA[<pre>4.1</pre>]]></c>
+        <d><![CDATA[<pre>No output due to syntax error</pre>]]></d>
+        <e><![CDATA[<pre>No output due to runtime error</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code at right?</pre>]]></question>
+        <code><![CDATA[<pre>long a = 1;
+long b = 3000000000;    // 3 billion
+System.out.println(a + b);</pre>]]></code>
+        <a><![CDATA[<pre>3000000001</pre>]]></a>
+        <b><![CDATA[<pre>Long.MAX_VALUE</pre>]]></b>
+        <c><![CDATA[<pre>Long.MIN_VALUE</pre>]]></c>
+        <d><![CDATA[<pre>No output due to syntax error</pre>]]></d>
+        <e><![CDATA[<pre>No output due to runtime error</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code at right?</pre>]]></question>
+        <code><![CDATA[<pre>byte a = (byte)('a' + 'b');
+System.out.println(a);</pre>]]></code>
+        <a><![CDATA[<pre>ab</pre>]]></a>
+        <b><![CDATA[<pre>-61</pre>]]></b>
+        <c><![CDATA[<pre>125</pre>]]></c>
+        <d><![CDATA[<pre>No output due to syntax error</pre>]]></d>
+        <e><![CDATA[<pre>No output due to runtime error</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code at right?</pre>]]></question>
+        <code><![CDATA[<pre>System.out.println(Integer.parseInt("101", 2));</pre>]]></code>
+        <a><![CDATA[<pre>2</pre>]]></a>
+        <b><![CDATA[<pre>10</pre>]]></b>
+        <c><![CDATA[<pre>101</pre>]]></c>
+        <d><![CDATA[<pre>5</pre>]]></d>
+        <e><![CDATA[<pre>No output due to syntax error</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code at right?</pre>]]></question>
+        <code><![CDATA[<pre>System.out.println(Integer.toHexString(27));</pre>]]></code>
+        <a><![CDATA[<pre>27</pre>]]></a>
+        <b><![CDATA[<pre>1a</pre>]]></b>
+        <c><![CDATA[<pre>1b</pre>]]></c>
+        <d><![CDATA[<pre>1c</pre>]]></d>
+        <e><![CDATA[<pre>1d</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code at right?</pre>]]></question>
+        <code><![CDATA[<pre>System.out.println(~5);</pre>]]></code>
+        <a><![CDATA[<pre>5</pre>]]></a>
+        <b><![CDATA[<pre>-5</pre>]]></b>
+        <c><![CDATA[<pre>6</pre>]]></c>
+        <d><![CDATA[<pre>-6</pre>]]></d>
+        <e><![CDATA[<pre>2</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+</practice>

@@ -1,0 +1,61 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Grades</div>
+
+<div id="csContent"> 
+<h1>Directions</h1>
+  <p>Your friend wants you to write a program that will calculate his six week's average in one of
+     his classes. The teacher's grading policy and your friend's grades are shown in the table below.</p>
+<table id="csTable">
+<tr>
+  <th>Category</th>
+  <th>Percentage</th>
+  <th>Current Grade</th>
+</tr>
+<tr>
+  <td>Homework</td>
+  <td>30%</td>
+  <td>88</td>
+</tr>
+<tr>
+  <td>Quizzes</td>
+  <td>20%</td>
+  <td>74</td>
+</tr>
+<tr>
+  <td>Tests</td>
+  <td>50%</td>
+  <td>95</td>
+</tr>
+</table>
+<p>*The six week's average should be rounded to the nearest integer.</p>	 
+<p>Use the following instructions in your implementation:</p>
+<div id=csList>
+<ol>
+<li>Create 4 variables of type double named dailyAvg, quizAvg, testAvg, and sixWeeksAvg.
+    Initialize dailyAvg to 88, quizAvg to 74, testAvg to 95, and sixWeeksAvg to zero. </li>
+<li>Create another variable of type int named roundedAvg and initialize it to zero.</li>
+<li>Calculate the six weeks average using the following formula: <br><br>
+    &nbsp;&nbsp;&nbsp;sixWeeksAvg equals dailyAvg times 0.3 plus quizAvg times 0.2 plus testAvg times 0.5<br><br></li>
+<li>To round the six week's average to the nearest integer do the following:<br>
+    - add 0.5 to sixWeeksAvg<br>
+  - <font color="#FF0000">cast</font> the sixWeeksAvg to an int and store the 
+  result in roundedAvg</li>   
+<li>The program's output should be in the same format as the Sample Run below.</li> 
+</ul>
+</div>
+<h1>Source File</h1>
+<p>Grades.java</p>
+<h1>Sample Run</h1>
+<div id="csSampleRun">
+<pre>
+Daily Average = 88.0
+Quiz Average = 74.0
+Test Average = 95.0
+--------------------------
+Six Weeks Average = 89
+</pre>
+</div>
+	<br>
+</div>	
+

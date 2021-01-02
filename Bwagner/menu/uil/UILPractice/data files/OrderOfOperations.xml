@@ -1,0 +1,127 @@
+<practice>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>System.out.print( 2 + "3" + 1 + 7 );</pre>]]></code>
+        <a><![CDATA[<pre>13</pre>]]></a>
+        <b><![CDATA[<pre>517</pre>]]></b>
+        <c><![CDATA[<pre>2317</pre>]]></c>
+        <d><![CDATA[<pre>238</pre>]]></d>
+        <e><![CDATA[<pre>23</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>out.println("ATE"+'5'%5);</pre>]]></code>
+        <a><![CDATA[<pre>ATE2</pre>]]></a>
+        <b><![CDATA[<pre>ATE0</pre>]]></b>
+        <c><![CDATA[<pre>ATE3</pre>]]></c>
+        <d><![CDATA[<pre>ATE5</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to a run-time error</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>int j = 5;
+double t = 7.5;
+long v = 3;
+j += t *= v;
+out.println(j);</pre>]]></code>
+        <a><![CDATA[<pre>26</pre>]]></a>
+        <b><![CDATA[<pre>36</pre>]]></b>
+        <c><![CDATA[<pre>22</pre>]]></c>
+        <d><![CDATA[<pre>50</pre>]]></d>
+        <e><![CDATA[<pre>27</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>int a = 10;
+a++;
+a-=++a;
+out.println(a);</pre>]]></code>
+        <a><![CDATA[<pre>0</pre>]]></a>
+        <b><![CDATA[<pre>1</pre>]]></b>
+        <c><![CDATA[<pre>-1</pre>]]></c>
+        <d><![CDATA[<pre>10</pre>]]></d>
+        <e><![CDATA[<pre>11</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>int i = 6;
+if (++i > 3 || i++ < 9 && ++i == 7)
+out.print("Howdy");
+out.println(i);</pre>]]></code>
+        <a><![CDATA[<pre>Howdy9</pre>]]></a>
+        <b><![CDATA[<pre>7</pre>]]></b>
+        <c><![CDATA[<pre>9</pre>]]></c>
+        <d><![CDATA[<pre>Howdy7</pre>]]></d>
+        <e><![CDATA[<pre>6</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>out.println( "pi" + 3 + 1 + 4 );</pre>]]></code>
+        <a><![CDATA[<pre>pi8</pre>]]></a>
+        <b><![CDATA[<pre>pi31</pre>]]></b>
+        <c><![CDATA[<pre>pi314</pre>]]></c>
+        <d><![CDATA[<pre>314</pre>]]></d>
+        <e><![CDATA[<pre>pi</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is order of precedence for the operations on the right
+ from highest precedent to lowest precedent?</pre>]]></question>
+        <code><![CDATA[<pre>I. !=
+II. +=
+III. %
+IV. <<
+V. &&</pre>]]></code>
+        <a><![CDATA[<pre>II, I, V, III, IV</pre>]]></a>
+        <b><![CDATA[<pre>III, II, I, V, IV</pre>]]></b>
+        <c><![CDATA[<pre>III, IV, I, V, II</pre>]]></c>
+        <d><![CDATA[<pre>III, II, V, I, IV</pre>]]></d>
+        <e><![CDATA[<pre>IV, III, V, I, IV</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Here are three lines taken from the Java Order of Precedence chart. 
+Which choice represents the correct order of precedence for these three lines?</pre>]]></question>
+        <code><![CDATA[<pre>I. << >> >>>
+II. * / %
+III. ? :</pre>]]></code>
+        <a><![CDATA[<pre>II, III, I</pre>]]></a>
+        <b><![CDATA[<pre>III, II, I</pre>]]></b>
+        <c><![CDATA[<pre>II, I, III</pre>]]></c>
+        <d><![CDATA[<pre>I, II, III</pre>]]></d>
+        <e><![CDATA[<pre>I, III, II</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Here are three lines taken from the Java Order of Precedence chart.
+Which choice represents the correct order of precedence for these three
+lines?</pre>]]></question>
+        <code><![CDATA[<pre>I. * / %
+II. == !=
+III. = += -= *= /= %= &= ^= |= <<= >>= >>>=</pre>]]></code>
+        <a><![CDATA[<pre>II, I, III</pre>]]></a>
+        <b><![CDATA[<pre>I, III, II</pre>]]></b>
+        <c><![CDATA[<pre>I, II, III</pre>]]></c>
+        <d><![CDATA[<pre>III, II, I</pre>]]></d>
+        <e><![CDATA[<pre>II, III, I</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Here are three lines from the Java Order of Precedence chart. Which
+choice represents the correct order of precedence for these three lines?</pre>]]></question>
+        <code><![CDATA[<pre>I. ^
+II. ++expr --expr +expr -expr ~ !
+III. + -</pre>]]></code>
+        <a><![CDATA[<pre>I, II, III</pre>]]></a>
+        <b><![CDATA[<pre>III, II, I</pre>]]></b>
+        <c><![CDATA[<pre>II, I, III</pre>]]></c>
+        <d><![CDATA[<pre>I, III, II</pre>]]></d>
+        <e><![CDATA[<pre>II, III, I</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+</practice>

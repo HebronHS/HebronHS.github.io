@@ -1,0 +1,84 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">FlappyBird4</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/FlappyBird4.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >FlappyBird4</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>FlappyBird4</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the FlappyBird4 Scenario, and click Open.</p></li>
+</ol>
+
+<p>In this version of the program a scoreboard has been added to the world. When FlappyBird passes through a set of pipes the
+   scoreboard is increased by one. The scoreboard does not appear until Flappy reaches the first set of pipes.</p>
+
+<h1>Scoreboard Class</h1>
+
+<p>The following Scoreboard class is used to create a ScoreBoard object.</p>
+<div><img src="greenfoot/images/FlappyBird4_01.png"></div>
+
+<p>An image is not initially assigned to the Scoreboard class in the Greenfoot environment. The image is instead created in the 
+   Scoreboard's constructor. The image is created as a blank image with dimensions 150 x 80.</p>
+
+<p>The method <strong>setScore</strong> is used to update the score when Flappy passes through a set of pipes. The method follows
+   these steps to update the scoreboard:</p>
+   <ul id="csList">
+   <li><p>Gets a reference to the image.</p></li>
+   <li><p>Clears the image so it is blank.</p></li>
+   <li><p>Selects the font attributes used to draw on the image.</p></li>
+   <li><p>Draws the value of the parameter score onto the image.</p></li>
+   </ul>
+   
+<h1>FlappyWorld Class</h1>
+<p>A Scoreboard object is created, added to the world, and updated in the FlappyWorld class.</p>
+<p>Look at the method <strong>displayScore</strong>.</p>
+<div><img src="greenfoot/images/FlappyBird4_02.png"></div>
+<p>This method is responsible for increasing the score and calling the ScoreBoard method <strong>setScore</strong> to update the
+    scoreboard with the new score.</p>
+<p>The <strong>act</strong> method calls the <strong>displayScore</strong> method each time Flappy passes through a set of pipes. The tricky part
+   of this code is knowing when Flappy passes through the pipes. This is accomplished by adding a couple of counter variables to the 
+   FlappyWorld class. Recall from the previous lesson that by using a counter variable and an if statement we were able to space the 
+   pipes so that they were always 100 units apart. Knowing this fact, namely that the pipes are always 100 units apart, all we have to do 
+   is count the number of "steps" Flappy takes. If he takes at least 100 then we know he made it through one set of pipes. 
+   Look at the following code in the act method.</p>
+<div><img src="greenfoot/images/FlappyBird4_03.png"></div>
+<p>Look again at the code from the previous lesson that was used to space the pipes 100 units apart.</p>
+<div><img src="greenfoot/images/FlappyBird4_04.png"></div>
+<p>In this lesson I decided to use a different approach. Instead of counting to 100 and then resetting the counter back to zero I choose to
+   check to see if the counter is divisible by 100. By doing it this way it made the rest of the code easier to implement. Notice that I also 
+   changed the name of the counter variable to <strong>pipeCounter</strong>.</p>
+   
+<p>It is the next two if statements that help us determine when Flappy passes through a set of pipes. I did some test runs and 
+    determined that Flappy reaches the first set of pipes when pipeCounter equals 210. I stored this value in a constant named
+	<strong>FIRST_PIPE</strong>. The first if statement is used to determine when Flappy reaches the first pipes. From that point on we
+	start counting Flappy's steps by incrementing a variable named <strong>flappyCounter</strong>. When the second if 
+	statement is true we know that Flappy has reached the next set of pipes so the displayScore method is called to update the scoreboard.</p>
+   
+   
+<h1>Program Modifications</h1>
+<p>A <strong>CountDown</strong> class is included in this scenario that has the exact same functionality as the ScoreBoard class. Use
+   this CountDown class to display a number count down (like when a rocket is getting ready to blast off) so that the
+   game player knows when the game is about to begin. The CountDown class is designed to display numbers in the following format:</p>
+<div><img src="greenfoot/images/FlappyBird4_05.png"></div>  
+
+  <p>To complete this task you are going to implement the method <strong>displayCountDown</strong> located in the
+     FlappyWorld class.</p> 
+
+<p>Use the following pseudocode to aid you in your implementation:</p>
+<div id="csOutput" style="width: 650px; font-size:1.0em"><pre>Create a CountDown object and store its reference in a variable named <strong>countDown</strong>
+Add the countDown object to the world
+Use a for loop to count down from 5 to 1
+    Use the countDown object to call the CountDown class's setCount method and use
+      the the loop control variable as it's argument.
+      Example: countDown.setCount(i);
+    Call the Greenfoot class's delay method: Greenfoot.delay(25);
+Call the world class's removeObject method using the countDown object as it's argument,
+so that the countDown object is removed from the world after it finishes counting down.
+</pre></div>
+
+	<br>
+</div>
+

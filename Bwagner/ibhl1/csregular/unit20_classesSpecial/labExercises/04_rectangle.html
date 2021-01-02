@@ -1,0 +1,205 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Rectangle</div>
+
+<div id="csContent">  
+ <p>In this assignment you are going to implement two classes: a <strong>Rectangle</strong> class and a 
+ <strong>RectangleManager</strong> class. The RectangleManager class will be a client
+	of the Rectangle class. It will also contain the main method for the program.</p>
+<h1>Directions</h1>
+<h3>Rectangle class</h3>
+<p>The Rectangle class is going to the store the dimensions of a rectangle and provide methods for calculating
+   its perimeter and area.</p>
+
+<p>Create a file named <strong>Rectangle.java</strong> and add the following code.</p>
+<div id="csCode">
+<pre>
+public class Rectangle
+{
+   // instance variables
+   
+   // constructors
+   
+   // accessor methods
+   
+   // mutator methods
+   
+   // other methods
+   
+}
+</pre>
+</div>
+<h3>Instance Variables</h3>
+<p>We will need two variables to store the rectangle's length and width.
+   Add the following code to the instance variables section.</p>
+<div id="csCode">
+<pre>
+private int length;     // rectangle's length
+private int width;      // rectangle's width
+</pre>
+</div>
+
+<h3>Constructors</h3>
+<div id="csList">
+<ol>
+<li>Create <strong>one constructor</strong> for the Rectangle class that will allow a client to 
+    assign specific values to its length and width variables.</li>
+</ol></div>
+
+<h3>Accessor Methods</h3>
+<div id="csList">
+<ol start="2">
+<li>Create an accessor method for the length variable and the width variable.</li>
+   </ol></div>
+<h3>Mutatator Methods</h3> 
+<p>Methods in a class that allow clients to modify an object's instance variables are called <strong>mutator methods</strong>. 
+   In our implementation of the Rectangle class, we are going to define two mutator methods. The first
+   method will give clients the ability to modify the length instance variable. Add the following code 
+   to the mutator section.</p>
+
+<div id="csCode">
+<pre>
+public void setLength(int l)
+{
+   length = l;
+}
+</pre>
+</div>
+<p>Next we implement a mutator method for the width instance variable.</p>
+<div id="csCode">
+<pre>
+public void setWidth(int w)
+{
+   width = w;
+}
+</pre>
+</div>
+<h3>Other Methods</h3>
+<p>Add two other methods to the Rectangle class that
+   will calculate the perimeter and area of a rectangle. Place them in the other methods section.</p>
+<div id="csList">
+<ol start="3">
+<li>Implement a method named<strong> getPerimeter</strong>. This method should calculate and return the
+    perimeter of the rectangle.</li>
+<li>Implement a method named<strong> getArea</strong>. This method should calculate and return the
+    area of the rectangle.</li>
+</ol></div>
+<br><br>
+<h3>Client Program - RectangleManager class</h3>
+<p>The purpose of the RectangleManager class is to test the fuctionality of the Rectangle class. To do this it
+   instantiates a Rectangle object, allows the user to enter the length and width values for a rectangle, 
+   calculates the perimeter and area of the given rectangle, and then displays the results. It also
+   provides the ability to change the dimensions of the rectangle.</p>
+<p>Create a file named <strong>RectangleManager.java</strong> and add the following code.</p>
+<div id="csCode">
+<pre>
+import java.util.*;
+
+public class RectangleManager
+{  
+   // instance variables
+   private Rectangle rect;
+   
+   public void inputDimensions(Scanner keyboard)
+   {
+   
+   }
+   
+   public void changeDimensions(Scanner keyboard)
+   {
+   
+   }
+   
+   public void print()
+   {
+   
+   }
+   
+   public static void main(String[] args)
+   {
+       RectangleManager app = new RectangleManager();
+       Scanner keyboard = new Scanner(System.in);
+       String ans="y";
+	   
+       app.inputDimensions(keyboard);
+       app.print();
+	   
+       System.out.println();
+       System.out.print("Change Dimensions[y/n]-->");
+       keyboard.nextLine();  // dummy read
+       ans = keyboard.nextLine();
+	   
+       while(ans.equals("y"))
+       {
+           app.changeDimensions(keyboard);
+           app.print();
+		   
+           System.out.println();
+           System.out.print("Change Dimensions[y/n]-->");
+           keyboard.nextLine();  // dummy read
+           ans = keyboard.nextLine();
+       }    
+   }	
+}</pre>
+</div>
+   
+<h3>Instance Variables</h3>
+<p>A Rectangle object variable named <strong>rect</strong> has been declared. It will be assigned a Rectangle
+   object in the inputDimensions method. </p>
+<h3>inputDimensions Method</h3>
+<div id="csList">
+<ol start="5">
+<li>Implement the  <strong>inputDimensions </strong> method. This method should prompt the user for the dimensions of a rectangle then 
+   instantiate a Rectangle object using the values input by the user as parameters to the 
+   constructor. The object's reference should be assigned to the variable rect.
+</li></ol></div>
+<h3>changeDimensions Method</h3>
+<div id="csList">
+<ol start="6">
+<li>Implement the <strong>changeDimensions </strong> method. This method should prompt the user for
+    the dimensions of a rectangle then use the Rectangle class's mutator methods to update the length
+    and width values of rect.
+</li></ol></div>
+<h3>print Method</h3>
+<div id="csList">
+<ol start="7">
+<li>Implement the <strong>print</strong> method so that it will display rect's length, width, perimeter, and area.</li>
+</ol></div>
+<br>
+<h1>Source File</h1>
+<p>Rectangle.java</p>
+<p>RectangleManager.java</p>
+<h1>Sample Run</h1>
+<div id="csSampleRun">
+<pre>
+Enter length -->10
+Enter width -->20
+
+Length    = 10
+Width     = 20
+Perimeter = 60
+Area      = 200
+
+Change Dimensions[y/n]-->y
+Enter length -->15
+Enter width -->30
+
+Length    = 15
+Width     = 30
+Perimeter = 90
+Area      = 450
+
+Change Dimensions[y/n]-->y
+Enter length -->2
+Enter width -->2
+
+Length    = 2
+Width     = 2
+Perimeter = 8
+Area      = 4
+
+Change Dimensions[y/n]-->n
+</pre>
+</div>
+	<br>
+</div>

@@ -1,0 +1,76 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Scary Snake</div>
+<p>In this lesson we are going to write a program that has a snake and some mice. When the snake approaches a mouse the mouse gets scared
+   and runs away from the snake in the opposite direction.</p>
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/Scary Snake.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Scary Snake</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Scary Snake</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Scary Snake Scenario, and click Open.</p></li>
+</ol>
+
+<h1>Snake Class</h1>
+<p>Let's start by compiling and running the program. Press the arrow keys to make the snake move. Did you notice a problem when the snake moved to its
+   left? Yes, the snake's image is upside down. The problem occurs because of the way an image is rotated when you use the <strong>setRotation</strong> method. There is a method in the Snake class named <strong>flipImage</strong> that fixes 
+   this problem. To apply the fix do the following:</p>
+   <ol id="csList">
+   <li><p>Open the <strong>Snake</strong> class to view its code.</p></li> 
+   <li><p>In the act method remove the comment symbols (//) from in front of the <strong>flipImage</strong> method call.</p></li>
+   <li><p>Compile and run the program again. Test the left arrow key. The image should now be upright.</p></li>  
+   </ol>
+   <p>The flipImage method uses a method in the GreenfootImage class called <strong>mirrorVertically</strong>. This method when applied to an image will flip its
+      orientation vertically. Look at the following code from the flipImage method:</p>
+	  <div id="csCode"><pre>getImage().mirrorVertically();</pre></div>
+	  <p>The method <strong>getImage</strong> gets the snakes image and then the method <strong>mirrorVertically</strong> flips the image.</p>
+<h3>Method collisionCheck</h3>
+<p>The method <strong>collisionCheck</strong> checks to see if a snake has collided with a mouse.</p>
+<p>To make the mouse run away when the snake comes near the method needs to know which mouse the snake is touching. To identify the mouse we
+   need to use the Actor method <strong>getOneIntersectingObject</strong>. If you recall from the previous lesson the getOneIntersectingObject method 
+   returns the Actor that caused the collision. Look at the following code:</p>
+   <div id="csCode"><pre>Actor actor = getOneIntersectingObject(Mouse.class);
+if(actor != null)
+{
+   actor.runAway(getRotation());  // tell mouse to run away
+}
+</pre></div>
+<p>The code above is suppose to cause a mouse to run away from the snake if the snake touches it. This code, however, causes the following compiler
+   error - <strong>cannot find symbol - method runAway(int)</strong>. If you look at the Mouse class the method runAway does exist, so why does the compiler 
+   say it does not? To answer this question we need to look more closely at the following line of code:</p>
+      <div id="csCode"><pre>Actor actor = getOneIntersectingObject(Mouse.class);</pre></div>
+<p>According the Actor class documentation the getOneIntersectingObject method returns an Actor. So to accomodate this method we created
+   an Actor variable named actor to store this return value. But is this Actor just an Actor? No, it is actually a Mouse. 
+   How do we know it is a Mouse? Because we told the getOneIntersectingObject method we only wanted mice.</p>
+   <div id="csCode"><pre>Actor actor = getOneIntersectingObject(<div id="csHighlight"><pre>Mouse.class</pre></div>);</pre></div>
+<p>To summarize, the getOneIntersectingObject method can only return Actors even though the Actor it is returning is actually a Mouse. Here is 
+   the key to the problem. Since the returned object is an Actor it can only use Actor methods. The <strong>runAway</strong> method is a Mouse method therefore the variable
+   actor cannot call or use this method. Look at the following code:</p>
+   <div id="csCode"><pre>actor.runAway(getRotation());    <div id="csHighlight"><pre>// error</pre></div> </pre></div>
+   <P>The actor variable is attempting to call the method runAway, but it can't because runAway is a Mouse method and the actor variable
+      can only call Actor methods.</P>
+<p>Fortunately there is a way to fix this problem and it is called <strong>casting</strong>. Look at the following code:</p>
+   <div id="csCode"><pre>Actor actor = getOneIntersectingObject(Mouse.class);
+if(actor != null)
+{
+    Mouse mouse = <div id="csHighlight"><pre>(Mouse)</pre></div>actor;  // cast actor to a Mouse
+    mouse.runAway(getRotation());  // tell mouse to run away
+}
+</pre></div>
+<p>Using casting we convert the object in actor to a Mouse and store its reference in a Mouse variable named <strong>mouse</strong>. 
+   This only works because the object stored in actor is really a Mouse. With the conversion done the <strong>runAway</strong> method is now called by a Mouse variable which makes the compiler very happy. Remember since the
+   Mouse class is a subclass of Actor a mouse object can use both Actor and Mouse methods.</p>
+
+<br><hr>
+<h1>Program Modifications</h1>
+<ol id="csList">
+<li><p>Add the code discussed above into the <strong>collisionCheck</strong> method.</p></li>
+<li><p>Compile the program.</p></li>
+<li><p>Add some mice to the world and run the program. When the snake touches a mouse the mouse should move away in the 
+       opposite direction.</p></li>
+</ol>
+	<br>
+</div>	
+

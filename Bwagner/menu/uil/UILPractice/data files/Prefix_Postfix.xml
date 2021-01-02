@@ -1,0 +1,143 @@
+<practice>
+    <problem>
+        <question><![CDATA[Convert the following infix expression to postfix.]]></question>
+        <code><![CDATA[<pre>a + b * c - d</pre>]]></code>
+        <a><![CDATA[<pre>a b + c * d -</pre>]]></a>
+        <b><![CDATA[<pre>a b c * + d -</pre>]]></b>
+        <c><![CDATA[<pre>b c * a + d -</pre>]]></c>
+        <d><![CDATA[<pre>a b c + * d -</pre>]]></d>
+        <e><![CDATA[<pre>a b c * c d -</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+	<problem>
+        <question><![CDATA[Convert the following infix expression to prefix.]]></question>
+        <code><![CDATA[<pre>a + b * c - d</pre>]]></code>
+        <a><![CDATA[<pre>- * + a b c d</pre>]]></a>
+        <b><![CDATA[<pre>a * b c + - d</pre>]]></b>
+        <c><![CDATA[<pre>- + a * b c d</pre>]]></c>
+        <d><![CDATA[<pre>* + a b c - d</pre>]]></d>
+        <e><![CDATA[<pre>+ a * b c - d</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[Convert the following infix expression to postfix.]]></question>
+        <code><![CDATA[<pre>(a + b) * c / d</pre>]]></code>
+        <a><![CDATA[<pre>a b + c * d /</pre>]]></a>
+        <b><![CDATA[<pre>a b + c * / d</pre>]]></b>
+        <c><![CDATA[<pre>c a b + * d /</pre>]]></c>
+        <d><![CDATA[<pre>a b c * + d /</pre>]]></d>
+        <e><![CDATA[<pre>a + b c * d /</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+	<problem>
+        <question><![CDATA[Convert the following infix expression to prefix.]]></question>
+        <code><![CDATA[<pre>(a + b) * c / d</pre>]]></code>
+        <a><![CDATA[<pre> + a b c * / d</pre>]]></a>
+        <b><![CDATA[<pre>* a b + c / d</pre>]]></b>
+        <c><![CDATA[<pre>/ a b * c d</pre>]]></c>
+        <d><![CDATA[<pre>/ * + a b c d</pre>]]></d>
+        <e><![CDATA[<pre>+ * a b c / d</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+	<problem>
+        <question><![CDATA[Convert the following infix expression to postfix.]]></question>
+        <code><![CDATA[<pre>x + 2 * y ^ 3</pre>]]></code>
+        <a><![CDATA[<pre>x 2 y * 3 ^ +</pre>]]></a>
+        <b><![CDATA[<pre>x 2 y 3 ^ * +</pre>]]></b>
+        <c><![CDATA[<pre>x 2 * y 3 ^ +</pre>]]></c>
+        <d><![CDATA[<pre>x + 2 y * 3 ^</pre>]]></d>
+        <e><![CDATA[<pre>x + 2 y 3 ^ *</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+		<problem>
+        <question><![CDATA[Convert the following infix expression to prefix.]]></question>
+        <code><![CDATA[<pre>x + 2 * y ^ 3</pre>]]></code>
+        <a><![CDATA[<pre>+ x ^ * 2 y 3</pre>]]></a>
+        <b><![CDATA[<pre>+ x 2 ^ y 3</pre>]]></b>
+        <c><![CDATA[<pre>+ x * ^ 2 y 3</pre>]]></c>
+        <d><![CDATA[<pre>^ * + x 2 y 3</pre>]]></d>
+        <e><![CDATA[<pre>+ x * 2 ^ y 3</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+		<problem>
+        <question><![CDATA[Convert the following postfix expression to infix.]]></question>
+        <code><![CDATA[<pre>a b * c + d -</pre>]]></code>
+        <a><![CDATA[<pre>a * b + c - d</pre>]]></a>
+        <b><![CDATA[<pre>a + b * c - d</pre>]]></b>
+        <c><![CDATA[<pre>a - b * c + d</pre>]]></c>
+        <d><![CDATA[<pre>a * b - c + d</pre>]]></d>
+        <e><![CDATA[<pre>a - b + c * d</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+		<problem>
+        <question><![CDATA[Convert the following prefix expression to infix.]]></question>
+        <code><![CDATA[<pre>+ * / a b c d</pre>]]></code>
+        <a><![CDATA[<pre>a / b + c * d</pre>]]></a>
+        <b><![CDATA[<pre>a + b * c / d</pre>]]></b>
+        <c><![CDATA[<pre>a * b + c / d</pre>]]></c>
+        <d><![CDATA[<pre>a / b * c + d</pre>]]></d>
+        <e><![CDATA[<pre>a + b / c * d</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+		<problem>
+        <question><![CDATA[Convert the following infix expression to postfix.]]></question>
+        <code><![CDATA[<pre>a * (b + c) / d - e * f</pre>]]></code>
+        <a><![CDATA[<pre>a b c + * d / e - f *</pre>]]></a>
+        <b><![CDATA[<pre>a * b c d / e f * -</pre>]]></b>
+        <c><![CDATA[<pre>a b c + * d / e c * -</pre>]]></c>
+        <d><![CDATA[<pre>a b c + / d * e f * -</pre>]]></d>
+        <e><![CDATA[<pre>a * b c + d / e f * -</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+		<problem>
+        <question><![CDATA[Convert the following infix expression to prefix.]]></question>
+        <code><![CDATA[<pre>a * (b + c) / d - e * f</pre>]]></code>
+        <a><![CDATA[<pre>- / * a + b c d * e f</pre>]]></a>
+        <b><![CDATA[<pre>- * * a / + b c d e f</pre>]]></b>
+        <c><![CDATA[<pre>/ * a + b c d - * e f</pre>]]></c>
+        <d><![CDATA[<pre>* a / + b c d - * e f</pre>]]></d>
+        <e><![CDATA[<pre>- * / * a + b c d e f</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+		<problem>
+        <question><![CDATA[Convert the following infix expression to postfix.]]></question>
+        <code><![CDATA[<pre>(x - 5 + y / 2 * ( z - 3) ) / x - 2</pre>]]></code>
+        <a><![CDATA[<pre>x 5 - + y 2 / z 3 - * x / - 2</pre>]]></a>
+        <b><![CDATA[<pre>x 5 y 2 / z 3 - * + - x / 2 -</pre>]]></b>
+        <c><![CDATA[<pre>x 5 + - y 2 / z 3 - * / x 2 -</pre>]]></c>
+        <d><![CDATA[<pre>x 5 - y 2 / z 3 - * + x / 2 -</pre>]]></d>
+        <e><![CDATA[<pre>x 5 - y 2 / z 3 - * / x + 2 -</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+		<problem>
+        <question><![CDATA[Convert the following infix expression to postfix.]]></question>
+        <code><![CDATA[<pre>(x - 5 + y / 2 * ( z - 3) ) / x - 2</pre>]]></code>
+        <a><![CDATA[<pre>- / + - x 5 * / y 2 - z 3 x 2</pre>]]></a>
+        <b><![CDATA[<pre>- + - x 5 / * / y 2 - z 3 x 2</pre>]]></b>
+        <c><![CDATA[<pre>- / + - x 5 / y 2 * - z 3 x 2</pre>]]></c>
+        <d><![CDATA[<pre>+ - x 5 / * / y 2 - z 3 x - 2</pre>]]></d>
+        <e><![CDATA[<pre>- - / + x 5 / * - y 2 z 3 x 2</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+		<problem>
+        <question><![CDATA[Convert the following postfix expression to infix.]]></question>
+        <code><![CDATA[<pre>1 2 * 3 4 * + 5 *</pre>]]></code>
+        <a><![CDATA[<pre>1 * 2 + 3 * 4 * 5</pre>]]></a>
+        <b><![CDATA[<pre>1 * 2 + ( 3 * 4 * 5 )</pre>]]></b>
+        <c><![CDATA[<pre>( 1 * 2 + 3 * 4 ) * 5</pre>]]></c>
+        <d><![CDATA[<pre>( 1 * 2 ) + 3 * 4 * 5</pre>]]></d>
+        <e><![CDATA[<pre>( 1 * 2 ) + 3 * ( 4 * 5 )</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+		<problem>
+        <question><![CDATA[Convert the following prefix expression to infix.]]></question>
+        <code><![CDATA[<pre>- / + 1 2 3 * + 4 5 6</pre>]]></code>
+        <a><![CDATA[<pre>1 + 2 / 3 - 4 + 5 * 6</pre>]]></a>
+        <b><![CDATA[<pre>( 1 + 2 ) / 3 - ( 4 + 5 ) * 6</pre>]]></b>
+        <c><![CDATA[<pre>1 + ( 2 / 3 ) - ( 4 + 5 ) * 6</pre>]]></c>
+        <d><![CDATA[<pre>1 / ( 2 + 3 ) - ( 4 + 5 ) * 6</pre>]]></d>
+        <e><![CDATA[<pre>( 1 + 2 ) / 3 - 4 + 5 * 6</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+		
+</practice>

@@ -1,0 +1,171 @@
+<practice>    
+    <problem>
+        <question><![CDATA[<pre>Which of the following correctly instantiates
+an ArrayList of String objects?</pre>]]></question>
+        <code><![CDATA[<pre> </pre>]]></code>
+        <a><![CDATA[<pre>List&lt;String&gt; list = new ArrayList&lt;String&gt;();</pre>]]></a>
+        <b><![CDATA[<pre>ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;();</pre>]]></b>
+        <c><![CDATA[<pre>List&lt;String&gt; list = new ArrayList&lt;&gt;();</pre>]]></c>
+        <d><![CDATA[<pre>ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();</pre>]]></d>
+        <e><![CDATA[<pre>all of the above</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>ArrayList&lt;Integer&gt; nums = new ArrayList&lt;Integer&gt;();
+nums.add(2);
+nums.add(4);
+System.out.println(nums);</pre>]]></code>
+        <a><![CDATA[<pre>[4, 2]</pre>]]></a>
+        <b><![CDATA[<pre>[4]</pre>]]></b>
+        <c><![CDATA[<pre>[2]</pre>]]></c>
+        <d><![CDATA[<pre>[2, 4]</pre>]]></d>
+        <e><![CDATA[<pre>[0, 2, 4]</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>ArrayList&lt;Integer&gt; nums = new ArrayList&lt;Integer&gt;();
+nums.add(7);
+nums.add(0, 3);
+System.out.print(nums);</pre>]]></code>
+        <a><![CDATA[<pre>[3, 7]</pre>]]></a>
+        <b><![CDATA[<pre>[7, 3]</pre>]]></b>
+        <c><![CDATA[<pre>[3]</pre>]]></c>
+        <d><![CDATA[<pre>[7, 0, 3]</pre>]]></d>
+        <e><![CDATA[<pre>[0, 3, 7]</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>ArrayList&lt;Integer&gt; laps;
+laps = new ArrayList&lt;Integer&gt;();
+laps.add(2);
+laps.add(0, 1);
+laps.add(0, 3);
+laps.set(2, laps.get(1));
+System.out.print(laps);</pre>]]></code>
+        <a><![CDATA[<pre>[3, 3]</pre>]]></a>
+        <b><![CDATA[<pre>[2, 0, 2]</pre>]]></b>
+        <c><![CDATA[<pre>[3, 1, 3]</pre>]]></c>
+        <d><![CDATA[<pre>[3, 1, 1]</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to a runtime error.</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();
+list.add(10);
+list.add(20);
+list.set(0, 15);
+System.out.println(list);</pre>]]></code>
+        <a><![CDATA[<pre>[10, 20]</pre>]]></a>
+        <b><![CDATA[<pre>[15, 20]</pre>]]></b>
+        <c><![CDATA[<pre>[10, 15]</pre>]]></c>
+        <d><![CDATA[<pre>[0, 20]</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to a runtime error.</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>ArrayList&lt;String&gt; list1, list2;
+list1 = new ArrayList&lt;String&gt;();
+list2 = new ArrayList&lt;String&gt;();
+list1.add("Glenn");
+list2.add(listl.get(0));
+System.out.print(list1 == list2);</pre>]]></code>
+        <a><![CDATA[<pre>true</pre>]]></a>
+        <b><![CDATA[<pre>false</pre>]]></b>
+        <c><![CDATA[<pre>null</pre>]]></c>
+        <d><![CDATA[<pre>There is no output due to a syntax error.</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to a runtime error.</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>ArrayList&lt;String&gt; classes;
+classes = new ArrayList&lt;String&gt;();
+System.out.print(classes.size());</pre>]]></code>
+        <a><![CDATA[<pre>null</pre>]]></a>
+        <b><![CDATA[<pre>10</pre>]]></b>
+        <c><![CDATA[<pre>0</pre>]]></c>
+        <d><![CDATA[<pre>There is no output due to a syntax error.</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to a runtime error.</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>nums = new ArrayList&lt;Integer&gt;();
+for(int i = 0; i < 10; i++)
+  nums.add(i);
+
+Iterator&lt;Integer&gt; it = nums.iterator();
+int count = 0;
+while(it.hasNext())
+  count++;
+
+System.out.println(count);</pre>]]></code>
+        <a><![CDATA[<pre>0</pre>]]></a>
+        <b><![CDATA[<pre>10</pre>]]></b>
+        <c><![CDATA[<pre>45</pre>]]></c>
+        <d><![CDATA[<pre>There is no output due to a syntax error.</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to an infinite loop
+that occurs when the code is run.</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>ArrayList&lt;Integer&gt; ar;
+ar = new ArrayList&lt;Integer&gt;();
+
+ar.add(3);
+ar.add(0, 1);
+ar.add(1, 0);
+
+System.out.print(ar.toString());</pre>]]></code>
+        <a><![CDATA[<pre>[1, 0, 3]</pre>]]></a>
+        <b><![CDATA[<pre>[0, 1, 3]</pre>]]></b>
+        <c><![CDATA[<pre>[3, 1, 0]</pre>]]></c>
+        <d><![CDATA[<pre>[0, 3, 1]</pre>]]></d>
+        <e><![CDATA[<pre>[0, 3, 0]</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>ArrayList&lt;String&gt; letters;
+letters = new ArrayList&lt;String&gt;();
+letters.add("Z");
+letters.add("A");
+letters.add("MM");
+Collections.sort(letters);
+System.out.println(letters);</pre>]]></code>
+        <a><![CDATA[<pre>[Z, MM, A]</pre>]]></a>
+        <b><![CDATA[<pre>[A, MM, Z]</pre>]]></b>
+        <c><![CDATA[<pre>[A, Z, MM]</pre>]]></c>
+        <d><![CDATA[<pre>[Z, A, MM]</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to a syntax error.</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>ArrayList&lt;Integer&gt; kd = new ArrayList&lt;Integer&gt;();
+int[] data = {1, 4, 1, 7, 20, 2, 33};
+for(int el : data){
+  if(el &lt; kd.size())
+    kd.add(el, el);
+  else if(el &lt; 20)
+    kd.add(el);
+  else
+    kd.add(0, el);
+}
+
+for(int el : kd)
+  System.out.print(el);</pre>]]></code>
+        <a><![CDATA[<pre>141720233</pre>]]></a>
+        <b><![CDATA[<pre>3312</pre>]]></b>
+        <c><![CDATA[<pre>332072411</pre>]]></c>
+        <d><![CDATA[<pre>332012147</pre>]]></d>
+        <e><![CDATA[<pre>3317</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+</practice>

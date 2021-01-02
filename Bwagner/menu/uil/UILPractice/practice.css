@@ -1,0 +1,116 @@
+
+#practice_leftCol
+{
+    float:left;
+    margin-right: 40px;
+    padding-right: 40px;
+    border-collapse:collapse;
+    border-right: 2px solid gray;
+}
+
+button.buttonList
+{
+    font-size:1.6em;
+    border-collapse:collapse;
+    border: 2px solid gray;
+}
+
+#submitButton
+{
+    font-size:1.6em;
+    margin-left: 20px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+
+#question
+{
+    margin-bottom: 30px;
+}
+
+body{
+  margin      : 0;
+  padding     : 1.5em;
+  font-family : Consolas,Courier New,sans-serif;
+}
+
+pre{
+    font-family : Consolas,Courier New,sans-serif;   
+    display : inline-block;
+    margin: 0px;
+    padding: 0px;
+    font-size : 1em;
+   // margin-bottom: 20px;
+    
+}
+
+.example{
+  margin-bottom : 1.5em;
+}
+
+input[type=checkbox],
+input[type=radio   ]{
+  width     : 2em;
+  margin    : 0;
+  padding   : 0;
+  font-size : 1em;
+  opacity   : 0;
+}
+
+input[type=checkbox] + label,
+input[type=radio   ] + label{
+  display      : inline-block;
+  margin-left  : -2em;
+  line-height  : 1.5em;
+  margin-bottom: 15px;
+}
+
+input[type=checkbox] + label > span,
+input[type=radio   ] + label > span{
+  float            : left;
+  display          : inline-block;
+  width            : 0.875em;
+  height           : 0.875em;
+  margin           : 0.25em 0.5em 0.25em 0.25em;
+  border           : 0.0625em solid rgb(192,192,192);
+  border-radius    : 0.25em;
+  background       : rgb(224,224,224);
+  background-image :    -moz-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :     -ms-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :      -o-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image : -webkit-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :         linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  vertical-align   : bottom;
+}
+
+input[type=checkbox]:checked + label > span,
+input[type=radio   ]:checked + label > span{
+  background-image :    -moz-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :     -ms-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :      -o-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image : -webkit-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :         linear-gradient(rgb(224,224,224),rgb(240,240,240));
+}
+
+input[type=checkbox]:checked + label > span:before{
+  content     : '✓';
+  display     : block;
+  width       : 1em;
+  color       : rgb(153,204,102);
+  font-size   : 0.875em;
+  line-height : 1em;
+  text-align  : center;
+  text-shadow : 0 0 0.0714em rgb(115,153,77);
+  font-weight : bold;
+}
+
+input[type=radio]:checked +  label > span > span{
+  display          : block;
+  width            : 0.5em;
+  height           : 0.5em;
+  margin           : 0.125em;
+  border           : 0.0625em solid rgb(115,153,77);
+  border-radius    : 0.125em;
+  background       : rgb(94,94,154);     //153,204,102
+}
+

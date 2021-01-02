@@ -1,0 +1,1794 @@
+Test 01 Oct 07 2006
+practice
+available
+0
+0
+0
+0
+45
+Test 02 Oct 14 2006
+practice
+available
+0
+0
+0
+0
+45
+Test 03 Oct 21 2006
+practice
+available
+0
+0
+0
+0
+45
+Test 04 Oct 28 2006
+practice
+available
+0
+0
+0
+0
+45
+Test 05 Nov 04 2006
+practice
+available
+0
+0
+0
+0
+45
+Test 06 Nov 11 2006
+practice
+available
+0
+0
+0
+0
+45
+Test 07 Nov 18 2006
+practice
+available
+0
+0
+0 
+0
+45
+Test 08 Dec 02 2006
+practice
+available
+0
+0
+0
+0
+45
+Test 09 Jan 20 2007
+practice
+available
+0
+0
+0
+0
+45
+Test 10 Jan 27 2007
+practice
+available
+0
+0
+0
+0
+45
+Test 11 Feb 03 2007
+practice
+available
+0
+0
+0
+0
+45
+Test 12 Feb 17 2007
+practice
+available
+0
+0
+0
+0
+45
+Test 13 Feb 24 2007
+practice
+available
+0
+0
+0
+0
+45
+Test 14 Mar 03 2007
+practice
+available
+0
+0
+0
+0
+45
+Test 01 Oct 26 2007
+practice
+available
+0
+0
+0
+0
+45
+Test 02 Oct 13 2007
+practice
+available
+0
+0
+0
+0
+45
+Test 03 Oct 20 2007
+practice
+available
+0
+0
+0
+0
+45
+Test 04 Nov 03 2007
+practice
+available
+0
+0
+0
+0
+45
+Test 05 Nov 10 2007
+practice
+available
+0
+0
+0
+0
+45
+Test 06 Nov 17 2007
+practice
+available
+0
+0
+0
+0
+45
+Test 07 Dec 01 2007
+practice
+available
+0
+0
+0
+0
+45
+Test 08 Dec 08 2007
+practice
+available
+0
+0
+0
+0
+45
+Test 09 Jan 19 2008
+practice
+available
+0
+0
+0
+0
+45
+Test 10 Jan 26 2008
+practice
+available
+0
+0
+0
+0
+45
+Test 11 Feb 02 2008
+practice
+available
+0
+0
+0
+0
+45
+Test 12 Feb 16 2008
+practice
+available
+0
+0
+0
+0
+45
+Test 13 Feb 23 2008
+practice
+available
+0
+0
+0
+0
+45
+Test 14 Mar 01 2008
+practice
+available
+0
+0
+0
+0
+45
+Test 01 Oct 04 2008
+practice
+available
+0
+0
+0
+0
+45
+Test 02 Oct 11 2008
+practice
+available
+0
+0
+0
+0
+45
+Test 03 Oct 25 2008
+practice
+available
+0
+0
+0
+0
+45
+Test 04 Nov 01 2008
+practice
+available
+0
+0
+0
+0
+45
+Test 05 Nov 08 2008
+practice
+available
+0
+0
+0
+0
+45
+Test 06 Nov 15 2008
+practice
+available
+0
+0
+0
+0
+45
+Test 07 Nov 22 2008
+practice
+available
+0
+0
+0
+0
+45
+Test 08 Dec 06 2008
+practice
+available
+0
+0
+0
+0
+45
+Test 09 Jan 17 2009
+practice
+available
+0
+0
+0
+0
+45
+Test 10 Jan 24 2009
+practice
+available
+0
+0
+0
+0
+45
+Test 11 Jan 31 2009
+practice
+available
+0
+0
+0
+0
+45
+Test 12 Feb 07 2009
+practice
+available
+0
+0
+0
+0
+45
+Test 13 Feb 21 2009
+practice
+available
+0
+0
+0
+0
+45
+Test 14 Feb 28 2009
+practice
+available
+0
+0
+0
+0
+45
+Test 01 Oct 03 2009
+practice
+available
+0
+0
+0
+0
+45
+Test 02 Oct 17 2009
+practice
+available
+0
+0
+0
+0
+45
+Test 03 Oct 24 2009
+practice
+available
+0
+0
+0
+0
+45
+Test 04 Oct 31 2009
+practice
+available
+0
+0
+0
+0
+45
+Test 05 Nov 07 2009
+practice
+available
+0
+0
+0
+0
+45
+Test 06 Nov 14 2009
+practice
+available
+0
+0
+0
+0
+45
+Test 07 Nov 21 2009
+practice
+available
+0
+0
+0
+0
+45
+Test 08 Dec 05 2009
+practice
+available
+0
+0
+0
+0
+45
+Test 09 Jan 16 2010
+practice
+available
+0
+0
+0
+0
+45
+Test 10 Jan 23 2010
+practice
+available
+0
+0
+0
+0
+45
+Test 11 Jan 30 2010
+practice
+available
+0
+0
+0
+0
+45
+Test 12 Feb 13 2010
+practice
+available
+0
+0
+0
+0
+45
+Test 13 Feb 20 2010
+practice
+available
+0
+0
+0
+0
+45
+Test 01 Oct 02 2010
+practice
+available
+0
+0
+0
+0
+45
+Test 02 Oct 16 2010
+practice
+available
+0
+0
+0
+0
+45
+Test 03 Oct 23 2010
+practice
+available
+0
+0
+0
+0
+45
+Test 04 Oct 30 2010
+practice
+available
+0
+0
+0
+0
+45
+Test 05 Nov 06 2010
+practice
+available
+0
+0
+0
+0
+45
+Test 06 Nov 13 2010
+practice
+available
+0
+0
+0
+0
+45
+Test 07 Nov 20 2010
+practice
+available
+0
+0
+0
+0
+45
+Test 08 Dec 04 2010
+practice
+available
+0
+0
+0
+0
+45
+Test 09 Jan 15 2011
+practice
+available
+0
+0
+0
+0
+45
+Test 10 Jan 22 2011
+practice
+available
+0
+0
+0
+0
+45
+Test 11 Jan 29 2011
+practice
+available
+0
+0
+0
+0
+45
+Test 12 Feb 12 2011
+practice
+available
+0
+0
+0
+0
+45
+Test 13 Feb 19 2011
+practice
+available
+0
+0
+0
+0
+45
+Test 14 Feb 26 2011
+practice
+available
+0
+0
+0
+0
+45
+UTCS Open 2011
+practice
+available
+0
+0
+0
+0
+45
+Test 00 Sep 30 2011
+practice
+available
+0
+0
+0
+0
+45
+Test 01 Oct 08 2011
+practice
+available
+0
+0
+0
+0
+45
+Test 02 Oct 22 2011
+practice
+available
+0
+0
+0
+0
+45
+Test 03 Oct 29 2011
+practice
+available
+0
+0
+0
+0
+45
+Test 04 Nov 05 2011
+practice
+available
+0
+0
+0
+0
+45
+Test 05 Nov 12 2011
+practice
+available
+0
+0
+0
+0
+45
+Test 06 Nov 19 2011
+practice
+available
+0
+0
+0
+0
+45
+Test 07 Dec 03 2011
+practice
+available
+0
+0
+0
+0
+45
+Test 08 Jan 14 2012
+practice
+available
+0
+0
+0
+0
+45
+Test 09 Jan 21 2012
+practice
+available
+0
+0
+0
+0
+45
+Test 10 Jan 28 2012
+practice
+available
+0
+0
+0
+0
+45
+Test 11 Feb 11 2012
+practice
+available
+0
+0
+0
+0
+45
+Test 12 Feb 18 2012
+practice
+available
+0
+0
+0
+0
+45
+Test 13 Feb 25 2012
+practice
+available
+0
+0
+0
+0
+45
+Test 14 Mar 03 2012
+practice
+available
+0
+0
+0
+0
+45
+UTCS Open 2012
+practice
+available
+0
+0
+0
+0
+45
+Test 01 Oct 06 2012
+practice
+available
+0
+0
+0
+0
+45
+Test 02 Oct 20 2012
+practice
+available
+0
+0
+0
+0
+45
+Test 03 Oct 27 2012
+practice
+available
+0
+0
+0
+0
+45
+Test 04 Nov 03 2012
+practice
+available
+0
+0
+0
+0
+45
+Test 05 Nov 10 2012
+practice
+available
+0
+0
+0
+0
+45
+Test 06 Nov 17 2012
+practice
+available
+0
+0
+0
+0
+45
+Test 07 Dec 01 2012
+practice
+available
+0
+0
+0
+0
+45
+Test 08 Jan 12 2013
+practice
+available
+0
+0
+0
+0
+45
+Test 09 Jan 19 2013
+practice
+available
+0
+0
+0
+0
+45
+Test 10 Jan 26 2013
+practice
+available
+0
+0
+0
+0
+45
+Test 11 Feb 09 2013
+practice
+available
+0
+0
+0
+0
+45
+Test 12 Feb 16 2013
+practice
+available
+0
+0
+0
+0
+45
+Test 13 Feb 23 2013
+practice
+available
+0
+0
+0
+0
+45
+Test 14 Mar 02 2013
+practice
+available
+0
+0
+0
+0
+45
+UTCS Open 2013
+practice
+available
+0
+0
+0
+0
+45
+Test 01 Oct 12 2013
+practice
+available
+0
+0
+0
+0
+45
+Test 02 Oct 19 2013
+practice
+available
+0
+0
+0
+0
+45
+Test 03 Oct 26 2013
+practice
+available
+0
+0
+0
+0
+45
+Test 04 Nov 02 2013
+practice
+available
+0
+0
+0
+0
+45
+Test 05 Nov 09 2013
+practice
+available
+0
+0
+0
+0
+45
+Test 06 Nov 16 2013
+practice
+available
+0
+0
+0
+0
+45
+Test 07 Nov 23 2013
+practice
+available
+0
+0
+0
+0
+45
+Test 08 Dec 07 2013
+practice
+available
+0
+0
+0
+0
+45
+Test 09 Jan 11 2014
+practice
+available
+0
+0
+0
+0
+45
+Test 10 Jan 18 2014
+practice
+available
+0
+0
+0
+0
+45
+Test 11 Jan 25 2014
+practice
+available
+0
+0
+0
+0
+45
+Test 12 Feb 08 2014
+practice
+available
+0
+0
+0
+0
+45
+Test 13 Feb 15 2014
+practice
+available
+0
+0
+0
+0
+45
+Test 14 Mar 01 2014
+practice
+available
+0
+0
+0
+0
+45
+UTCS Open 2014
+practice
+available
+0
+0
+0
+0
+45
+Test 01 Oct 11 2014
+practice
+available
+0
+0
+0
+0
+45
+Test 02 Oct 18 2014
+practice
+available
+0
+0
+0
+0
+45
+Test 03 Oct 25 2014
+practice
+available
+0
+0
+0
+0
+45
+Test 04 Nov 01 2014
+practice
+available
+0
+0
+0
+0
+45
+Test 05 Nov 08 2014
+practice
+available
+0
+0
+0
+0
+45
+Test 06 Nov 15 2014
+practice
+available
+0
+0
+0
+0
+45
+Test 07 Nov 22 2014
+practice
+available
+0
+0
+0
+0
+45
+Test 08 Dec 06 2014
+practice
+available
+0
+0
+0
+0
+45
+Test 09 Jan 10 2015
+practice
+available
+0
+0
+0
+0
+45
+Test 10 Jan 17 2015
+practice
+available
+0
+0
+0
+0
+45
+Test 11 Jan 24 2015
+practice
+available
+0
+0
+0
+0
+45
+Test 12 Feb 07 2015
+practice
+available
+0
+0
+0
+0
+45
+Test 13 Feb 14 2015
+practice
+available
+0
+0
+0
+0
+45
+Test 14 Feb 21 2015
+practice
+available
+0
+0
+0
+0
+45
+Test 10 Jan 28 2017
+practice
+available
+0
+0
+0
+0
+45
+Test 08 Jan 18 2020
+practice
+available
+0
+0
+0
+0
+45
+Invitational A 2004
+state
+available
+0
+0
+0
+0
+45
+Invitational B 2004
+state
+available
+0
+0
+0
+0
+45
+District 1 2004
+state
+available
+0
+0
+0
+0
+45
+District 2 2004
+state
+available
+0
+0
+0
+0
+45
+Regional 2004
+state
+available
+0
+0
+0
+0
+45
+State 2004
+state
+available
+0
+0
+0
+0
+45
+Invitational A 2005
+state
+available
+0
+0
+0
+0
+45
+Invitational B 2005
+state
+available
+0
+0
+0
+0
+45
+District 1 2005
+state
+available
+0
+0
+0
+0
+45
+District 2 2005
+state
+available
+0
+0
+0
+0
+45
+Regional 2005
+state
+available
+0
+0
+0
+0
+45
+State 2005
+state
+available
+0
+0
+0
+0
+45
+Invitational A 2006
+state
+available
+0
+0
+0
+0
+45
+Invitational B 2006
+state
+available
+0
+0
+0
+0
+45
+District 1 2006
+state
+available
+0
+0
+0
+0
+45
+District 2 2006
+state
+available
+0
+0
+0
+0
+45
+Regional 2006
+state
+available
+0
+0
+0
+0
+45
+State 2006
+state
+available
+0
+0
+0
+0
+45
+Invitational A 2007
+state
+available
+0
+0
+0
+0
+45
+Invitational B 2007
+state
+available
+0
+0
+0
+0
+45
+District 1 2007
+state
+available
+0
+0
+0
+0
+45
+District 2 2007
+state
+available
+0
+0
+0
+0
+45
+Regional 2007
+state
+available
+0
+0
+0
+0
+45
+State 2007
+state
+available
+0
+0
+0
+0
+45
+Practice 2008
+state
+available
+0
+0
+0
+0
+45
+Invitational A 2008
+state
+available
+0
+0
+0
+0
+45
+Invitational B 2008
+state
+available
+0
+0
+0
+0
+45
+District 1 2008
+state
+available
+0
+0
+0
+0
+45
+District 2 2008
+state
+available
+0
+0
+0
+0
+45
+Regional 2008
+state
+available
+0
+0
+0
+0
+45
+State 2008
+state
+available
+0
+0
+0
+0
+45
+Invitational A 2009
+state
+available
+0
+0
+0
+0
+45
+Invitational B 2009
+state
+available
+0
+0
+0
+0
+45
+District 1 2009
+state
+available
+0
+0
+0
+0
+45
+District 2 2009
+state
+available
+0
+0
+0
+0
+45
+Regional 2009
+state
+available
+0
+0
+0
+0
+45
+State 2009
+state
+available
+0
+0
+0
+0
+45
+Invitational A 2010
+state
+available
+0
+0
+0
+0
+45
+Invitational B 2010
+state
+available
+0
+0
+0
+0
+45
+District 1 2010
+state
+available
+0
+0
+0
+0
+45
+District 2 2010
+state
+available
+0
+0
+0
+0
+45
+Regional 2010
+state
+available
+0
+0
+0
+0
+45
+State 2010
+state
+available
+0
+0
+0
+0
+45
+Invitational A 2011
+state
+available
+0
+0
+0
+0
+45
+Invitational B 2011
+state
+available
+0
+0
+0
+0
+45
+District 1 2011
+state
+available
+0
+0
+0
+0
+45
+District 2 2011
+state
+available
+0
+0
+0
+0
+45
+Regional 2011
+state
+available
+0
+0
+0
+0
+45
+State 2011
+state
+available
+0
+0
+0
+0
+45
+Invitational A 2012
+state
+available
+0
+0
+0
+0
+45
+Invitational B 2012
+state
+available
+0
+0
+0
+0
+45
+District 1 2012
+state
+available
+0
+0
+0
+0
+45
+District 2 2012
+state
+available
+0
+0
+0
+0
+45
+Regional 2012
+state
+available
+0
+0
+0
+0
+45
+State 2012
+state
+available
+0
+0
+0
+0
+45
+Invitational A 2013
+state
+available
+0
+0
+0
+0
+45
+Invitational B 2013
+state
+available
+0
+0
+0
+0
+45
+District 1 2013
+state
+available
+0
+0
+0
+0
+45
+District 2 2013
+state
+available
+0
+0
+0
+0
+45
+Regional 2013
+state
+available
+0
+0
+0
+0
+45
+State 2013
+state
+available
+0
+0
+0
+0
+45
+Invitational A 2014
+state
+available
+0
+0
+0
+0
+45
+Invitational B 2014
+state
+available
+0
+0
+0
+0
+45
+District 1 2014
+state
+available
+0
+0
+0
+0
+45
+District 2 2014
+state
+available
+0
+0
+0
+0
+45
+Regional 2014
+state
+available
+0
+0
+0
+0
+45
+State 2014
+state
+available
+0
+0
+0
+0
+45
+Invitational A 2015
+state
+available
+0
+0
+0
+0
+45
+Invitational B 2015
+state
+available
+0
+0
+0
+0
+45
+Regional 2015
+state
+available
+0
+0
+0
+0
+45
+Invitational A 2016
+state
+available
+0
+0
+0
+0
+45
+Invitational B 2016
+state
+available
+0
+0
+0
+0
+45
+District 1 2016
+state
+available
+0
+0
+0
+0
+45
+District 2 2016
+state
+available
+0
+0
+0
+0
+45
+Regional 2016
+state
+available
+0
+0
+0
+0
+45
+Invitational A 2017
+state
+available
+0
+0
+0
+0
+45
+Invitational B 2017
+state
+available
+0
+0
+0
+0
+45
+District 2017
+state
+available
+0
+0
+0
+0
+45
+Regional 2017
+state
+available
+0
+0
+0
+0
+45
+State 2017
+state
+available
+0
+0
+0
+0
+45
+Invitational A 2018
+state
+available
+0
+0
+0
+0
+45
+Invitational B 2018
+state
+available
+0
+0
+0
+0
+45
+District 2018
+state
+available
+0
+0
+0
+0
+45
+Regional 2018
+state
+available
+0
+0
+0
+0
+45
+State 2018
+state
+available
+0
+0
+0
+0
+45
+Invitational A 2019
+state
+available
+0
+0
+0
+0
+45
+Invitational B 2019
+state
+available
+0
+0
+0
+0
+45
+District 2019
+state
+available
+0
+0
+0
+0
+45
+Regional 2019
+state
+available
+0
+0
+0
+0
+45
+State 2019
+state
+available
+0
+0
+0
+0
+45
+Invitational A 2020
+state
+available
+0
+0
+0
+0
+45
+Invitational B 2020
+state
+available
+0
+0
+0
+0
+45
+
+

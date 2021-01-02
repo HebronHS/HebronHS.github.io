@@ -1,0 +1,83 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Random Numbers</div>
+
+<div id="csContent">
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/Random Numbers.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Random Numbers</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Random Numbers</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Random Numbers Scenario, and click Open.</p></li>
+</ol> 
+<h1>Directions</h1>
+<p>In previous Java lessons you created random numbers using the Math class's <strong>random</strong> method. The following code
+   generates a random number between 1 and 100 inclusive.</p>
+<div id="csCode" style="width:625px"><pre>
+int num = (int)(Math.random() * 100) + 1;
+</pre></div> 
+<p>Greenfoot provides another way to generate random numbers. The following code also generates a random number between 1 and 100 inclusive.</p>
+<div id="csCode" style="width:625px"><pre>
+int num = Greenfoot.getRandomNumber(100) + 1;
+</pre></div> 
+<p>You can still use the Math class's random method if you prefer.</p>
+<h1>Smiley Class</h1>
+<p>Click on the <strong>Smiley</strong> class to view its code. You will notice that it does not contain any methods. The only thing that makes the Smiley
+class different from the Actor class is there is an image of a smiley face associated with it. Since the Smiley face does not have any special behavior
+no additional methods are necessary. A smiley object does nothing more than simply 
+appear on the screen.</p>
+
+<h1>MyWorld class</h1>
+<p>Click on the <strong>MyWorld</strong> class to view its code.</p>
+<p>The MyWorld class includes an <strong>act</strong> method. Recall that in Greenfoot act methods are called automatically when the user presses the 
+Run button. Any code placed inside these methods will be executed repeatedly while the program is running.</p>
+<div><img src="greenfoot/images/Random Numbers_01.png"></div>
+<p>The code in the act method creates a Smiley object and adds it to the world at a random location. Since this code is inside the act method 
+   this process is repeated continually. Notice that the code utilizes the <strong>getRandomNumber</strong> method to place the Smiley objects
+   at random locations within the boundaries of the world. This is accomplished through the use of the World class's <strong>getWidth</strong> and <strong>getHeight</strong>
+   methods. These methods return the dimensions of the world.</p>
+   
+<h1>Compile and Execute</h1>
+<p>Compile and execute the program.</p>
+
+<br><hr>
+<h1>Program Modifications</h1>
+<ol id="csList">
+<li><p>To better organize the program your first task is to create a new void method in the MyWorld class named <strong>createSmiley</strong>.</p></li>
+<li><p>Cut and paste all of the code currently in the act method into this new method.</p></li>
+<li><p>In the act method make a call to the <strong>createSmiley</strong> method.</p></li>
+<p>When you have completed all three tasks the MyWorld class should look like the following:</p>
+<div><img src="greenfoot/images/Random Numbers_02.png"></div>
+<li><p>Compile and execute the program to verify that it still works.</p></li>
+<li><p>Add a method named <strong>createRandomBug</strong> to the MyWorld class.</p></li>
+<li>
+      <p>Place the following code in the method.</p>
+    </li>
+<div id="csCode" style="width:625px"><pre>
+RandomBug bug = new RandomBug();
+addObject(bug, getWidth() / 2, getHeight() / 2);
+</pre></div>
+<li><p>In the MyWorld constructor make a call to the <strong>createRandomBug</strong> method. Code added to the MyWorld constructor is
+    executed once right before the act method is called.</p>
+<p>When completed the MyWorld class should look like the following:</p>
+<div><img src="greenfoot/images/Random Numbers_03.png"></div></li>
+<li><p>Click on the <strong>RandomBug</strong> class to view its code.</p></li>
+<li>
+      <p>Add code to the RandomBug's act method so that RandomBug <strong>moves</strong> and <strong>turns</strong> 
+        randomly around the world. Since RandomBug is a subclass of Tracker you 
+        should make it leave tracks as it moves. Double click on the Actor class 
+        so that you can view its code. Look for methods you can use to complete 
+        this task.</p>
+    </li>
+<div><img src="greenfoot/images/RandomBug_01.png"></div>
+    <li>Before executing your code you will need to stop the world from drawing 
+      smiley faces. An easy way to accomplish this is to comment out the code 
+      that makes a call to <strong>createSmiley</strong> in the MyWorld's act 
+      method.</li>
+<div><img src="greenfoot/images/Random Numbers_04.png"></div>
+</ol>
+
+	<br>
+</div>	
+

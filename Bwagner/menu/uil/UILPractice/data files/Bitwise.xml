@@ -1,0 +1,178 @@
+<practice>
+    <problem>
+        <question><![CDATA[<pre>What is the output?</pre>]]></question>
+        <code><![CDATA[<pre>out.println(20 | 10);</pre>]]></code>
+        <a><![CDATA[<pre>22</pre>]]></a>
+        <b><![CDATA[<pre>20</pre>]]></b>
+        <c><![CDATA[<pre>18</pre>]]></c>
+        <d><![CDATA[<pre>10</pre>]]></d>
+        <e><![CDATA[<pre>30</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is the output?</pre>]]></question>
+        <code><![CDATA[<pre>out.println(17 & 24);</pre>]]></code>
+        <a><![CDATA[<pre>1</pre>]]></a>
+        <b><![CDATA[<pre>16</pre>]]></b>
+        <c><![CDATA[<pre>17</pre>]]></c>
+        <d><![CDATA[<pre>41</pre>]]></d>
+        <e><![CDATA[<pre>408</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Which of the following operators
+multiplies by 2?</pre>]]></question>
+        <code><![CDATA[<pre> </pre>]]></code>
+        <a><![CDATA[<pre>>></pre>]]></a>
+        <b><![CDATA[<pre><<</pre>]]></b>
+        <c><![CDATA[<pre>&</pre>]]></c>
+        <d><![CDATA[<pre>|</pre>]]></d>
+        <e><![CDATA[<pre>^</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>System.out.println(10 ^ 7);</pre>]]></code>
+        <a><![CDATA[<pre>10</pre>]]></a>
+        <b><![CDATA[<pre>17</pre>]]></b>
+        <c><![CDATA[<pre>13</pre>]]></c>
+        <d><![CDATA[<pre>8</pre>]]></d>
+        <e><![CDATA[<pre>12</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>System.out.println(~4);</pre>]]></code>
+        <a><![CDATA[<pre>0</pre>]]></a>
+        <b><![CDATA[<pre>4</pre>]]></b>
+        <c><![CDATA[<pre>-3</pre>]]></c>
+        <d><![CDATA[<pre>-4</pre>]]></d>
+        <e><![CDATA[<pre>-5</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>int shift = -15;
+System.out.print(shift>>2);</pre>]]></code>
+        <a><![CDATA[<pre>0</pre>]]></a>
+        <b><![CDATA[<pre>-4</pre>]]></b>
+        <c><![CDATA[<pre>-3</pre>]]></c>
+        <d><![CDATA[<pre>3</pre>]]></d>
+        <e><![CDATA[<pre>4</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>System.out.println(Integer.MAX_VALUE << 1);</pre>]]></code>
+        <a><![CDATA[<pre>0</pre>]]></a>
+        <b><![CDATA[<pre>-1</pre>]]></b>
+        <c><![CDATA[<pre>-2</pre>]]></c>
+        <d><![CDATA[<pre>2</pre>]]></d>
+        <e><![CDATA[<pre>2147483646</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>System.out.println(Integer.MAX_VALUE << 31);</pre>]]></code>
+        <a><![CDATA[<pre>0</pre>]]></a>
+        <b><![CDATA[<pre>-1</pre>]]></b>
+        <c><![CDATA[<pre>-2</pre>]]></c>
+        <d><![CDATA[<pre>2</pre>]]></d>
+        <e><![CDATA[<pre>-2147483648</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>System.out.println(Integer.MAX_VALUE << 32);</pre>]]></code>
+        <a><![CDATA[<pre>0</pre>]]></a>
+        <b><![CDATA[<pre>-1</pre>]]></b>
+        <c><![CDATA[<pre>-2</pre>]]></c>
+        <d><![CDATA[<pre>2</pre>]]></d>
+        <e><![CDATA[<pre>2147483647</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>System.out.println(-1 >>> 1);</pre>]]></code>
+        <a><![CDATA[<pre>2147483647</pre>]]></a>
+        <b><![CDATA[<pre>0</pre>]]></b>
+        <c><![CDATA[<pre>-2</pre>]]></c>
+        <d><![CDATA[<pre>3</pre>]]></d>
+        <e><![CDATA[<pre>no output due to compiler error</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>char x = (char)((7<<3)-8); 
+out.println(x);</pre>]]></code>
+        <a><![CDATA[<pre>56</pre>]]></a>
+        <b><![CDATA[<pre>48</pre>]]></b>
+        <c><![CDATA[<pre>0</pre>]]></c>
+        <d><![CDATA[<pre>51</pre>]]></d>
+        <e><![CDATA[<pre>8</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>int e = (7 << 6 >> 7);
+out.println(e);</pre>]]></code>
+        <a><![CDATA[<pre>1</pre>]]></a>
+        <b><![CDATA[<pre>4</pre>]]></b>
+        <c><![CDATA[<pre>5</pre>]]></c>
+        <d><![CDATA[<pre>2</pre>]]></d>
+        <e><![CDATA[<pre>3</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>int q=17;
+int r=23;
+out.println(q|r&q&r);</pre>]]></code>
+        <a><![CDATA[<pre>12</pre>]]></a>
+        <b><![CDATA[<pre>20</pre>]]></b>
+        <c><![CDATA[<pre>17</pre>]]></c>
+        <d><![CDATA[<pre>19</pre>]]></d>
+        <e><![CDATA[<pre>23</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code segment
+to the right?</pre>]]></question>
+        <code><![CDATA[<pre>int x = 14, y = 21, z = 7;
+int a = x ^ y;
+int b = x | y;
+int c = x & y;
+int d = x ^ z & y | z;
+out.println(a + " " + b + " " + c);</pre>]]></code>
+        <a><![CDATA[<pre>31 27 4</pre>]]></a>
+        <b><![CDATA[<pre>11 27 5</pre>]]></b>
+        <c><![CDATA[<pre>4 27 31</pre>]]></c>
+        <d><![CDATA[<pre>27 31 4</pre>]]></d>
+        <e><![CDATA[<pre>5 27 31</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>int q = 17;
+int r = 23;
+out.println(q & r ^ 9 & q >> 3);</pre>]]></code>
+        <a><![CDATA[<pre>12</pre>]]></a>
+        <b><![CDATA[<pre>20</pre>]]></b>
+        <c><![CDATA[<pre>17</pre>]]></c>
+        <d><![CDATA[<pre>19</pre>]]></d>
+        <e><![CDATA[<pre>23</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>int a = 5;
+int b = 3;
+out.println(a>>2+3&b);</pre>]]></code>
+        <a><![CDATA[<pre>0</pre>]]></a>
+        <b><![CDATA[<pre>2</pre>]]></b>
+        <c><![CDATA[<pre>3</pre>]]></c>
+        <d><![CDATA[<pre>4</pre>]]></d>
+        <e><![CDATA[<pre>5</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+</practice>

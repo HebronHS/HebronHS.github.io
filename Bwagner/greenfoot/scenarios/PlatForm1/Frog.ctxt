@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Frog
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Frog\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Frog()
+comment1.text=\r\n\ Constructor\r\n
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ platformTest()
+comment3.text=\r\n\ Tests\ to\ see\ if\ the\ frog\ has\ collided\ with\ a\ platform.\r\n\ If\ the\ frog\ has\ landed\ on\ a\ TopPlatform\ it\ resets\ vertical\ and\ horizontal\ velocity\ to\ zero\r\n\ \ \ \ and\ sets\ the\ jumping\ flag\ to\ false.\r\n\ If\ the\ frog\ hits\ a\ BottomPlatform\ it\ sets\ the\ vertical\ velocity\ and\ gravity\ so\ the\ frog\r\n\ \ \ \ will\ fall\ straight\ down.\r\n
+comment4.params=
+comment4.target=void\ movementTest()
+comment4.text=\r\n\ Tests\ to\ see\ if\ the\ left\ or\ right\ arrow\ keys\ have\ been\ pressed.\r\n\ The\ jumping\ flag\ prevents\ a\ frog\ from\ changing\ directions\ or\ moving\ left\ or\ right\ \r\n\ while\ it\ is\ still\ in\ the\ air\ from\ a\ jump.\r\n
+comment5.params=
+comment5.target=void\ jumpTest()
+comment5.text=\r\n\ Tests\ to\ see\ if\ the\ up\ arrow\ key\ has\ been\ pressed.\ If\ the\ up\ key\ is\ pressed\ the\ frog\ jumps.\r\n\ The\ jumping\ flag\ prevents\ the\ frog\ from\ jumping\ while\ it\ is\ still\ in\ the\ air\ from\ the\ \r\n\ previous\ jump\ It\ can't\ jump\ again\ until\ it\ lands..\r\n
+comment6.params=
+comment6.target=void\ updateLocation()
+comment6.text=\r\n\ Updates\ the\ frogs\ location\ according\ to\ its\ current\ horizontal(dx)\ and\ vertical(dy)\r\n\ velocities.\ It\ also\ applies\ the\ force\ of\ gravity\ to\ the\ vertical\ velocity(dy).\r\n
+numComments=7

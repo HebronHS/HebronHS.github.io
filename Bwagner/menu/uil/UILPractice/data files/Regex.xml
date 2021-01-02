@@ -1,0 +1,269 @@
+<practice>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String stuff = "two three five seven";
+String[] words = stuff.split("\\s+");
+System.out.print( words.length );</pre>]]></code>
+        <a><![CDATA[<pre>1</pre>]]></a>
+        <b><![CDATA[<pre>0</pre>]]></b>
+        <c><![CDATA[<pre>2</pre>]]></c>
+        <d><![CDATA[<pre>7</pre>]]></d>
+        <e><![CDATA[<pre>4</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String start = "12.7 9.4 90";
+String[] elems = start.split("\\s+");
+double d;
+d = Double.parseDouble(elems[1]);
+System.out.print(d);</pre>]]></code>
+        <a><![CDATA[<pre>12.7</pre>]]></a>
+        <b><![CDATA[<pre>9.4</pre>]]></b>
+        <c><![CDATA[<pre>7.0</pre>]]></c>
+        <d><![CDATA[<pre>00.0</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to a runtime error</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String times;
+times = "7:48:1:09:08";
+String[] pieces = times.split(":");
+System.out.print(pieces[3]);</pre>]]></code>
+        <a><![CDATA[<pre>08</pre>]]></a>
+        <b><![CDATA[<pre>10</pre>]]></b>
+        <c><![CDATA[<pre>09</pre>]]></c>
+        <d><![CDATA[<pre>9</pre>]]></d>
+        <e><![CDATA[<pre>5</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String sample = "the_thirty_three";
+String[] parts = sample.split("h");
+System.out.print( parts.length );</pre>]]></code>
+        <a><![CDATA[<pre>0</pre>]]></a>
+        <b><![CDATA[<pre>3</pre>]]></b>
+        <c><![CDATA[<pre>4</pre>]]></c>
+        <d><![CDATA[<pre>t</pre>]]></d>
+        <e><![CDATA[<pre>e_t</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String names = "Bob Don J Tim";
+String[] chopped = names.split("\\s+");
+System.out.print(chopped.length);</pre>]]></code>
+        <a><![CDATA[<pre>2</pre>]]></a>
+        <b><![CDATA[<pre>4</pre>]]></b>
+        <c><![CDATA[<pre>5</pre>]]></c>
+        <d><![CDATA[<pre>There is no output due to syntax error.</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to an ArrayIndexOutOfBoundsException.</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String garbage = "851..983gh:23(10";
+String[] data = garbage.split("\\D+");
+System.out.print(data[1]);</pre>]]></code>
+        <a><![CDATA[<pre>983</pre>]]></a>
+        <b><![CDATA[<pre>..</pre>]]></b>
+        <c><![CDATA[<pre>8</pre>]]></c>
+        <d><![CDATA[<pre>5</pre>]]></d>
+        <e><![CDATA[<pre>gh:</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String trash = "ham+can--putt*=cut";
+String[] sp = trash.split("\\W+");
+System.out.print(sp[2]);</pre>]]></code>
+        <a><![CDATA[<pre>*=</pre>]]></a>
+        <b><![CDATA[<pre>can</pre>]]></b>
+        <c><![CDATA[<pre>putt</pre>]]></c>
+        <d><![CDATA[<pre>-</pre>]]></d>
+        <e><![CDATA[<pre>There is no output.</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String messy;
+messy = "6...56fg@71*&^14:";
+String[] res = messy.split( "\\D+" );
+System.out.print(res[3]);</pre>]]></code>
+        <a><![CDATA[<pre>:</pre>]]></a>
+        <b><![CDATA[<pre>71</pre>]]></b>
+        <c><![CDATA[<pre>7</pre>]]></c>
+        <d><![CDATA[<pre>14</pre>]]></d>
+        <e><![CDATA[<pre>*&^</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is the output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String b4 = "10the13new26xfiles00fringe";
+String[] chunks = b4.split("\\d+");
+System.out.print(chunks.length);</pre>]]></code>
+        <a><![CDATA[<pre>3</pre>]]></a>
+        <b><![CDATA[<pre>4</pre>]]></b>
+        <c><![CDATA[<pre>1</pre>]]></c>
+        <d><![CDATA[<pre>5</pre>]]></d>
+        <e><![CDATA[<pre>0</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is the output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String b4 = "P@55W()rded";
+String[] broken = b4.split("\\W");
+System.out.print(broken.length);
+for(String s: broken)
+  System.out.print(s);</pre>]]></code>
+        <a><![CDATA[<pre>5@()</pre>]]></a>
+        <b><![CDATA[<pre>4P55Wrded</pre>]]></b>
+        <c><![CDATA[<pre>3P55Wrded</pre>]]></c>
+        <d><![CDATA[<pre>1P@55W()rded</pre>]]></d>
+        <e><![CDATA[<pre>6PWrded</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String s = "al4?ph1z..lag?sauce";
+String[] arr = s.split("[\\d]\\?");
+System.out.println(arr.length);</pre>]]></code>
+        <a><![CDATA[<pre>1</pre>]]></a>
+        <b><![CDATA[<pre>2</pre>]]></b>
+        <c><![CDATA[<pre>3</pre>]]></c>
+        <d><![CDATA[<pre>5</pre>]]></d>
+        <e><![CDATA[<pre>19</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String s="Now/is/the/time";
+String[] t =s.split("[\\Wi]");
+System.out.print(t.length);</pre>]]></code>
+        <a><![CDATA[<pre>6</pre>]]></a>
+        <b><![CDATA[<pre>4</pre>]]></b>
+        <c><![CDATA[<pre>2</pre>]]></c>
+        <d><![CDATA[<pre>3</pre>]]></d>
+        <e><![CDATA[<pre>1</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String s = "ALPHA*BETA*GAMMA";
+String t[] = s.split("A*");
+out.println(t.length + t[3]);</pre>]]></code>
+        <a><![CDATA[<pre>4MM</pre>]]></a>
+        <b><![CDATA[<pre>5MM</pre>]]></b>
+        <c><![CDATA[<pre>6TA*G</pre>]]></c>
+        <d><![CDATA[<pre>5*G</pre>]]></d>
+        <e><![CDATA[<pre>16P</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String good = "/long/neck/dinos";
+String[] bigs = good.split("[//]");
+System.out.println(bigs[3]);</pre>]]></code>
+        <a><![CDATA[<pre>long</pre>]]></a>
+        <b><![CDATA[<pre>neck</pre>]]></b>
+        <c><![CDATA[<pre>dinos</pre>]]></c>
+        <d><![CDATA[<pre>/</pre>]]></d>
+        <e><![CDATA[<pre>lnd</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String item = "Austin Texas";
+boolean m = item.matches("A.*.*.s");
+System.out.print(m);</pre>]]></code>
+        <a><![CDATA[<pre>false</pre>]]></a>
+        <b><![CDATA[<pre>true</pre>]]></b>
+        <c><![CDATA[<pre>0</pre>]]></c>
+        <d><![CDATA[<pre>There is no output due to a syntax error.</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to a runtime error.</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String s = "wearerthechamps";
+out.print(s.matches(".*ec.*"));
+out.print(" ");
+out.print(s.matches(".*a.+p.*"));</pre>]]></code>
+        <a><![CDATA[<pre>true true</pre>]]></a>
+        <b><![CDATA[<pre>false false</pre>]]></b>
+        <c><![CDATA[<pre>true false</pre>]]></c>
+        <d><![CDATA[<pre>false true</pre>]]></d>
+        <e><![CDATA[<pre>true</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>boolean p = "Hello".matches(".*");
+boolean q = "Hello".matches("\\w+");
+System.out.println("" + p + q);</pre>]]></code>
+        <a><![CDATA[<pre>truefalse</pre>]]></a>
+        <b><![CDATA[<pre>falsefalse</pre>]]></b>
+        <c><![CDATA[<pre>falsetrue</pre>]]></c>
+        <d><![CDATA[<pre>truetrue</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to a syntax error.</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String s23 = "4";
+System.out.print(s23.matches("\\d"));
+System.out.print(s23.matches("\\D")); 
+System.out.print(s23.matches("\\w"));</pre>]]></code>
+        <a><![CDATA[<pre>truefalsefalse</pre>]]></a>
+        <b><![CDATA[<pre>falsetruefalse</pre>]]></b>
+        <c><![CDATA[<pre>truefalsetrue</pre>]]></c>
+        <d><![CDATA[<pre>truetruetrue</pre>]]></d>
+        <e><![CDATA[<pre>falsefalsetrue</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Which of the following could replace <*1> in
+the code to the right so that tally would 
+increase by one each time the if statement
+was found true?</pre>]]></question>
+        <code><![CDATA[<pre>String x = "whipyoohakbyoohpubyakpybabhdak";
+x=x.replaceAll("ooh","");
+String[] list = x.split("[pub]");
+String look = "yak";
+Integer tally = new Integer(0);
+for(String that : list)
+    if(look.matches(that)) 
+        <*1> 
+
+out.println(tally); // 1</pre>]]></code>
+        <a><![CDATA[<pre>tally++;</pre>]]></a>
+        <b><![CDATA[<pre>tally = tally + 1;</pre>]]></b>
+        <c><![CDATA[<pre>tally = new Integer(tally.intValue()+1);</pre>]]></c>
+        <d><![CDATA[<pre>A and B only</pre>]]></d>
+        <e><![CDATA[<pre>A, B, and C</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Assuming that <*1> is filled correctly,
+what is output by the line marked //1 
+in the client code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String x = "whipyoohakbyoohpubyakpybabhdak";
+x=x.replaceAll("ooh","");
+String[] list = x.split("[pub]");
+String look = "yak";
+Integer tally = new Integer(0);
+for(String that : list)
+    if(look.matches(that)) 
+        <*1> 
+
+out.println(tally); // 1</pre>]]></code>
+        <a><![CDATA[<pre>3</pre>]]></a>
+        <b><![CDATA[<pre>5</pre>]]></b>
+        <c><![CDATA[<pre>4</pre>]]></c>
+        <d><![CDATA[<pre>2</pre>]]></d>
+        <e><![CDATA[<pre>1</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+</practice>

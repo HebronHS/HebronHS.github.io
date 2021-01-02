@@ -1,0 +1,94 @@
+<practice>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int sum = 0;
+for(int i = 0; i < 10; i++)
+sum += i * 6;
+out.println(sum);</pre>]]></code>
+        <a><![CDATA[<pre>54</pre>]]></a>
+        <b><![CDATA[<pre>45</pre>]]></b>
+        <c><![CDATA[<pre>270</pre>]]></c>
+        <d><![CDATA[<pre>10</pre>]]></d>
+        <e><![CDATA[<pre>330</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int i = 9;
+double d = 4.5;
+out.printf("%.1f",i + d);</pre>]]></code>
+        <a><![CDATA[<pre>13</pre>]]></a>
+        <b><![CDATA[<pre>13.5</pre>]]></b>
+        <c><![CDATA[<pre>14.0</pre>]]></c>
+        <d><![CDATA[<pre>14</pre>]]></d>
+        <e><![CDATA[<pre>13.0</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code segment to the right?]]></question>
+        <code><![CDATA[<pre>double d1 = 9.7;
+double d2 = 10.3;
+out.printf("%.1f",d1 - d2);</pre>]]></code>
+        <a><![CDATA[<pre>-0.6</pre>]]></a>
+        <b><![CDATA[<pre>1.4</pre>]]></b>
+        <c><![CDATA[<pre>0.6</pre>]]></c>
+        <d><![CDATA[<pre>-1.4</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to an error.</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>char c = 'd';
+double d = 0.165;
+out.printf("%.1f",c * d);</pre>]]></code>
+        <a><![CDATA[<pre>11.4</pre>]]></a>
+        <b><![CDATA[<pre>16.5</pre>]]></b>
+        <c><![CDATA[<pre>11.2</pre>]]></c>
+        <d><![CDATA[<pre>16.4</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to an error.</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int a;
+int x = 6;
+int y = 10;
+int z = 8;
+a = x + y + z % 5;
+out.println(a);</pre>]]></code>
+        <a><![CDATA[<pre>2</pre>]]></a>
+        <b><![CDATA[<pre>4</pre>]]></b>
+        <c><![CDATA[<pre>3</pre>]]></c>
+        <d><![CDATA[<pre>19</pre>]]></d>
+        <e><![CDATA[<pre>5</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int a;
+int x = 18;
+int y = 3;
+int z = 50;
+a = y*z+(int)Math.pow(x%y,z/(2*y));
+out.println(a);</pre>]]></code>
+        <a><![CDATA[<pre>150</pre>]]></a>
+        <b><![CDATA[<pre>151</pre>]]></b>
+        <c><![CDATA[<pre>0</pre>]]></c>
+        <d><![CDATA[<pre>1679766</pre>]]></d>
+        <e><![CDATA[<pre>1</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int sum = 5000;
+for(int i=25; i<100; i+=10)
+sum-=i*2;
+out.println(sum);</pre>]]></code>
+        <a><![CDATA[<pre>5480</pre>]]></a>
+        <b><![CDATA[<pre>4520</pre>]]></b>
+        <c><![CDATA[<pre>480</pre>]]></c>
+        <d><![CDATA[<pre>5960</pre>]]></d>
+        <e><![CDATA[<pre>4040</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+</practice>

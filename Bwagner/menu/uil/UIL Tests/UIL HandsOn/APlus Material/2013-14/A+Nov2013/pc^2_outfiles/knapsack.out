@@ -1,0 +1,27 @@
+knapsack capacity = 5
+total weight = 4
+total value = 9
+Item #1 - v=5:w=3
+Item #3 - v=4:w=1
+
+knapsack capacity = 6
+total weight = 6
+total value = 14
+Item #3 - v=4:w=3
+Item #4 - v=7:w=2
+Item #5 - v=3:w=1
+
+knapsack capacity = 10
+total weight = 10
+total value = 20
+Item #1 - v=9:w=2
+Item #2 - v=4:w=5
+Item #3 - v=7:w=3
+
+knapsack capacity = 100
+total weight = 99
+total value = 223
+Item # 4 - v=73:w=61
+Item # 6 - v=52:w=11
+Item #10 - v=16:w=4
+Item #12 - v=82:w=23

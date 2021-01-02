@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Review Test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<BASE href="">
+<link rel="stylesheet" href="../css/TakeTest.css">
+
+<script type="text/javascript" src="../scripts/pdfobject.js"></script>
+
+<script type="text/javascript">
+
+function embedPDF()
+{
+		var file = "data/" + name + ".pdf";
+		var myPDF = new PDFObject({ 
+	
+		  url: file,
+		  pdfOpenParams: { pagemode: 'none', scrollbars: '1', toolbar: '0', statusbar: '0', messages: '0', navpanes: '0' }
+	
+		}).embed("content");  
+}
+</script>
+
+
+</head>
+
+<body>
+
+Unable to open file!

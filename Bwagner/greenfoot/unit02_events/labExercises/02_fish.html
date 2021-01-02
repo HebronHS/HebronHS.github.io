@@ -1,0 +1,178 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Fish</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/Fish.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Fish</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Fish</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Fish Scenario, and click Open.</p></li>
+</ol>
+
+<h1>Fish class</h1>
+<p>The purpose of the <strong>Fish</strong> class is demonstrate how to check for keyboard events in a program. </p>
+
+<ol id="csList">
+<li><p>Select Greenfoot Class Documentation from the Help menu. Review the documentation for the <strong>Greenfoot</strong> class. Look for methods that can be used with keyboard input.</p></li>
+<li><p>Go back to the Greenfoot environment. Compile and run the Fish Scenario. While the program is running press the left and right arrow keys. </p></li>
+<p>The act method uses the Greenfoot method <strong>isKeyDown</strong> to check for keyboard input.</p>
+<li><p>Click on the fish. What happens?</p></li>
+<li><p>Look at the following code.</p>
+<div id="csCode" style="width:625px"><pre>
+if(Greenfoot.mouseClicked(<div id="csHighlight"><pre>this</pre></div>))
+{
+    getImage().mirrorHorizontally();              // flip image horizontally
+}
+</pre></div>
+<p>Notice the use of the Java keyword <strong>this</strong>. The <strong>this</strong> keyword is important in Java because it allows a class to refer to itself.
+The code is basically saying "if the mouse was clicked on a Fish flip its image".</p></li>
+</ol>
+
+<br><hr>
+
+<h1>Program Modifications</h1>
+<ol id = "csList">
+<li><p>Add code to the Fish class so that a fish can move up and down when the up and down arrow keys are pressed. This can be accomplished 
+       using these steps:</p> 
+       <ul id="csList">
+             <li><p>Copy the two if statements that check to see if the "left" or "right" arrow keys have been pressed and paste them
+                    in the act method below the two if statements just copied. </p></li>
+             <li><p>Change the check for the "left" arrow key to the "up" arrow key and the check for the "right" arrow key to the "down" arrow key. </p></li>
+             <li><p>In the if statement for the "up" arrow key, change the following line of code from</p>
+                  <div id="csCode" style="width:350px"><pre>setLocation(getX() - speed, getY());</pre></div>
+             <p>to</p>
+                  <div id="csCode" style="width:350px"><pre>setLocation(getX(), getY()  - speed);</pre></div>
+            </li>
+            <li><p>In the if statement for the "down" arrow key, change the following line of code from</p>
+                  <div id="csCode" style="width:350px"><pre>setLocation(getX() + speed, getY());</pre></div>
+             <p>to</p>
+                  <div id="csCode" style="width:350px"><pre>setLocation(getX(), getY() + speed);</pre></div>
+            </li>
+      </ul>
+</p></li>
+<li><p>Add the following code to the Fish class's act method.</p>
+<div id="csCode" style="width:625px"><pre>
+if(Greenfoot.isKeyDown("f"))
+{
+   speed++;     // faster
+}
+
+if(Greenfoot.isKeyDown("s"))
+{
+   speed--;     // slower
+   if(speed &lt; 0)   // no negative speeds
+      speed = 0;
+}
+</pre></div>
+</li>
+<li>
+<p>Compile and run the program. Press the "f" key to increase the fish's speed and press the "s" key to decrease its speed.</p>
+<p>There is a problem with this code. When a user presses the "f" key the speed of the fish is suppose to increase by one. Did you notice, however, that the speed
+   seemed to increase by a lot more than one. The reason for this huge increase in speed is because of the way the <strong>isKeyDown</strong> method works.  The method isKeyDown 
+   returns true while the key is pressed. While you hold down the "f" key the method isKeyDown continually returns true. This will cause the speed variable to be incremented numerous 
+   times before you are able to release the key. To fix this problem we can use a different Greenfoot method named <strong>getKey</strong>.</p></li>
+   <li><p>Replace the code added in the previous step with the following code.</p></li>
+   
+   <div id="csCode" style="width:625px"><pre>
+String key = Greenfoot.<div id="csHighlight"><pre>getKey()</pre></div>;   // get name of last key that was pressed
+if(key != null && key.equals("f"))  
+{
+   speed++;    // faster
+}
+
+if(key != null && key.equals("s"))
+{
+   speed--;    // slower
+   if(speed &lt; 0)  // no negative speeds
+      speed = 0;
+}
+</pre></div>
+<li><p>The <strong>getKey</strong> method returns the name of the last key that was pressed. If more than one key was pressed, this method returns <strong>only the most recently pressed key</strong>.
+The method returns <strong>null</strong> if no keys were pressed. 
+The method returns null if no keys were pressed because of this the if statements need to check to see if the value of key is not null.
+(The keyword <strong>null</strong> is used in Java to signify that an object variable, like key,
+does not reference an object.)</p>
+<div id="csCode" style="width:625px"><pre>if(<div id = "csHighlight"><pre>key != null</pre></div> && key.equals("f"))  
+{
+   speed++;    // faster
+}
+</pre></div>
+<p>Without this check the code would terminate with a runtime error if no key was pressed. There is, however, a trick you can do to eliminate the need for this check.
+   Look at the following code:</p>
+      <div id="csCode" style="width:625px"><pre>
+String key = Greenfoot.<div id="csHighlight"><pre>getKey()</pre></div>;   // get name of last key that was pressed
+if("f".equals(key))  
+{
+   speed++;    // faster
+}
+
+if("s".equals(key))
+{
+   speed--;    // slower
+   if(speed &lt; 0)  // no negative speeds
+      speed = 0;
+}
+</pre></div>
+<p>By flipping the strings in the equals statements the check for null is no longer necessary. When you create a string
+      literal in a program like "f" and "s" Java creates a String object in memory so 
+      they are never null.</p>
+</li>
+<li><p>Currently when the user presses the left arrow key the fish will move to the left (west) but the movement is backward. In this last
+       modification to the program, we are going to modify the fish's behavior so that when the "left" arrow key is pressed the 
+       fish's image will flip horizontally so that the fish is facing west and when the "right" arrow key is pressed the 
+       the fish will face back to the east. To accomplish this do the following:</p>
+       <ul id="csList">
+        <li><p>Add a new instance variable of type String named <strong>direction</strong> and assign it the string value "right". Remember
+               that instance variables are defined at the top of the class. This gives variables global scope which means they can be used in any method within 
+               the class.
+        </p></li>
+        <li><p>Replace the <strong>act</strong> method with following code. The changes are highlighted in red.</p>
+            <div id="csCode" style="width:550px"><pre>public void act() 
+{
+      if(Greenfoot.isKeyDown("right"))
+      {
+            setLocation(getX() + speed, getY());
+            <div id="csHighlight"><pre>if(direction.equals("left"))    
+                  getImage().mirrorHorizontally();                   
+            direction = "right";
+      </pre></div>}
+      
+      if(Greenfoot.isKeyDown("left"))
+      {
+            setLocation(getX() - speed, getY());
+            <div id="csHighlight"><pre>if(direction.equals("right"))  
+                  getImage().mirrorHorizontally();               
+            direction = "left";
+      </pre></div>}
+      
+      if(Greenfoot.isKeyDown("up"))
+      {
+            setLocation(getX(), getY() - speed);
+      }
+      
+      if(Greenfoot.isKeyDown("down"))
+      {
+            setLocation(getX(), getY() + speed);
+      }
+      
+      if(Greenfoot.mouseClicked(this))
+      {
+            getImage().mirrorHorizontally();
+      }
+}</pre></div>
+<p>The code above uses the instance variable <strong>direction</strong> to keep track of the
+   horizontal direction a fish is facing. If a fish's direction variable is set to "right" and the
+   left arrow key is pressed, then the fish image is flipped so that the image faces west.
+   The code finishes by setting the direction variable to "left". If a fish's direction variable is set to "left" and the
+   right arrow key is pressed, then the fish image is flipped so that the image faces east and
+   the direction variable is set to "right".</p>
+</li></ul>
+</li>
+
+</ol>
+	<br>
+</div>	
+

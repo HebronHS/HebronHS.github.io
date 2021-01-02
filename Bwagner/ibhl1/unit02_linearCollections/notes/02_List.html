@@ -1,0 +1,253 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csHeader">Linear Collection: List</div>
+	<div id="obj">
+		<table>
+			<tr><th>What You Will Learn</th></tr>
+			<tr>
+			    <td>
+					<ul>		
+          				<li></li>
+						<li></li>
+						<li></li>		
+					</ul>
+				</td>
+			</tr>		
+		</table>
+</div>	
+<div id="csContent"> 	
+<h1>Linear Collection: List</h1>
+      <p>A <strong>linear collection</strong> is a collection that is ordered 
+        by position. Each item except the first has a unique predecessor, and 
+        each item except the last has a unique successor.</p>
+      <p><img src="images/linearCollection.gif" width="400" height="100"></p>
+      <p>You are already familiar with two linear collections: array and ArrayList. 
+        In this unit, we introduce another linear collection called a <strong>LinkedList</strong>.</p>
+      <p>Both the ArrayList and the LinkedList utilize the <strong>List</strong> 
+        interface that extends the Collection interface. The List 
+        interface adds position-oriented operations, including the ability 
+        to insert an element, get an element, as well as remove or change an element. 
+      </p>
+	  
+      <h1>List Interface</h1>
+      <h3>interface java.util.List&lt;E&gt;</h3>
+      <table id="csTable">
+        <tr> 
+          <td width="40%">int <strong>size</strong>()</td>
+          <td width="60%">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>boolean <strong>add</strong>(E obj)</td>
+          <td>appends obj to end of list; returns true</td>
+        </tr>
+        <tr> 
+          <td>void <strong>add</strong>(int index, E obj)</td>
+          <td>inserts obj at position index</td>
+        </tr>
+        <tr> 
+          <td>E <strong>get</strong>(int index)</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>E <strong>set</strong>(int index, E obj)</td>
+          <td>replaces the element at position index with 
+            obj; returns the element formerly at the specified position</td>
+        </tr>
+        <tr> 
+          <td>E <strong>remove</strong>(int index)</td>
+          <td>removes element from position index, moving 
+            elements at position index + 1 and higher to the left (subtracts from 
+            their indices) and adjusts size; returns the element formerly at the 
+            specified position</td>
+        </tr>
+        <tr> 
+          <td>Iterator &lt;E&gt; <strong>iterator</strong>()</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>ListIterator &lt;E&gt; <strong>listIterator</strong>()</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      <p>In addition to the methods introduced through the List interface 
+        the <strong>LinkedList</strong> class also implements the following methods that 
+        provide additional operations for working with the beginning and end of 
+        a list.</p>
+      <h2>Additonal LinkedList methods</h2>
+      <table id="csTable">
+        <tr> 
+          <td>void <strong>addFirst</strong>(E obj)</td>
+        </tr>
+        <tr> 
+          <td>void <strong>addLast</strong>(E obj)</td>
+        </tr>
+        <tr> 
+          <td>E <strong>getFirst</strong>()</td>
+        </tr>
+        <tr> 
+          <td>E <strong>getLast</strong>()</td>
+        </tr>
+        <tr> 
+          <td>E <strong>removeFirst</strong>()</td>
+        </tr>
+        <tr> 
+          <td>E <strong>removeLast</strong>()</td>
+        </tr>
+      </table>
+      <p>Since both the ArrayList and LinkedList implement the 
+         List interface their behavior is similar.</p>
+      <h3><strong>Creating a Linked List Object</strong></h3>
+      <div id="csCode"><pre>LinkedList &lt;Integer&gt; list = new LinkedList();
+</pre>
+      </div>
+      <p><strong>or</strong></p>
+      <div id="csCode"><pre>List &lt;Integer&gt; list = new LinkedList();
+</pre>
+      </div>
+      <br> 
+	  <h3>Adding an Object to a LinkedList</h3>
+      <div id="csCode"><pre>for(int i=0; i &lt; 10; i++)
+{
+   list.add(new Integer(i));
+}</pre>
+      </div>
+      <p><strong>or</strong></p>
+      <div id="csCode"><pre>for(int i=0; i &lt; 10; i++)
+{
+   list.add(i);  <font color="#009933"> // autoboxing</font>
+}</pre>
+      </div>
+      <p>*For more examples refer to the samples section.</p>
+	  
+	  
+ <h1>Iterators</h1>
+      <p>Java provides two methods or techniques for traversing the contents of 
+        a list. The first approach is to use methods from the List interface 
+        such as size and get. The second and more functional 
+        approach is to use a mechanism called an <strong>iterator</strong>.</p>
+      <p>An <strong>iterator</strong> is an object associated with a collection 
+        that makes it possible to traverse the collection (that is, to visit each 
+        of the items in the collection in turn). To provide consistence between 
+        all of the collections in the Java Collections Framework (JCF), code written 
+        using iterators will work for any type of collection (ArrayList, LinkedList, 
+        TreeSet, and HashSet)..</p>
+      <p>An iterator's current position is always in one of three places:</p>
+      <div id="csList"><ol>
+        <li>Just before the first item</li>
+        <li>Between two adjacent items</li>
+        <li>Just after the last item</li>
+      </ol></div>
+      <p>Initially, when an iterator is first instantiated, the position is immediately 
+        before the first item in the list. From this position the user can either 
+        navigate to another position or modify the list in some way. For lists, 
+        java.util provides two types of iterators, a <strong>simple iterator</strong> 
+        and a <strong>list iterator</strong>. </p>
+		
+      <h3>Simple Iterator</h3>
+      <p>In Java, a simple iterator is an object that responds to messages specified 
+        in the interface java.util.Iterator.</p>
+      <p><strong>java.util.Iterator&lt;E&gt;</strong></p>
+	  
+      <table id="csTable">
+        <tr> 
+          <td width="30%">boolean <strong>hasNext()</strong> </font></td>
+          <td width="70%">returns true if there are any items following 
+            the current position</td>
+        </tr>
+        <tr> 
+          <td>E <strong>next()</strong></td>
+          <td><strong>Precondition</strong>: <strong>hasNext</strong> returns true.<br>
+            Throws a NoSuchElementException if hasNext returns false<br>
+            Returns the next item and advances the position</td>
+        </tr>
+        <tr> 
+          <td>void <strong>remove()</strong></td>
+          <td><p><strong>Precondition</strong>: next has recently been called.<br>
+              Throws an IllegalStateException if the next method has 
+              not yet been called or if the remove method has already been called 
+              after the last call to the next method<br>
+              Removes the item returned by the most recent call of next</p>
+            </td>
+        </tr>
+      </table>
+	  
+      <p>You create an iterator object by sending the message <strong>iterator</strong> 
+        to list as show in the following code segment:</p>
+      <div id="csCode">
+        <pre>List &lt;String&gt; myList = new LinkedList();
+Iterator &lt;String&gt; iter = myList.iterator();   <font color="#006600">// get iterator from list</font>
+</pre>
+      </div>
+      <p>*The method <strong>iterator</strong> is provided through the List interface.</p>
+      <p>Once an iterator object has been retrieved from a list the methods <strong>hasNext</strong> 
+        and <strong>next</strong> are used for navigating the list. The method 
+        <strong>remove</strong> will mutate the underlying list.</p>
+      <p>The code segment below demonstrates a traversal of a list to display 
+        its contents using an iterator:</p>
+      <div id="csCode"><pre>
+while(iter.hasNext())
+{
+   System.out.println(iter.next());
+}</pre>
+</div>
+      <p>The <strong>enhanced for loop</strong> is simply
+        a condensed version of an iterator block. Refer to the samples below.</p>
+      <p><strong>Iterator version</strong></p>
+      <div id="csCode"><pre>Iterator&lt;String&gt; iter = myList.iterator();
+while(iter.hasNext())
+{
+   String str = iter.next();  <font color="#006600">// casting not necessary because of generics</font>
+   <font color="#006600">// Process element</font>
+}</pre>
+</div>
+      <p><strong>Enhanced for loop version</strong></p>
+      <div id="csCode"><pre>for(String str : myList)
+{
+   <font color="#006600">// Process element</font>
+}</pre>
+</div>
+      <br>
+      <p>Note that simple iterators are not restricted to lists but can be used 
+        with any other Java collections, although the method remove might 
+        not be supported by some implementations.</p>
+		
+      <h3>ListIterator</h3>
+      <p>The <strong>ListIterator</strong> interface extends the Iterator 
+        interface to support adding or changing elements in the underlying collection. 
+        The java.util.ListIterator&lt;E&gt; provides two-way traversal of a list 
+        (traverse list in reverse order).</p>
+      <p><strong>java.util.ListIterator&lt;E&gt; extends java.util.Iterator&lt;E&gt;</strong></p>
+      <table id="csTable">
+        <tr> 
+          <td width="40%">void <strong>add</strong>(E obj)</font></td>
+          <td width="69%">adds obj before the element that will by returned by next</td>
+        </tr>
+        <tr> 
+          <td>void <strong>set</strong>(E obj)</td>
+          <td>replaces the last element returned by next with obj</td>
+        </tr>
+      </table>
+	  
+      <p>The following source code demonstrates the use of a <strong>ListIterator</strong>:</p>
+      <div id="csCode"><pre>
+ListIterator&lt;String&gt; iterator = list.listIterator();
+...
+while (iterator.hasNext()) 
+{
+   String element = iterator.next();
+   if(element.equals(&quot;Elizabeth Smith&quot;))
+       element.set(&quot;Elizabeth Bailey&quot;);  <font color="#006600">// modify element</font>
+}</pre>
+</div>
+      <h1>Comparison of ArrayList and LinkedList classes</h1>
+      <p>As stated previously there are two general-purpose List implementations 
+        in the Collections Framework: <strong>ArrayList</strong> and <strong>LinkedList</strong>. 
+        Which of the two List implementations you use depends on your 
+        specific needs. If you need to support random access, without inserting 
+        or removing elements from any place other than the end, then ArrayList 
+        offers the optimal collection. If, however, you need to frequently add 
+        and remove elements from the middle of the list and only access the list 
+        elements sequentially, then LinkedList offers the better implementation.</p>
+
+<br>
+</div>

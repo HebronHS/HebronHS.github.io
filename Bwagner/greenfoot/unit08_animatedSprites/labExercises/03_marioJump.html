@@ -1,0 +1,148 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Mario Jump</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the scenario: <a href="greenfoot/scenarios/MarioJump.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Mario Jump</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Mario Jump</strong> and paste it in your <strong>myGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Mario Jump scenario, and click Open.</p></li>
+</ol>
+<br>
+
+<p>In this lesson features of the <strong>AnimatedActor</strong> class are demonstrated by animating a Mario actor as he moves.</p>
+
+<h1>Mario Sprite Sheet</h1>
+<p>The mario sprite sheet consists of 9 frames. The frames all face to the right and are numbered from 0 to 8.</p>
+   
+<div><img src="greenfoot/images/marioSheet1.png"></div>
+
+<h1>Mario Class</h1>
+  <p>The Mario class's <strong>movementTest</strong> method is responsible for 
+    allowing a Mario object to move horizontally within the world. As mario 
+    moves he is also animated using the sprite sheet frames. When he moves to the
+    right frames 0 through 8 are used to give him the illusion of walking. When mario turns to the left
+    the same frames are used to animate him but they are flipped horizontally using the GreenfootImage class's
+    method <strong>mirrorHorizontally</strong> so that the images are facing left.
+    The method movementTest is shown below. Study the 
+    code until you have a good understanding of how it works.</p>
+ 
+ <div><img src="greenfoot/images/Mario_02.png"></div>  
+    
+<h1>Improved Collision Detection</h1> 
+<p>Run the program. Use the up arrow key for jumping. Have mario jump onto the platform and
+       then from the platform have him jump so that he lands on the ground.</p>
+	 <p>If you look closely you will see something strange when mario lands on the ground. If you
+       don't see it try slowing down the frame rate just before he lands. What you will see is that
+       mario actually goes below the top of ground for one frame and then pops back up so that he is positioned correctly
+       on top of the ground.</p></li>
+    <p>The reason this occurs can best be explained by looking at an example.</p>
+   <img src="greenfoot/images/MarioCollision1.png" width="40%" height="40%" style="margin-right:20px">
+   <img src="greenfoot/images/MarioCollision2.png" width="40%" height="40%">
+   <p>In this example, mario has been falling after jumping off of a platform. As gravity applies its  
+      downward force to mario his vertical velocity(dy) has been accelerating each time frame. In the illustration, he has
+      reached a y-coordinate 20px above the ground (360px). The reason that he will go below the top of the ground is because
+      his current vertical velocity(dy) is equal to 30px, therefore when dy is applied to his current y-coordinate he will move
+      10px below the top of the ground before a collision has been detected. This distance is marked by the yellow line.</p></li>
+      <h3>Two Collision Detection Strategies</h3>
+      <p>In game programming, there are two approaches to handling collisions. 
+      The first approach,
+      and the one we are currently using, is to check to see if a <strong>collision has occurred</strong> and then respond
+      to it. The method <strong>collideWithGroundTest</strong> below implements the check for collision after it has occurred approach.</p> 
+     <div><img src="greenfoot/images/Mario_03.png"></div> 
+     <p>The if statement is true when mario's y-coordinate is greater than or equal to the top of the ground's
+        y-coordinate. Because there is a good chance mario is below the top of the ground when the 
+        collision is detected the <strong>setLocation</strong> method is used to move mario up so that he is position correctly on top of the ground.  
+      
+    <p>The second approach, is to check to see if a <strong>collision is going to occur</strong> during the current time cycle so you can respond to it before the
+      collision actually occurs. The method <strong>willCollideWithGroundTest</strong> below implements the check to see if a collision is going to 
+      occur approach.</p>
+      
+      <div><img src="greenfoot/images/Mario_04.png"></div>
+      <p>The if statement is true when mario's y-coordinate <strong>plus his current vertical velocity(dy)</strong> will cause him to collide with
+         the ground. Since the check for a collision occurs before mario actually moves the method is able to 
+         recalculate the vertical velocity(dy) so that it is equal to the distance from mario's feet to the
+         top of the ground. The new dy value can then be applied to his current y-coordinate so that it positions him correctly on top of the ground.</p> 
+      <h3>Demonstration</h3>
+      <p>In the Mario class's act method, the method <strong>willCollideWithGroundTest</strong>
+             is commented out. Remove the comment symbols "//" and place them in front of the method
+             collideWithGroundTest so willCollideWithGroundTest will be executed instead of 
+             collideWithGroundTest.</p>
+
+         <div><img src="greenfoot/images/Mario_05.png"></div> 
+         <p>Run the program again and notice that mario will not go below the top of the ground when it lands
+            after a jump.</p>
+      <h1>Program Modifications</h1>
+      <ol id="csList">
+      <li><p>In the MyWorld constructor create two <strong>Elevator</strong> objects. Add the first object at location
+             (216, 260) and the second object at location (385, 260).</p></li>
+      <li><p>An Elevator object is a special type of Platform that will slowly lower Mario
+             to the ground when it is activated. When the elevator reaches the ground it will automatically drop Mario
+             off and return to its starting position.</p>
+      <p>Your task is to complete the method <strong>elevatorTest</strong> in the Mario class.
+         This method should test to see if the "down" arrow key has been pressed and that Mario
+         is standing on an elevator. If both these conditions are true the method should
+         activate the elevator movement by calling the Elevator class's <strong>goingDown</strong> method. To
+         have Mario go down with the elevator Mario's vertical velocity(dy) should be set to 1 within the body of the if statement.</li>
+      </ol>
+      <h3>Things to Consider</h3>
+      <p>The Greenfoot class's <strong>getKey</strong> method can only be called one time each game loop cycle. The method
+         jumpTest already makes a call to getKey and stores it's result in an instance variable named 
+         <strong>key</strong>. Therefore, the elevatorTest method cannot make a call to the getKey method, instead it should just test the value stored in the <strong>key</strong> variable
+         to see if it equals "down".
+      <p>In order to call the Elevator class's <strong>goingDown</strong> method the elevatorTest method needs a reference
+         to the elevator mario is standing on. This can be achieved with the following code:</p>
+
+      <div id="csCode"><pre> Actor actor = getOneObjectAtOffset(0, getHeight()/2 + 5, Elevator.class);</pre></div>
+
+      <p>The method <strong>getOneObjectAtOffset</strong> looks for an object of the Elevator class relative to Mario's current (x,y) location.
+         In this case, the method is looking for an elevator just below mario's feet.</p>
+      <p>If the getOneObjectAtOffset method finds an elevator at the specified location then it returns a reference to it.
+         However, the method does not return an Elevator object like you might expect, but instead
+         returns a reference to an Actor object. There is a reason for this oddity but it is beyond the scope of our discussion.
+         What you need to know is although the code says that the object being returned by the getOneObjectAtOffset method
+         is an Actor we know that it is really an Elevator object because that is what we specified in the
+         getOneObjectAtOffset method's parameter list.</p>
+         
+         <div id="csCode"><pre>Actor actor = getOneObjectAtOffset(0, getHeight()/2 + 5, <span id="csHighlight"><pre>Elevator.class</pre></span>);</pre></div>
+         
+         <p>This would not be a problem if all we were going
+         to use were Actor methods, but we need to call the <strong>goingDown</strong> method which belongs to the Elevator class.  
+         Therefore, we need to add the following line of code that <strong>casts</strong> the Actor object to an
+         Elevator object which can then be stored in an Elevator variable.</p>
+         
+         <div id="csCode"><pre>Elevator elevator = <span id="csHighlight"><pre>(Elevator)</pre></span>actor;</pre></div>
+         
+         <p>The reason that casting is necessary is because the Java compiler cannot determine the
+            actual class type of an object. Java can only determine this while the program is running.
+            So casting is a programmer's way of telling the compiler which class an object belongs to so
+            that the compiler does not flag it as an error. Of course, casting only works when the object being cast is actually an object of the specified class. 
+
+         <p>After casting, it is important that the elevatorTest method test to see if there is actually an elevator
+            under mario's feet. The getOneObjectAtOffset will return a value of <strong>null</strong> if it does not find an
+            object of the specified class, in our case an Elevator object. The following code performs this test:
+
+         <div id="csCode"><pre>if(elevator != null)      // if elevator exists
+{
+            
+}</pre></div>
+
+         <p>The following pseudocode summarizes the steps needed to make an elevator move.</p>
+
+<div id="csOutput" style="width:760px; font-size: 1.0em"><pre>if <strong>key</strong> equals "down" then
+   get elevator below mario's feet and store it's reference in an Actor variable named <strong>actor</strong>
+   cast <strong>actor</strong> to an Elevator object and store it's reference in an Elevator variable named <strong>elevator</strong>
+   if <strong>elevator</strong> != null then
+      call the Elevator class's method <strong>goingDown()</strong>
+      assign marios's vertical velocity position (<strong>dy</strong>) a value of 1
+   end if
+end if
+<pre></div>
+
+         
+	<br>
+</div>	
+

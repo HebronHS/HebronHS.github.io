@@ -1,0 +1,266 @@
+<practice>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int u = 5;
+double v = 5.5;
+if( v > u )
+  System. out. print ( 1 );
+if( (int)v > u )
+  System. out. print ( 2 );
+else
+  System.out.print( 3 );</pre>]]></code>
+        <a><![CDATA[<pre>2</pre>]]></a>
+        <b><![CDATA[<pre>12</pre>]]></b>
+        <c><![CDATA[<pre>123</pre>]]></c>
+        <d><![CDATA[<pre>13</pre>]]></d>
+        <e><![CDATA[<pre>3</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>String n = "kuipers";
+if( Character.isLetter(n.charAt(l) ) )
+   System.out.print( 1 );
+else if ( n.length() > 4 )
+   System.out.print( 2 );
+if ( n != null )
+   System. out. print ( 3 );</pre>]]></code>
+        <a><![CDATA[<pre>23</pre>]]></a>
+        <b><![CDATA[<pre>1</pre>]]></b>
+        <c><![CDATA[<pre>123</pre>]]></c>
+        <d><![CDATA[<pre>2</pre>]]></d>
+        <e><![CDATA[<pre>13</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>double m = 1.5;
+double n = 2.5;
+
+if( m > n )
+  n *= 2;
+else
+  m *= 2;
+
+if( m > 2 )
+  System.out.print( 1 );
+else
+  System.out.print( 2 );</pre>]]></code>
+        <a><![CDATA[<pre>12</pre>]]></a>
+        <b><![CDATA[<pre>2</pre>]]></b>
+        <c><![CDATA[<pre>1</pre>]]></c>
+        <d><![CDATA[<pre>21</pre>]]></d>
+        <e><![CDATA[<pre>212</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int x = 8;
+int y = 4 * 2;
+if( x == y ){
+  if( x % 2 == 0 )
+    x--;
+  else
+    y++;
+}
+System.out.print( x + " " + y );</pre>]]></code>
+        <a><![CDATA[<pre>8 8</pre>]]></a>
+        <b><![CDATA[<pre>8 9</pre>]]></b>
+        <c><![CDATA[<pre>7 7</pre>]]></c>
+        <d><![CDATA[<pre>7 9</pre>]]></d>
+        <e><![CDATA[<pre>7 8</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What are the possible outputs for 
+the code to the right?
+
+I. 0
+II. 1
+III. 2</pre>]]></question>
+        <code><![CDATA[<pre>int x, y;
+// code to initialize x, y
+String result = "";
+if ( x > 10 )
+  result += "a";
+if( y > 10 )
+  result += "a";
+System.out.println( result.length() );</pre>]]></code>
+        <a><![CDATA[<pre>I only</pre>]]></a>
+        <b><![CDATA[<pre>II only</pre>]]></b>
+        <c><![CDATA[<pre>III only</pre>]]></c>
+        <d><![CDATA[<pre>II and III</pre>]]></d>
+        <e><![CDATA[<pre>I, II, and III</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the client code to the right?]]></question>
+        <code><![CDATA[<pre>public int off(int month){
+  int result = -4;
+  switch( month ){
+    case 1: result = -3; break;
+    case 3: case 5: case 8: case 10:
+      result = -1; break;
+    default: result = 0;
+  }
+  return result;
+}
+
+// client code
+System.out.print( off(1) + off(7) );</pre>]]></code>
+        <a><![CDATA[<pre>-3</pre>]]></a>
+        <b><![CDATA[<pre>-8</pre>]]></b>
+        <c><![CDATA[<pre>-6</pre>]]></c>
+        <d><![CDATA[<pre>0</pre>]]></d>
+        <e><![CDATA[<pre>-7</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>String vals = "abac";
+int total = 0;
+char ch;
+for( int i = 0; i < vals.length(); i++){
+  ch = vals.charAt(i);
+  switch ( ch ) {
+    case 'a' : total++; break;
+    case 'b' : total *= 2; break;
+    default : total--;
+  }
+}
+
+System.out.print( total );</pre>]]></code>
+        <a><![CDATA[<pre>4</pre>]]></a>
+        <b><![CDATA[<pre>3</pre>]]></b>
+        <c><![CDATA[<pre>0</pre>]]></c>
+        <d><![CDATA[<pre>1</pre>]]></d>
+        <e><![CDATA[<pre>2</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int x = 15;
+switch(x) {
+case 14: out.print("Hi ");
+case 15: out.print("Chicken ");
+case 16: out.print("Bob ");
+default: out.print("Ranch ");
+}</pre>]]></code>
+        <a><![CDATA[<pre>Chicken</pre>]]></a>
+        <b><![CDATA[<pre>Hi</pre>]]></b>
+        <c><![CDATA[<pre>Ranch</pre>]]></c>
+        <d><![CDATA[<pre>Chicken Bob</pre>]]></d>
+        <e><![CDATA[<pre>Chicken Bob Ranch</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>double d = 2.5;
+switch(d){
+case 1.0: out.print("does");break;
+case 1.5: out.print("this");break;
+case 2.0: out.print("even");break;
+case 2.5: out.print("work");break;
+default :out.print("?");
+}</pre>]]></code>
+        <a><![CDATA[<pre>work</pre>]]></a>
+        <b><![CDATA[<pre>doesthisevenwork?</pre>]]></b>
+        <c><![CDATA[<pre>work?</pre>]]></c>
+        <d><![CDATA[<pre>There is no output due to a compile error.</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to a runtime error.</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int x = 2;
+switch( x % 5 ) {
+   case 0 : out.print("T");
+   case 1 : out.print("H"); break;
+   case 2 : out.print("A");
+   case 3 : out.print("N"); break;
+   case 4 : out.print("X");
+}</pre>]]></code>
+        <a><![CDATA[<pre>ANX</pre>]]></a>
+        <b><![CDATA[<pre>T</pre>]]></b>
+        <c><![CDATA[<pre>HN</pre>]]></c>
+        <d><![CDATA[<pre>NX</pre>]]></d>
+        <e><![CDATA[<pre>AN</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[]]></question>
+        <code><![CDATA[<pre>String s = "dog";
+switch( s )
+{
+   case "dag" : System.out.print("7");
+   case "dog" : System.out.print("8");
+   case "dug" : System.out.print("9");
+}</pre>]]></code>
+        <a><![CDATA[<pre>7</pre>]]></a>
+        <b><![CDATA[<pre>8</pre>]]></b>
+        <c><![CDATA[<pre>9</pre>]]></c>
+        <d><![CDATA[<pre>78</pre>]]></d>
+        <e><![CDATA[<pre>89</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>String d3 = "acbbeab";
+int t = 0;
+for(int i = 0; i < d3.length(); i++){
+  switch( d3.charAt(i) ){
+    case 'a' :
+      t++;
+      break;
+    case 'b' :
+      t += 2;
+      break;
+    case 'c' :
+      t *= 3;
+  }
+}
+
+System.out.print(t);</pre>]]></code>
+        <a><![CDATA[<pre>10</pre>]]></a>
+        <b><![CDATA[<pre>9</pre>]]></b>
+        <c><![CDATA[<pre>13</pre>]]></c>
+        <d><![CDATA[<pre>0</pre>]]></d>
+        <e><![CDATA[<pre>2436</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is the value of total after 
+executing the code to the right?]]></question>
+        <code><![CDATA[<pre>int x = 42, total = 0;
+while (x != 0) {
+  switch(x%3) {
+    case 0: total = total + 1; break;
+    case 2: total = total - 1; break;
+  }
+  x = x/3;
+}</pre>]]></code>
+        <a><![CDATA[<pre>-2</pre>]]></a>
+        <b><![CDATA[<pre>-1</pre>]]></b>
+        <c><![CDATA[<pre>0</pre>]]></c>
+        <d><![CDATA[<pre>1</pre>]]></d>
+        <e><![CDATA[<pre>2</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>double c = 2.5;
+if( c > 1.5 ){
+  if( c > 3 )
+    c = c * 2;
+  else
+    c = c + 1;
+}
+System.out.print( c );</pre>]]></code>
+        <a><![CDATA[<pre>5.0</pre>]]></a>
+        <b><![CDATA[<pre>3.5</pre>]]></b>
+        <c><![CDATA[<pre>6.0</pre>]]></c>
+        <d><![CDATA[<pre>4.0</pre>]]></d>
+        <e><![CDATA[<pre>2.5</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+</practice>

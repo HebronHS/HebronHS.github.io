@@ -1,0 +1,98 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Gradient Background</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/Gradient.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Gradient</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Gradient</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Gradient Scenario, and click Open.</p></li>
+</ol>
+
+<h1>Background Image</h1>
+<p>In this section you will learn how to add a background image to a world. Follow these steps.</p>
+<ol id="csList">
+<li><p>Right click on the MyWorld class and select <strong>Set image...</strong></p></li>
+<div><img src="greenfoot/images/Gradient_01.png"></div>
+<li><p>Under <strong>Image Categories:</strong> select <strong>background</strong></p></li>
+<li><p>Under <strong>Library Images:</strong> select <strong>bluerock.jpg</strong> and click Ok.</p></li>
+<div><img src="greenfoot/images/Gradient_02.png"></div>
+<p>The bluerock image is a tile image. A <strong>tile</strong> is a small image that is specifically designed so that multiple tiles can fit together to form a
+   larger image. The Greenfoot environment will automatically duplicate the tile to form an image that fills a world's entire background.
+   If the chosen image's size is greater than or equal to the world's dimensions the image will not be duplicated.</p>
+</ol>
+<h1>Removing Background Image</h1>
+<p>To remove a background image follow these steps:</p>
+<ol id="csList">
+<li><p>Right click on the MyWorld class and select <strong>Set image...</strong></p></li>
+<li><p>Under <strong>Scenario images:</strong> select <strong>No image</strong> then click Ok.</p></li>
+<div><img src="greenfoot/images/Gradient_03.png"></div>
+</ol>
+
+<h1>Drawing on a Background Image</h1>
+<p>In this section you will learn how you can draw on a background image using drawing tools. Follow these steps.</p>
+<ol id="csList">
+<li><p>Click on the Help menu and select <strong>Greenfoot Documentation</strong>.</p></li>
+<div><img src="greenfoot/images/Draw_01.png"></div>
+<li><p>On the left side of the document select <strong>GreenfootImage</strong> to view the documentation for the GreenfootImage class. 
+       Scroll down to the section <strong>Method Summary</strong> to view the list of methods the class provides.</p></li>
+<li><p>Drawing on a background is a two step process. First, get the background image from the world and store its reference in a 
+       <strong>GreenfootImage</strong> variable.</p>
+	   <div id="csCode" style="width:625px"><pre>GreenfootImage bk = getBackground();</pre></div>
+	   <p>Second, use the <strong>GreenfootImage</strong> methods to change the drawing color or draw on the image.</p>
+	   <div id="csCode"style="width:625px" ><pre>bk.setColor(Color.RED);          // change color to red
+bk.drawLine(0, 0, 200, 200);     // draw a line
+bk.fillOval(50, 50, 300, 300);   // draw a filled circle</pre></div>
+	   </li>
+<p>The example below demostrates this two step process by filling the background of MyWorld with a gradient.</p>
+<li><p>Add the method <strong>gradientFill</strong> below to the MyWorld class.</p>
+<div id="csCode" style="width:625px"><pre>
+/*
+ *  This method fills the background image with a gray gradient.
+ *  @param startRange the starting color intensity of the gradient
+ *  @param endRange the ending color intensity of the gradient
+ */
+public void <div id="csHighlight"><pre>gradientFill</pre></div>(int startRange, int endRange)
+{
+	// Step 1: request the background image from the world and store its reference
+	//         in a GreenfootImage variable
+	GreenfootImage bk = getBackground();
+	
+	double repeat = Math.ceil((double)getHeight() / Math.abs(startRange - endRange));
+	int y = 0;
+	int c = startRange;
+	
+	for(int i = 0; i &lt; getHeight() / repeat; i++)
+	{
+		// Step 2: use the GreenfootImage methods to change colors and draw on the 
+		//         background image
+		bk.setColor(new Color(c, c, c));
+		for(int j = 0; j &lt; repeat; j++)
+		{
+			bk.drawLine(0, y, getWidth(), y);     // Step 2
+			y++;
+		}
+		if(startRange &lt;= endRange)
+		   c++;
+		else
+		   c--;
+	}
+}
+</pre></div>
+</li>
+<li><p>Add the following code to the MyWorld constructor</p>
+<div id="csCode" style="width:625px"><pre>
+gradientFill(50, 255);
+</pre></div>
+<p>The MyWorld constructor should look like the following:</p>
+<div><img src="greenfoot/images/Gradient_04.png"></div>
+</li>
+<li><p>Compile the program. The background should change to a gradient.</p></li>
+</ol>
+
+	<br>
+</div>	
+

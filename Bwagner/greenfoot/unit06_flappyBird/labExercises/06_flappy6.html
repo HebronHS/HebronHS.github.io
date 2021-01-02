@@ -1,0 +1,75 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">FlappyBird6</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/FlappyBird6.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >FlappyBird6</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>FlappyBird6</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the FlappyBird6 Scenario, and click Open.</p></li>
+</ol>
+<br>
+<p>In this lesson a scrolling background is added to the game.</p>
+
+<h1>Scrolling Background</h1>
+<p>The following image is assigned as the background for FlappyWorld.</p>
+<div><img src="greenfoot/images/FlappyBird6_01.png"></div>
+<p>Since the size of the image (139 x 400) is smaller than the size of the world (600 x 400), the World class automatically duplicates the
+   image horizontally and vertically as much as needed to completely fill the world.</p>
+<div><img src="greenfoot/images/FlappyBird6_02.png"></div>
+<p>The original image was specifically designed so that when it is duplicated it fits together like the pieces of a puzzle.</p>
+<p>There is, however, a problem with the image design as it relates to the dimensions of the world. If you look closely at the 
+   background image created by Greenfoot the left and right edges do not match up. This image will not work as a scrolling background because
+   the left edge needs to fit seemlessly with the right edge to create a smooth transition as the background is scrolled.</p>
+<p>To fix this problem I either had to redesign the original image so that its width would divide evenly into 600 or I just needed
+   to increase the size of the world so that the original image divided evenly into it. The second option was easier so I changed the
+   dimensions of the world to 695 x 400. Recall that the original image had dimensions (139 x 400). The reason I choose 695 is 
+   because 139 x 5 = 695. Using a width of 695 allowed Greenfoot to use exactly 5 original images to create a background image that matched up on both ends.</p>
+<div><img src="greenfoot/images/FlappyBird6_03.png"></div>
+
+<h1>FlappyWorld class</h1>
+<p>To create the scrolling background effect a method named <strong>scrollBackground</strong> was added to the FlappyWorld class and called in its
+   act method. A constant named <strong>SCROLL_SPEED</strong> was also added and assigned a value of -3 so that the background image
+   scrolls from right to left.</p>
+<div><img src="greenfoot/images/FlappyBird6_04.png"></div>
+
+<p>For an explanation of how this code works refer to unit 3.</p>
+
+
+<h1>Program Modifications</h1>
+<p>Currently, pipes are created off-screen and then instructed to move left to right across the world. 
+   But after a pipe has slid across the world and is no longer visible, where do they go? 
+   The answer is: they keep going. The longer you play, the more off-screen pipes there are
+   taking up valuable memory space and processing power. Modify the Pipe class so that pipes
+   are removed when they are no longer visible on the screen.</p>
+<p>To complete this task do the following:</p>
+<ol id="csList">
+<li><p>Create a method in the Pipe class named <strong>deleteMe</strong>.</p></li>
+<li><p>Implement the deleteMe method using the following pseudocode:</p>
+<div id="csOutput" style="width: 600px">
+<pre>if pipe at left edge of world then
+   getWorld().removeObject(this)
+end if</pre>
+</div>
+<h3>Hints</h3>
+<p>Note: if a pipe is traveling across the world from the right edge of the world to the left edge of the world
+what is the pipe's x-coordinate when it reaches the left edge of the world? This value should control when your
+if statement becomes true.</p>
+<p>Note: <strong>this</strong> is a keyword in Java that means "this" object. In this case it means "this" pipe. </p>
+<li><p>Make a call to the <strong>deleteMe</strong> method in the Pipe class's <strong>act</strong> method.</p></li>
+<li><p>How do you know if your code is actually removing pipes?</p>
+<p>To find out add the following code to FlappyWorld act method:</p>
+<div id="csCode"><pre>System.out.println(getObjects(Pipe.class).size());</pre></div>
+<p>This code displays how many pipes are currently in the world. If it continually displays the number 4
+   your code is working properly.</p></li>
+
+</li>
+
+
+</ol>	
+	<br>
+</div>
+

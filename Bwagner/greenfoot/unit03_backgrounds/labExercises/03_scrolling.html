@@ -1,0 +1,109 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Scrolling Background</div>
+
+<div id="csContent">
+<p>In this assignment you are going to learn how to make a scrolling background.</p>
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/Scrolling Background.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Scrolling Background</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Scrolling Background</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Scrolling Background Scenario, and click Open.</p></li>
+</ol>
+<h1>ScrollWorld Class</h1>
+<p>We can create animations in our greenfoot programs by simply moving actors within a world. Another technique that can be used to create animation is to move a world's background, creating what
+   is called a <strong>scrolling background</strong>. The ScrollWorld class demonstrates this technique by moving or scrolling a road background from right to left across the screen leaving a Car actor stationary in the middle of the world.</p>
+<p>Double-click on the <strong>ScrollWorld</strong> class to view its code.</p>
+<p>The ScrollWorld class contains one integer variable named <strong>SCROLL_SPEED</strong>. The purpose of this variable is to track how fast the road background moves. 
+       Since the program is designed to scroll the road from right to left the SCROLL_SPEED variable is initially assigned a value of -3. The user can increase or decrease the scroll speed by pressing
+	   the right or left arrow keys.</p>
+	   
+<p>The ScrollWorld's <strong>act</strong> method starts by making a call to the method <strong>scrollBackground</strong>. It is this method that produces the scrolling background effect. The act method also has code 
+       to increase or decrease the SCROLL_SPEED when the user presses the right or left arrow keys.</p>
+
+<h1>Method scrollBackground</h1>
+<p>In this section we will walk through the 3 steps required to produce a scrolling background. To make a scrolling background you must select a 
+   background image that is designed in such a way that one end of the image can connect to the other end of the image forming a seamless connection 
+   similar to the way a tile is formed. In this program we are going to use an image for the background that will mimic a road that goes by as a car
+   drives on it. The illustration below
+   shows this road background. The image is outlined in blue to signify that this is the original background image.</p></li>
+<div><img src="greenfoot/images/Road_01.png"></div>
+<ol id="csList">
+<li><p>The first step in creating a scrolling background is to create a new image that is a duplicate or copy of the original background. 
+       This is accomplished with the following code:</p>
+
+<div id="csCode" style="width:625px"><pre>GreenfootImage copy = new GreenfootImage(getBackground());</pre></div>
+<p>The illustration below shows the image that the variable <strong>copy</strong> references. This image is outlined in red to signify that it is not the world's background image. It is simply an image that 
+   is a duplicate of the background image.</p>
+<div><img src="greenfoot/images/Road_011.png"></div>
+</li>
+<li><p>The second step is to place this new image (highlighted in red) on top of the original background image but moved over 3 units to the left.
+       These 3 units are represented by the SCROLL_SPEED variable. This step will give the illusion that the road has moved to the left. In this step 
+	   the background image is modified.
+	   
+
+<div><img src="greenfoot/images/Road_02.png"> <img src="greenfoot/images/Road_03.png"></div>
+This step is accomplished with the following code:</p> 
+	   <div id="csCode" style="width:625px"><pre>getBackground().drawImage(copy, SCROLL_SPEED, 0);</pre></div>
+</li>
+<li><p>The third and final step is to attach the copy image to the right end of the background image that
+        was modified in step 2. By doing this step we can continually rebuild the background image so it gives the illusion of going on forever.
+		The illustration below demonstrates this step. The dotted lines mark the part of the background image that will be visible on 
+		the screen.</p>
+<div><img src="greenfoot/images/Road_04.png"></div>
+
+This step is accomplished with the following code:</p> 
+	   <div id="csCode" style="width:625px"><pre>getBackground().drawImage(copy, getBackground().getWidth() + SCROLL_SPEED, 0);</pre></div>
+</li>
+</ol>
+<br>
+<h3>Animation to Demonstrate Scrolling Background</h3>
+
+        <div id="animationContainer">
+            <div id="bufferContainer">
+                <div id="buffer"></div>
+                <div id="comment"></div>
+                <div id="background1"><img src="greenfoot/images/RoadAnimation/Road_01.png"></div>
+                <div id="background2"><img src="greenfoot/images/RoadAnimation/Road_02.png"></div>
+                <div id="background3"><img src="greenfoot/images/RoadAnimation/Road_02.png"></div>
+                <div id="background4"><img src="greenfoot/images/RoadAnimation/Road_02.png"></div>
+                <div id="background5"><img src="greenfoot/images/RoadAnimation/Road_03.png"></div>
+            </div>
+            <div id="codeContainer">
+                <div>
+                    <div id="code1"><img src="greenfoot/images/RoadAnimation/Code_01.png"></div>
+                    <div id="code2"><img src="greenfoot/images/RoadAnimation/Code_011.png"></div>
+                    <div id="code3"><img src="greenfoot/images/RoadAnimation/Code_012.png"></div>
+                    <div id="code4"><img src="greenfoot/images/RoadAnimation/Code_013.png"></div>
+                </div>
+                <div id="buttonPanel">
+                    <button class="animateButton" id="animateNext" onclick="advanceAnimation()">Next&nbsp;</button>
+                    <br><button class="animateButton" onclick="resetAnimation()">Reset</button>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
+
+<br><hr>
+<h1>Program Modifications</h1>
+<ol id="csList">
+<li><p>Complete the <strong>scrollBackground</strong> method by adding the code discussed above. When completed the method should look like the following.</p></li>
+<div><img src="greenfoot/images/Road_05.png"></div>
+</li>
+<li><p>Modify the <strong>Car</strong> class's act method so that the car can move up and down.</p>
+    <p>Create an integer instance variable named <strong>vy</strong> and set its value to 1. 
+    <p>Use the <strong>Greenfoot</strong> class's <strong>isKeyDown</strong> method and <br>
+       the <strong>Actor</strong> class's <strong>setLocation</strong> method in your implementation.</p></li>
+<li><p>Restrict the car's movement so that it cannot move outside the top and bottom boundaries of the road.</p>
+	<p>Use a y-value of 135 as the top boundary and y-value of 250 as the bottom boundary.</p>
+    <p>Wrap if statements around the setLocation methods so that they are only executed<br>
+       when the car is inside the upper and lower boundaries.</p></li>
+</ol>
+<br>
+	<br>
+</div>	
+

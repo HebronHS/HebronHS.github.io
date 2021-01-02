@@ -1,0 +1,65 @@
+8
+M-87 XN385 Jupiter SiriusB
+5
+M-87 XN385 4
+Jupiter M-87 5
+Jupiter SiriusB 700
+M-87 SiriusB 50
+XN385 SiriusB 8
+M-87 SiriusB
+CenA CenB CX8 D-Galaxy Nebulae
+6
+CenA CenB 1
+CenA CX8 7
+CenA Nebulae 3
+CenB Nebulae 6
+CX8 Nebulae 2
+Nebulae D-Galaxy 3
+CenA D-Galaxy
+Earth Theroc Ildira Llaro Rheindic
+6
+Earth Theroc 1
+Earth Ildira 3
+Earth Rheindic 4
+Rheindic Llaro 4
+Ildira Rheindic 1
+Theroc Ildira 1
+Earth Llaro
+A B C D E
+5
+A A 1
+A B 1
+B A 1
+C A 1 
+D E 1
+C A
+A B C D E
+2
+A A 1
+A B 1
+A B
+A B C D E F
+5
+A B 1 
+B C 5 
+C D 3
+D E 7 
+E F 9
+C E
+A B C D E F
+10
+A B 1 
+B C 5 
+C D 3
+D E 7 
+E F 9
+F E 9
+E D 7
+D C 3
+C B 5
+B A 1
+F A
+A B
+1
+A B 1
+A B

@@ -1,0 +1,67 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Hungry Lizard</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/Hungry Lizard.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Hungry Lizard</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Hungry Lizard</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Hungry Lizard Scenario, and click Open.</p></li>
+</ol>
+
+<h1>Collision Detection</h1>
+<p>In gaming, a <strong>collision</strong> is the act of one object intersecting with another object. An example of a collision would be a bullet hitting its target.
+<strong>Collision detection</strong> refers to the process of detecting collisions. Greenfoot provides several methods in the Actor class that can be used for collision detection.</p>
+
+<ol id="csList">
+<li><p>Click on the Help menu and select <strong>Greenfoot Documentation</strong>.</p></li>
+<div><img src="greenfoot/images/Draw_01.png"></div>
+<li><p>On the left side of the document select <strong>Actor</strong> to view the documentation for the Actor class. Scroll down to the section <strong>Method Summary</strong> and look for methods that can be used for
+  collision detection.</p></li>
+<li><p>What is the difference between the methods <strong>isTouching</strong>, <strong>intersects</strong>, and <strong>getOneIntersectingObject</strong>?</p></li>
+</ol>
+
+<h3>Method isTouching</h3>
+<p>The <strong>isTouching</strong> method returns true when an Actor of the specified class intersects with the Actor object doing the test, otherwise it returns false. Look at the following example.</p>
+<div id="csCode"><pre>if(isTouching(Bug.class))
+{   
+    // code that responds to collision
+}</pre></div>
+<p>The if statement is true when this object(the class where this code resides) is touching any Bug object.</p>
+	
+<h3>Method intersects</h3>
+<p>The <strong>interects</strong> method returns true when a specific Actor intersects with the Actor doing the test, otherwise it returns false. Look at the following example.</p>
+<div id="csCode"><pre>if(intersect(ladyBug))
+{   
+    // code that responds to collision
+}</pre></div>
+<p>The if statement is true when this object is touching the ladyBug object.</p>	
+
+<h3>Method getOneIntersectingObject</h3>
+<p>The <strong>getOneIntersectingObject</strong> method returns the Actor of the specified class that is currently intersecting with the object doing the test. If no Actor is currently intersecting it returns <strong>null</strong>. Look at the following example.</p>
+<div id="csCode"><pre>Actor actor = getOneIntersectingObject(Bug.class);  // get colliding actor
+if(actor != null)   // if collision occurred
+{   
+    // code that responds to collision
+}</pre></div>
+<p>The if statement is true when actor contains a reference to a Bug object.</p>	
+
+<p>In summary, both the <strong>isTouching</strong> and <strong>intersects</strong> methods return a boolean value of true or false, whereas the <strong>getOneIntersectingObject</strong> method actually returns that Actor that did the colliding.</p>		
+		
+<h1>Lizard class</h1>
+<p>Open the <strong>Lizard</strong> class to view its code.</p>
+<p>The Lizard class contains two methods named <strong>spinLizard</strong> and <strong>moveLizard</strong>. The spinLizard method will cause the lizard to spin around in a complete circle and then remove any flies it is touching.
+   The moveLizard method will move the lizard around the world when the left, right, up, or down arrows have been pressed.</p>
+   
+<br><hr>
+<h1>Program Modifications</h1>
+<ol id="csList">
+<li><p>Complete the Lizard class's <strong>act</strong> method so that it when the lizard collides with a Fly it spins around in a circle and eats the fly. If the lizard has not collided with a Fly it should move
+       if the left, right, up, or down arrow keys have been pressed.</p></li>
+</ol>
+	<br>
+</div>	
+

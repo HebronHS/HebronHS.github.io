@@ -1,0 +1,46 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">FlappyBird1</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/FlappyBird1.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >FlappyBird1</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>FlappyBird1</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the FlappyBird1 Scenario, and click Open.</p></li>
+</ol>
+
+<p>In this 8 part series we are going to write a version of the FlappyBird game. The FlappyBird game was a mobile-device game developed by a programmer
+   in Vietnam in 2013. In January of 2014 it became the most downloaded free game on the IOS App Store, but in February of 2014 the
+   developer took it down citing guilt over its addictive nature and overuse. </p>
+   
+<p>The game is a side-scroller where the player controls a bird, attempting to fly between rows of green pipes without coming into contact with them.</p>
+
+<h1>FlappyBird Class</h1>
+<p>To start our game we create two methods in the FlappyBird class named <strong>fly</strong> and <strong>displayGameOver</strong>.
+   The fly method allows Flappy to move up and down vertically. The <strong>BOOST_SPEED</strong> constant provides lift so the bird goes upward(climbs) and as
+   <strong>gravity(g)</strong> is applied the bird gradually goes downward(falls).</p>
+
+<p>The <strong>displayGameOver</strong> method is left as an exercise.</p>
+
+<h1>Program Modifications</h1>
+<p>Use the pseudocode below to implement the <strong>displayGameOver</strong> method. This method should display the message 
+   "GameOver" centered in the middle of the world and then end the game by calling the Greenfoot method stop. </p>
+   </p>Recall that to access the World class's methods from inside an Actor class you must use the Actor method <strong>getWorld()</strong>. 
+   For example, if you were coding in the FlappyBird class and you needed
+   to access the World class method getWidth you would use code like the following</p>
+   <div id="csCode" style="width:350px"><pre>int width = getWorld().getWidth();</pre></div>
+   <p>If you were coding in the FlappyBird class and you needed to access the World method addObject your code would be similar to this</p>
+    <div id="csCode" style="width:450px"><pre>getWorld().addObject( /*  parameters not shown  */ );</pre></div>
+   <h3>Pseudocode</h3>
+<div id="csOutput" style="width: 650px"><pre>
+create GameOver object
+add GameOver object to the world with its location being the center of the world
+end the game by calling Greenfoot.stop()
+</pre></div>
+	
+	<br>
+</div>
+

@@ -1,0 +1,45 @@
+8
+4
+cow 3 10 5
+skyscraper 15 9 10
+human 100 3 4
+sock 5 2 1
+31
+3
+leaf 4 2 2
+gold 24 5 4
+tires 10 2 4
+31
+1
+cow 100 1 2 
+100
+6
+bluecow 1 2 2
+greencow 1 2 2 
+purplecow 1 2 2
+redcow 1 2 2 
+tealcow 1 2 2
+yellowcow 1 2 2
+12
+4
+cow 300 10 5
+skyscraper 1500 9 10
+human 1000 3 5
+sock 50 2 1
+2500
+2
+cow 3 10 1
+human 3 1 2
+7
+2
+cow 30 10 1
+human 3 1 2
+6
+6
+bluecow 1 2 2
+greencow 1 2 2 
+purplecow 1 2 2
+redcow 1 2 2 
+tealcow 1 2 2
+yellowcow 1 2 2
+0

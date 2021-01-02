@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IA_Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #output {
+                font-size: 5.0em;
+                color: black;
+                text-align: center;
+                height: 200px;
+            }
+            #error {
+                font-size: 1.8em;
+                color: blue;
+                text-align: center;
+                height: 100px;
+            }
+            #signature {
+                text-align: center;
+                margin-top: 25px;
+            }
+            button {
+                font-size: 1.4em;
+                font-family: consolas, sans-serif;
+                text-align: center;
+                margin: 0px;
+                padding: 0px;
+            }
+            #conversionChoices {
+                font-size: 1.4em;
+                font-weight: bold;
+                width: 15%;
+                margin-left: 44%;
+                margin-bottom: 15px;
+            }
+            #wordBox {
+                font-size: 1.4em;
+                width: 40%;
+                margin-left: 30%;
+                text-align: center;
+            }
+            h1 {
+                font-size: 1.6em;
+                font-weight: bold;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <select id="conversionChoices">
+            <option value="inToPostSelected">Infix to Postfix</option>
+            <option value="inToPreSelected">Infix to Prefix</option>
+            <option value="postToInSelected">Postfix to Infix</option>
+            <option value="postToPreSelected">Postfix to Prefix</option>
+            <option value="preToInSelected">Prefix to Infix</option>
+            <option value="preToPostSelected">Prefix to Postfix</option>
+        </select>
+        <input type="text" placeholder="Enter Equation in Correct Format" id="wordBox">
+        <button type="button" onClick="conversionNavigator()">Convert</button>
+        <br><br>
+        <div id="output"></div>
+        <div id="error"></div>
+        <br> 
+        <div id="signature">Created by Tyler Beisel</div> 
+        
+        <script>
+            /*
+             * Method to detemine if the given string is an operator
+             * Assumes the given variable is a string
+             * returns true or false
+             */
+            function isOperator(str) {
+                if(str.localeCompare("+") === 0) {
+                    return true;
+                }
+                else if(str.localeCompare("/") === 0) {
+                    return true;
+                }
+                else if(str.localeCompare("-") === 0) {
+                    return true;
+                }
+                else if(str.localeCompare("*") === 0) {
+                    return true;
+                }
+                else if(str.localeCompare("^") === 0) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            
+            /*
+             * Method to determine the priority level of the given operator
+             * Assumes the given variable is a string
+             * Returns 1, 2 or 3 to represent priority level
+             */
+            function determinePrecedence(str) {
+                if(str.localeCompare("^") === 0) {
+                    return 3;
+                }
+                else if(str.localeCompare("*") === 0 || str.localeCompare("/") === 0) {
+                    return 2;
+                }
+                else if(str.localeCompare("+") === 0 || str.localeCompare("-") === 0) {
+                    return 1;
+                }
+                else {
+                    return 0;
+                }
+            }
+            
+            /*
+             * Method to determine if the given string is an '(' 
+             * Assumes given variable is a String
+             * Returns true if it is 
+             */
+            function isOpenPar (str) {
+                if(str.localeCompare("(") === 0) {
+                    return true;
+                }
+            }
+            
+            /*
+             * Method to determine if given string is a ')'
+             * Assumes given variable is a string
+             */
+            function isClosedPar (str) {
+                if(str.localeCompare(")") === 0) {
+                    return true;
+                }    
+            }
+            
+            /*
+             * Method to determine which convertor is slected and to run that method
+             * Changes the html output with the return of proper method
+             */
+            function conversionNavigator() {
+                var selection = document.getElementById("conversionChoices").value;
+                var userInput = document.getElementById("wordBox").value;
+                
+                document.getElementById("error").style.visibility = "hidden";
+                
+                if(!checkForSpaces(userInput)) {
+                    document.getElementById("output").innerHTML = "";
+                    document.getElementById("error").style.visibility = "visible";
+                    document.getElementById("error").innerHTML = "Equations need spaces between operands, operators, and parentheses<br>" +
+                                                                 "Examples: ( A + B ), + A B, A B +";
+                } 
+                else if(userInput.localeCompare("Tyler") === 0) {
+                    document.getElementById("output").innerHTML = "is Awesome";
+                }
+                else if(selection.localeCompare("inToPostSelected") === 0) {
+                    document.getElementById("output").innerHTML = inToPost(userInput);
+                }
+                else if(selection.localeCompare("inToPreSelected") === 0) {
+                    document.getElementById("output").innerHTML = inToPre(userInput);
+                }
+                else if(selection.localeCompare("postToInSelected") === 0) {
+                    document.getElementById("output").innerHTML = postToIn(userInput);
+                }
+                else if(selection.localeCompare("postToPreSelected") === 0) {
+                    document.getElementById("output").innerHTML = postToPre(userInput);
+                }
+                else if(selection.localeCompare("preToInSelected") === 0) {
+                    document.getElementById("output").innerHTML = preToIn(userInput);
+                }
+                else if(selection.localeCompare("preToPostSelected") === 0) {
+                    document.getElementById("output").innerHTML = preToPost(userInput);
+                }
+            }
+            
+            /*
+             * Method that checks to make sure the equation is in the proper format 
+             * Returns an error message if the format is wrong
+             */
+            function checkForSpaces(userInput) {
+  
+                for(var i = 1; i < userInput.length-1; i++) {
+                    if(isOperator(userInput.substring(i, i+1)) || isClosedPar(userInput.substring(i, i+1)) || isOpenPar(userInput.substring(i, i+1))) {
+                        if(userInput.substring(i-1, i).localeCompare(" ") !== 0) {
+                            return false;
+                        }
+                        if(userInput.substring(i+1, i+2).localeCompare(" ") !== 0) {
+                            return false;
+                        }
+                    } 
+                }
+                
+                if(isOperator(userInput.substring(0, 1)) || isClosedPar(userInput.substring(0, 1)) || isOpenPar(userInput.substring(0, 1))) {
+                    if(userInput.substring(1, 2).localeCompare(" ") !== 0) {
+                        return false;
+                    }
+                }
+                if(isOperator(userInput.substring(userInput.length-1, userInput.length)) || isClosedPar(userInput.substring(userInput.length-1, userInput.length)) || isOpenPar(userInput.substring(userInput.length-1, userInput.length))) {
+                    if(userInput.substring(userInput.length-2, userInput.length-1).localeCompare(" ") !== 0) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            
+            /*
+             * Method to convert an infix equation to postfix
+             * Assumes the supplied Infix equation is valid and is in the proper format 
+             * Returns the new postfix equation
+             */
+            function inToPost(userInput) {
+                var userArr = userInput.split(" ");
+                var postForm = "";
+                var tempStack = [];
+                var tempNum;
+                 
+                for(i = 0; i < userArr.length; i++) {
+                    tempNum = userArr[i];
+                    if(!isOperator(tempNum) && !isClosedPar(tempNum) && !isOpenPar(tempNum)) {
+                        postForm += tempNum + " ";
+                    } else if(isOpenPar(tempNum)) {
+                        tempStack.push(tempNum);
+                    } else if(isClosedPar(tempNum)) {
+                        while(!isOpenPar(tempStack[tempStack.length - 1])) {
+                             postForm += tempStack.pop() + " ";
+                        }
+                        tempStack.pop(); // This is the '('
+                    } else if(isOperator(tempNum)) {
+                        while(tempStack[0] != null && !isOpenPar(tempStack[tempStack.length - 1])
+                                && determinePrecedence(tempNum) <= determinePrecedence(tempStack[tempStack.length - 1])) {
+                            postForm += tempStack.pop() + " ";
+                        }
+                        tempStack.push(tempNum);
+                    }
+                }
+                while(tempStack[0] != null) {
+                    postForm += tempStack.pop() + " ";
+                } 
+                return postForm;
+            }
+            
+            /*
+             * Method to convert an infix equation to prefix
+             * Assumes the supplied Infix equation is valid and is in the proper format 
+             * Returns the new Prefix equation
+             */
+            function inToPre(userInput) {
+                var userArr = userInput.split(" ");
+                var postForm = "";
+                var tempStack = [];
+                var tempStack2 = [];
+                var tempNum;
+                
+                for(i = userArr.length-1; i >= 0; i--) {
+                    tempNum = userArr[i];
+                    
+                    if(!isOperator(tempNum) && !isClosedPar(tempNum) && !isOpenPar(tempNum)) {
+                        tempStack.push(tempNum);
+                    } else if(isClosedPar(tempNum)) {
+                        tempStack2.push(tempNum);
+                    } else if(isOpenPar(tempNum)) {
+                        while(!isClosedPar(tempStack2[tempStack2.length - 1])) {
+                            tempStack.push(tempStack2.pop());
+                        }
+                        tempStack2.pop();
+                    } else if(isOperator(tempNum)) {
+                        if(tempStack2[0] != null && determinePrecedence(tempNum) >= determinePrecedence(tempStack2[tempStack2.length - 1])) {
+                            tempStack2.push(tempNum);
+                        } else {
+                            while(tempStack2[0] != null && determinePrecedence(tempNum) < determinePrecedence(tempStack2[tempStack2.length - 1])) {
+                                tempStack.push(tempStack2.pop());
+                            }
+                            tempStack2.push(tempNum);
+                        }
+                    }
+                        
+                }
+                var amtLeft = tempStack2.length;
+                for(var i = 0; i < amtLeft; i++) {
+                    tempStack.push(tempStack2.pop());
+                }
+               
+                var finalCounter = tempStack.length;
+                for(i = 0; i < finalCounter; i++) {
+                    postForm += tempStack.pop() + " ";
+                }
+                return postForm;
+            }
+            
+            /*
+             * Method to convert postfix to infix
+             * Assumes the postfix equation is in proper form
+             * returns the new infix equation
+             */
+            function postToIn(userInput) {
+                var userArr = userInput.split(" ");
+                var postForm = "";
+                var tempStack = [];
+                var tempNum;
+                var a;
+                var b;
+                
+                for(i = 0; i < userArr.length; i++) {
+                    tempNum = userArr[i];
+                    
+                    if(!isOperator(tempNum)) {
+                        tempStack.push(tempNum);
+                        
+                    } else if(isOperator(tempNum)) {
+                        b = tempStack.pop();
+                        a = tempStack.pop();
+                        tempStack.push("(" + a + " " + tempNum + " " + b + ")");
+                    }
+                }
+                
+                for(var i = 0; i < tempStack.length; i++) {
+                    postForm += tempStack.pop();
+                }
+                return postForm;
+            }
+            
+            /*
+             * Method to convert postfix to prefix
+             * Assumes postfix is in proper form
+             * Uses the same code as postToIn() except it adds spaces in the parenthesis
+             * Then uses the already built inToPre() method
+             * returns the new prefix equation
+             */
+            function postToPre(userInput) {
+                var userArr = userInput.split(" ");
+                var postForm = "";
+                var tempStack = [];
+                var tempNum;
+                var a;
+                var b;
+                
+                for(i = 0; i < userArr.length; i++) {
+                    tempNum = userArr[i];
+                    
+                    if(!isOperator(tempNum)) {
+                        tempStack.push(tempNum);
+                        
+                    } else if(isOperator(tempNum)) {
+                        b = tempStack.pop();
+                        a = tempStack.pop();
+                        tempStack.push("(" + " " + a + " " + tempNum + " " + b + " " + ")");
+                    }
+                }
+                
+                for(var i = 0; i < tempStack.length; i++) {
+                    postForm += tempStack.pop();
+                }
+                
+                return inToPre(postForm);
+            }
+            
+            /*
+             * Method to convert prefix to infix
+             * Assumes prefix is in proper form
+             * Returns the new infix equation
+             */
+            function preToIn(userInput) {
+                var userArr = userInput.split(" ");
+                var postForm = "";
+                var tempStack = [];
+                var tempNum;
+                var a;
+                var b;
+                
+                for(i = userArr.length-1; i >= 0; i--) {
+                    tempNum = userArr[i];
+                    
+                    if(!isOperator(tempNum) && !isOpenPar(tempNum) && !isClosedPar(tempNum)) {
+                        tempStack.push(tempNum);
+                    } else if(isOperator(tempNum)) {
+                        a = tempStack.pop();
+                        b = tempStack.pop();
+                        tempStack.push("(" + a + " " + tempNum + " " + b + ")");
+                    }
+                }
+                for(var i = 0; i < tempStack.length; i++) {
+                    postForm += tempStack.pop();
+                }
+                
+                return postForm;
+            }
+            
+            /*
+             * Method to convert prefix to postfix
+             * Assumes prefix is in proper form
+             * Uses the same code as preToIn() except it adds spaces in the parenthesis
+             * Then uses the already built inToPost() method
+             * returns the new postfix equation
+             */
+            function preToPost(userInput) {
+                var userArr = userInput.split(" ");
+                var postForm = "";
+                var tempStack = [];
+                var tempNum;
+                var a;
+                var b;
+                
+                for(i = userArr.length-1; i >= 0; i--) {
+                    tempNum = userArr[i];
+                    
+                    if(!isOperator(tempNum) && !isOpenPar(tempNum) && !isClosedPar(tempNum)) {
+                        tempStack.push(tempNum);
+                    } else if(isOperator(tempNum)) {
+                        a = tempStack.pop();
+                        b = tempStack.pop();
+                        tempStack.push("(" + " " + a + " " + tempNum + " " + b + " " + ")");
+                    }
+                }
+                for(var i = 0; i < tempStack.length; i++) {
+                    postForm += tempStack.pop();
+                }
+                
+                return inToPost(postForm);
+            }
+        </script>
+    </body>
+</html>

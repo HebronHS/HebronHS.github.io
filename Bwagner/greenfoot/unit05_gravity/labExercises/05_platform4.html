@@ -1,0 +1,58 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Platform4</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/PlatForm4.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Platform4</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Platform4</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Platform4 Scenario, and click Open.</p></li>
+</ol>
+
+<h1>Fish</h1>
+<p>In this lesson the game has been modified to include fish. The fish can swim across the screen from left to right or
+   right to left. Once a fish swims all of the way across the screen it is removed from the world. When a fish is 
+   created by the world its location, direction, and speed are randomly determined. The fish themselves are also created at random.
+   Each time the act method is called there is a 5% chance of a fish being added to the world.</p>
+<div><img src="greenfoot/images/Platform4_01.png"></div>
+
+<h1>Program Modifications</h1>
+<p>Add a method named <strong>fishTest</strong> to the Frog class so that when a fish collides with a frog the frog is moved or pushed 10 
+   units away from the fish.</p>
+<ol id="csList">
+<li><p>Inorder to move the frog 10 units away from the fish the frog needs to know which direction the fish is swimming. One way to
+accomplish this is to give the Frog class "access" to the Fish class's <strong>speed</strong> variable. If a fish's speed is negative
+the fish is swimming to the left and if the speed is positive the fish is swimming to the right. </p>
+<p>Add the following <strong>accessor method</strong> to the Fish class:</p>
+<div><img src="greenfoot/images/Platform4_02.png"></div>
+</li>
+<li><p>Add a method to the Frog class named <strong>fishTest</strong>.</p></li>
+<li><p>Complete the method <strong>fishTest</strong> using the following pseudocode:</p>
+<div id="csOutput"><pre>
+if fish touches frog then
+   get the fish
+   get the fish's speed
+   if fish's speed &lt; 0 then
+      move frog 10 units to the left
+   else
+      move frog 10 units to the right
+   end if
+end if
+</pre></div>
+<p>The following code can be used to get the colliding fish and retrieve its speed using the <strong>accessor method</strong> from step 1:</p>
+<div id="csCode" style="width:625px"><pre>
+Actor actor = getOneIntersectingObject(Fish.class);    // get the fish
+int fishSpeed = ((Fish)actor).<div id="csHighlight"><pre>getSpeed()</pre></div>;              // get the fish's speed
+</pre></div>
+</li>
+<li><p>To include the fishTest method's behavior in the program add a call to the method in the Frog class's act method.</p>
+<div><img src="greenfoot/images/Platform4_03.png"></div>
+</li>
+
+</ol>
+
+	<br>
+</div>

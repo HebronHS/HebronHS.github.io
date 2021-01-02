@@ -1,0 +1,204 @@
+<practice>
+    <problem>
+        <question><![CDATA[<pre>What is returned by the method call rec(4)?</pre>]]></question>
+        <code><![CDATA[<pre>public static int rec(int x){
+  if(x <= 1)
+    return 1;
+  else
+    return x + rec(x - 1);
+}</pre>]]></code>
+        <a><![CDATA[<pre>4</pre>]]></a>
+        <b><![CDATA[<pre>1</pre>]]></b>
+        <c><![CDATA[<pre>24</pre>]]></c>
+        <d><![CDATA[<pre>10</pre>]]></d>
+        <e><![CDATA[<pre>-1</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is returned by the method call two(7)?</pre>]]></question>
+        <code><![CDATA[<pre>public static int two(int x){
+  if( x <= 2 )
+    return 1;
+  else
+    return 1 + two( x - 2 );
+}</pre>]]></code>
+        <a><![CDATA[<pre>1</pre>]]></a>
+        <b><![CDATA[<pre>3</pre>]]></b>
+        <c><![CDATA[<pre>5</pre>]]></c>
+        <d><![CDATA[<pre>6</pre>]]></d>
+        <e><![CDATA[<pre>4</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Find f(6) according to the recursive function definition shown on the
+right. You may use the space below to do your work.
+            
+f(6) =</pre>]]></question>
+        <code><![CDATA[<img src="data files/recurs1.png"></img>]]></code>
+        <a><![CDATA[<pre>1</pre>]]></a>
+        <b><![CDATA[<pre>2</pre>]]></b>
+        <c><![CDATA[<pre>3</pre>]]></c>
+        <d><![CDATA[<pre>4</pre>]]></d>
+        <e><![CDATA[<pre>5</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is returned by the method
+call self(11)?</pre>]]></question>
+        <code><![CDATA[<pre>public static int self(int n){
+  if( n <= 0 )
+    return 0;
+  else
+    return 1 + self( n - 2 );
+}</pre>]]></code>
+        <a><![CDATA[<pre>5</pre>]]></a>
+        <b><![CDATA[<pre>11</pre>]]></b>
+        <c><![CDATA[<pre>6</pre>]]></c>
+        <d><![CDATA[<pre>1</pre>]]></d>
+        <e><![CDATA[<pre>0</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Find f(7) according to the recursive function definition shown on the
+right. You may use the space below to do your work.
+            
+f(7) =</pre>]]></question>
+        <code><![CDATA[<pre><img src="data files/recurs2.png"></img></pre>]]></code>
+        <a><![CDATA[<pre>4</pre>]]></a>
+        <b><![CDATA[<pre>5</pre>]]></b>
+        <c><![CDATA[<pre>6</pre>]]></c>
+        <d><![CDATA[<pre>7</pre>]]></d>
+        <e><![CDATA[<pre>8</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is returned by the method 
+call recurs(7)?</pre>]]></question>
+        <code><![CDATA[<pre>public int recurs(int n){
+  int result = 0;
+  if( n <= 3 )
+    result = 2;
+  else
+    result = recurs(n - 2) + (n - 2);
+  return result;
+}</pre>]]></code>
+        <a><![CDATA[<pre>10</pre>]]></a>
+        <b><![CDATA[<pre>2</pre>]]></b>
+        <c><![CDATA[<pre>4</pre>]]></c>
+        <d><![CDATA[<pre>7</pre>]]></d>
+        <e><![CDATA[<pre>20</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is returned by the method 
+call loopy("", 5) ?</pre>]]></question>
+        <code><![CDATA[<pre>public static String loopy(String s, int x){
+  if( x <= 0 )
+     return s;
+  else
+     return x + s + loopy(s, x - 2);
+}</pre>]]></code>
+        <a><![CDATA[<pre>531-1</pre>]]></a>
+        <b><![CDATA[<pre>531</pre>]]></b>
+        <c><![CDATA[<pre>-1135</pre>]]></c>
+        <d><![CDATA[<pre>135</pre>]]></d>
+        <e><![CDATA[<pre>135531</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is returned by the method
+call again(1)?</pre>]]></question>
+        <code><![CDATA[<pre>public static int again(int x){
+  int result = 0;
+  if( x <= 0 )
+    result = 2;
+  else
+    result = 2 + again( x - 1 );
+  return result;
+}</pre>]]></code>
+        <a><![CDATA[<pre>4</pre>]]></a>
+        <b><![CDATA[<pre>-1</pre>]]></b>
+        <c><![CDATA[<pre>2</pre>]]></c>
+        <d><![CDATA[<pre>0</pre>]]></d>
+        <e><![CDATA[<pre>1</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is returned by the following method call?
+
+ways(new int[]{5, 3, 6, 3}, 15, 0 )</pre>]]></question>
+        <code><![CDATA[<pre>public static int ways(int[] ds,int g, int c){
+  int result = 0;
+  if( c == ds.length ){
+    if( g == 0 )
+      result = 1;
+  } else {
+    for(int i = 1; i <= ds[c]; i++)
+      result += ways(ds, g - i, c + 1);
+  }
+  return result;
+}</pre>]]></code>
+        <a><![CDATA[<pre>270</pre>]]></a>
+        <b><![CDATA[<pre>17</pre>]]></b>
+        <c><![CDATA[<pre>4</pre>]]></c>
+        <d><![CDATA[<pre>10</pre>]]></d>
+        <e><![CDATA[<pre>18</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the method call change(11) ?</pre>]]></question>
+        <code><![CDATA[<pre>//pre: n >= 0
+public static void change(int n){
+  if( n <= 2 )
+    System.out.print( n );
+  else{
+    change( n / 3 );
+    System.out.print( n % 3 );
+  }
+}</pre>]]></code>
+        <a><![CDATA[<pre>11</pre>]]></a>
+        <b><![CDATA[<pre>100</pre>]]></b>
+        <c><![CDATA[<pre>1</pre>]]></c>
+        <d><![CDATA[<pre>102</pre>]]></d>
+        <e><![CDATA[<pre>201</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Which of the following best describes 
+what will occur if the precondition 
+of method change is not met?</pre>]]></question>
+        <code><![CDATA[<pre>//pre: n >= 0
+public static void change(int n){
+  if( n <= 2 )
+    System.out.print( n );
+  else{
+    change( n / 3 );
+    System.out.print( n % 3 );
+  }
+}</pre>]]></code>
+        <a><![CDATA[<pre>An IllegalArgumentException will
+be thrown.</pre>]]></a>
+        <b><![CDATA[<pre>The method call will result in
+an infinite loop.</pre>]]></b>
+        <c><![CDATA[<pre>A stack overflow will 
+eventually occur.</pre>]]></c>
+        <d><![CDATA[<pre>A syntax error will occur.</pre>]]></d>
+        <e><![CDATA[<pre>The value of the parameter n
+will be printed out.</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is returned by f(0,4)?</pre>]]></question>
+        <code><![CDATA[<pre>public static int f(int x, int y) {
+  if (x==0) return 1+y;
+  if (y==0) return f(x-1,1);
+  return f(x-1, f(x,y-1));
+}</pre>]]></code>
+        <a><![CDATA[<pre>4</pre>]]></a>
+        <b><![CDATA[<pre>5</pre>]]></b>
+        <c><![CDATA[<pre>6</pre>]]></c>
+        <d><![CDATA[<pre>10</pre>]]></d>
+        <e><![CDATA[<pre>100</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+</practice>

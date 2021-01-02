@@ -1,0 +1,82 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Mario Climb</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the scenario: <a href="greenfoot/scenarios/MarioClimb.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Mario Climb</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Mario Climb</strong> and paste it in your <strong>myGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Mario Climb scenario, and click Open.</p></li>
+</ol>
+<br>
+
+<p>In this lesson, we again are using the <strong>AnimatedActor</strong> class to animate Mario's walking movement, but I
+   have also given Mario the ability to climb up and down ladders. The sprite sheet for this exercise
+   includes frames that can be used to animate Mario's movement up and down the ladders.</p>
+
+<h1>Mario Sprite Sheet</h1>
+<p>The mario sprite sheet consists of 16 frames. The frames numbered from 0 to 8 are used for walking and frames 9 to 15 are
+   used to animate climbing a ladder.</p>
+   
+<div><img src="greenfoot/images/marioSheet2.png"></div>
+
+<h1>Mario Class</h1>
+  <p>The Mario class, in this exercise, is similar to the previous one, except that he can no longer jump,
+     but instead has the ability to move up and down ladders by using the "up" and "down" arrow keys. 
+     This behavior is implemented in the method <strong>climbLadderTest</strong>.</p>
+ 
+ <p>Below is the basic structure of this method.</p>
+ <div><img src="greenfoot/images/MarioClimb03.png"></div>  
+ <p>If the "up" arrow key is pressed then Mario is going to attempt to ascend the ladder, and if the
+    "down" arrow key is pressed he is going to attempt to descend the ladder, and finally if no key has been
+    pressed he is just going to stay where he is. I use the word attempt because the "up" and "down"
+    arrow keys have no effect on Mario if is not touching a ladder.</p>
+ <p>To help you better understand what the <strong>climbLadderTest</strong> is doing I have divided the if-else
+    structure into its three sections: Ascending the ladder, Descending the ladder, and not moving.
+    Look at the comments that I have written for each line of code this should help you to understand
+    the code.</p>  
+<br>
+<h3>Ascending the Ladder (Going Up)</h3>
+<div><img src="greenfoot/images/MarioClimb04.png"></div> 
+
+<br>
+<h3>Descending the Ladder (Going Down)</h3>
+<div><img src="greenfoot/images/MarioClimb05.png"></div> 
+
+<br>
+<h3>Not Moving</h3>
+<div><img src="greenfoot/images/MarioClimb06.png"></div> 
+<br>
+<h1>Program Modifications</h1>
+
+     <p>A <strong>Coin</strong> class has been added to the scenario along with a sprite sheet
+      named "coinSheet7x32x32.png" placed in the scenario's image folder. A Coin object can be animated
+      so that it looks like it is spinning around on its y-axis.
+      
+      <p>Notice the naming convention
+      that I used for the sprite sheet, specifically, "7x32x32". This tells me that the sprite sheet has
+      7 frames and each frame has a width of 32 pixels and a height of 32 pixels. This naming style can
+      save you so time since you don't have to calculate or look these value up when creating an
+      AnimatedActor.</p>
+      
+  <ol id="csList">
+      <li><p>Create a Coin object in the MyWorld constructor. Use following information when creating the object:
+      sprite sheet = "coinSheet7x32x32.png"<br>
+      number of frames = 7<br>
+      width of a frame = 32<br>
+      height of a frame = 32</p>
+      <p>Note: The code that animates the coin has already been added to the Coin class's constructor. As long as the coin has been 
+         added to the world it will 
+         automatically start spinning when the Run button is clicked.</p></li>
+      <li>Add the Coin object to the world at the following location: (300, 214).</li>
+      <li>Create a method in the Mario class that will test to see if Mario collides with 
+          a coin. If he does, the coin should be removed from the world. Hint: use the Actor class method
+          <strong>removeTouching</strong> in your implementation.</p></li>
+   </ol>
+   <div><img src="greenfoot/images/MarioClimb01.png"></div>       
+	<br>
+</div>	
+

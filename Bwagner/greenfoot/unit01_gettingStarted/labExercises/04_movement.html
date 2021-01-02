@@ -1,0 +1,70 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Moving Actors</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/Moving Actors.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Moving Actors</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Moving Actors</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<div><img src="greenfoot/images/Moving Actors_01.png"></div>
+<li><p>Navigate to your MyGreenfoot folder, select the Moving Actors Scenario, and click Open.</p></li>
+<div><img src="greenfoot/images/Moving Actors_02.png"></div>
+</ol>
+<h1>Tracker Class</h1>
+  <p>Look at the Actor classes section for this scenario.</p>
+<div><img src="greenfoot/images/Moving Actors_03.png"></div>
+<p>Notice that the <strong>Tracker class</strong> is a subclass of Actor. This means that a Tracker object can do everything that an Actor can do plus any additional
+   behavior defined in the Tracker class. Double-click on the Tracker class to view its code. Notice there are three methods defined in the Tracker class two named 
+   <strong>startTrack</strong> and one named <strong>endTrack</strong>. A Tracker can move just like an Actor but it also has the added feature of being able to leave tracks as it moves.</p>
+<p>Leaving tracks is a two step process:</p>
+<p> Step 1: In the act method, call the <strong>startTrack</strong> method before any movement commands (move, setLocation).
+<p> Step 2: After all movement commands have been completed, call the method <strong>endTrack</strong> to stop leaving tracks.
+<h1>BoxBug Class</h1>
+<p>A <strong>BoxBug</strong> is a subclass of Tracker. This means that a BoxBug is a Tracker and can do everything a Tracker can do, and since a Tracker is
+an Actor the BoxBug can also do all of the Actor behaviors as well. So a BoxBug is an Actor and a Tracker.</p>
+
+<p>Double-click on the BoxBug class to view its code.</p>
+<div><img src="greenfoot/images/Moving Actors_04.png"></div>
+<p>Notice that the BoxBug class <strong>extends</strong> the Tracker class. This establishes the inheritance behavior described above.</p>
+<p>The idea of inheritance in programming is that one class inherits the behavior of another class then extends this behavior so the 
+   new subclass can <strong>do more</strong> than its parent. The new behavior of a BoxBug, defined in its act method, is to travel in a box or square pattern.
+   And since a BoxBug is a Tracker it can also leave tracks as it moves by calling the <strong>startTrack</strong> and <strong>endTrack</strong> methods it inherited from Tracker.</p>
+
+<h1>BoxBug Object in Action</h1>
+<p>To see a BoxBug's behavior add a BoxBug object to the world using one of the three techniques described in the previous lesson.
+Use BoxBug as a model to help you make the program modifications listed below.</p>
+<br><hr>
+<h1>Program Modifications</h1>
+<ol id="csList">
+<li><p>A <strong>CircleBug</strong> is a Tracker. Add code to the CircleBug's act method so that a CircleBug moves in a circle pattern. It should leave tracks
+ as it moves. Recall that the Tracker class had two methods named <strong>startTrack</strong>. The second method allows you to change the color of tracks and their thickness by providing the color and thickness as parameters to the method. For example,
+ the following code will draw tracks in the color red with a thickness of 3:</p>
+ <div id="csCode" style="width:350px"><pre>startTrack(Color.red, 3);</pre></div>
+ <p>This code will draw tracks using a custom color with a thickness of 1:</p>
+ <div id="csCode" style="width:350px"><pre>startTrack(new Color(30, 180, 55), 1);</pre></div>
+      <p><strong>Hint:</strong> if the distance moved and the degrees turned at 
+        each step when multiplied together equal 360 then the Bug will make a 
+        complete circle.</p>
+ <div><img src="greenfoot/images/CircleBug_01.png"></div>
+ </li>
+ <li><p>A <strong>StarBug</strong> is a Tracker. Add code to the StarBug's act method so that a StarBug moves in a star pattern. It should leave tracks
+ as it moves.</p>
+ <div><img src="greenfoot/images/StarBug_01.png"></div>
+ <h3>Hint:</h3>
+ <div><img src="greenfoot/images/StarBug_02.png" style="width:250px" h></div>
+ </li>
+ <li><p>A <strong>SpiralBug</strong> is a Tracker. Add code to the SpiralBug's act method so that a SpiralBug moves in a spiral pattern. It should
+  leave tracks as it moves. </p>
+ <p><strong>Hint:</strong> the amount you move needs to increase each time the act method is called. 
+     Define any <strong>instance variables</strong> you find necessary.</p>
+  <div><img src="greenfoot/images/SpiralBug_01.png"></div>
+  </li>
+
+</ol>
+	
+	<br>
+</div>	
+

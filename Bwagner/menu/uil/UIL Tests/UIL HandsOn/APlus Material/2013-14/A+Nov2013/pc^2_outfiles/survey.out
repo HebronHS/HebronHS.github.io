@@ -1,0 +1,29 @@
+Box that contains the most surveys: 12
+Box 5 contains 2 surveys.
+Boxes that contain only survey A: 1 7 11 13
+Boxes that contain exactly three surveys: 4 6 8 10 15 16
+Total number of surveys stuffed: 36
+
+Box that contains the most surveys: 12
+Box 7 contains 2 surveys.
+Boxes that contain only survey A: 1 11 13 17
+Boxes that contain exactly three surveys: 4 8 10 14 15 16
+Total number of surveys stuffed: 45
+
+Box that contains the most surveys: 12 18 20
+Box 23 contains 2 surveys.
+Boxes that contain only survey A: 1
+Boxes that contain exactly three surveys: 4 9
+Total number of surveys stuffed: 76
+
+Box that contains the most surveys: 4 6 8
+Box 4 contains 3 surveys.
+Boxes that contain only survey A: 1 5 7
+Boxes that contain exactly three surveys: 4 6 8
+Total number of surveys stuffed: 20
+
+Box that contains the most surveys: 48
+Box 17 contains 2 surveys.
+Boxes that contain only survey A: 1 19 23 29 31 37 41 43 47
+Boxes that contain exactly three surveys: 4 9 21 22 26 27 33 34 35 39
+Total number of surveys stuffed: 166

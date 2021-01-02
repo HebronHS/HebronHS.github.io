@@ -1,0 +1,55 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">ChangeCase</div>
+
+<div id="csContent"> 
+<h1>Directions</h1>
+  <p>Write a program that allows a user to enter an unknown number of words. Input should
+     stop when the user types the sentinel value "stop". When the input process is complete,
+	 the program should display each word in its original form, in all upper case letters, 
+	 and in all lower case letters.</p>
+  <p>Since you do not know how many words the user will enter you will need to make the
+     array's <strong>physical size</strong> large enough to accommodate a reasonable amount of words.
+	 You will also need to include a variable that keeps track of the array's <strong>logical size</strong>,
+	 that is, the actually number of words that have been entered into the array.</p>
+  <p>The String class includes two methods that return strings that have been converted
+     into all uppercase and lowercase letters. As an example, the following code</p>
+<div id="csCode">
+<pre>
+String str = "Computer";
+System.out.println(str.toUpperCase());
+System.out.println(str.toLowerCase());
+</pre>
+</div>
+<p>produce this output</p>
+<div id="csOutput">
+<pre>
+COMPUTER
+computer
+</pre>
+</div>
+
+<p>Use <strong>printf</strong> to display the output in columnar format.</p>
+<h1>Source File</h1>
+<p>ChangeCase.java</p>
+<h1>Sample Run</h1>
+<div id="csSampleRun">
+<pre>
+Dog
+cat
+Mouse
+PiG
+CHicken
+stop
+
+
+Dog       DOG        dog
+cat       CAT        cat
+Mouse     MOUSE      mouse
+PiG       PIG        pig
+CHicken   CHICKEN    chicken
+</pre>
+</div>
+	<br>
+</div>
+

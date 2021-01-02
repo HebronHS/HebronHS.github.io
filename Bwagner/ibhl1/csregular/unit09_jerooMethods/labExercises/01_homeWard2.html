@@ -1,0 +1,65 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Homeward Angel 2</div>
+
+<div id="csContent"> 
+<h1>Jeroo Methods</h1>
+<p>User-defined methods in Jeroo are coded in the Jeroo methods section. Refer to the illustration below.</p>
+<div align="center"><img src="images/homewardAngel2.png"></div>
+<h1>Directions</h1>
+  <p>Rewrite the program HomewardAngel, done previously, so that the Jeroo's behavior is divided into the following 3 Jeroo methods:</p>
+  <div id="csList">
+    <ul>
+	  <li><strong>getFlower</strong> - this method moves the Jeroo from its starting position to on top of the flower</li>
+	  <li><strong>pickAndToss</strong> - this method picks up the flower and tosses it at the net</li>
+	  <li><strong>enterHouse</strong> - this method moves the Jeroo through the opening in the net and finishes inside the house</li>
+	</ul>
+  </div>
+  <p>Use the following method declarations.</p>
+    <div id="csCode">
+    <pre>
+<font color="#FF00FF">// precondition: none
+// postcondition: Jeroo has been position on top of a flower</font>
+method getFlower()
+{
+
+}
+
+<font color="#FF00FF">// precondition: Jeroo is positioned on top of a flower
+// postcondition: flower has been picked and net has been disabled</font>
+method pickAndToss()
+{
+
+}
+
+<font color="#FF00FF">// precondition: none
+// postcondition: Jeroo has moved inside house</font>
+method enterHouse()
+{
+
+}
+	</pre>
+  </div>
+  <p>Use the following code as your main method.</p>
+  <div id="csCode">
+    <pre>
+method main()
+{ 
+   Jeroo angel = new Jeroo();
+    
+   angel.getFlower(); 
+   angel.pickAndToss(); 
+   angel.enterHouse();
+}</pre>
+  </div>
+  
+<h1>Source File</h1>
+<p>HomewardAngel2.jsc</p>
+<h1>Island File</h1>
+  <p><a href="images/Jeroo/Islands/Angel.zip"; style="color: #0000FF">Angel.jev</a></p>
+<h1>Sample Run - Before Execution</h1>
+<img src="images/Jeroo/homewardAngelBegin.gif">
+<h1>Sample Run - After Execution</h1>
+<img src="images/Jeroo/homewardAngel.gif">
+	<br>
+</div>

@@ -1,0 +1,133 @@
+<practice>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int k = 35, total = 0;
+while(k > 0)
+{
+   total += k;
+   k -= 8;
+}
+System.out.println(k);</pre>]]></code>
+        <a><![CDATA[<pre>0</pre>]]></a>
+        <b><![CDATA[<pre>3</pre>]]></b>
+        <c><![CDATA[<pre>-5</pre>]]></c>
+        <d><![CDATA[<pre>95</pre>]]></d>
+        <e><![CDATA[<pre>94</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int b = -3;
+while(b >= -8){
+   out.print(b);
+   b -= 2;
+}</pre>]]></code>
+        <a><![CDATA[<pre>-5-7</pre>]]></a>
+        <b><![CDATA[<pre>-3-5-7-8</pre>]]></b>
+        <c><![CDATA[<pre>-3-5-7-9</pre>]]></c>
+        <d><![CDATA[<pre>-3-5-7</pre>]]></d>
+        <e><![CDATA[<pre>There is no output.</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>for(int c=5; c>0; --c)
+   System.out.print(c);</pre>]]></code>
+        <a><![CDATA[<pre>543</pre>]]></a>
+        <b><![CDATA[<pre>5432</pre>]]></b>
+        <c><![CDATA[<pre>432</pre>]]></c>
+        <d><![CDATA[<pre>54321</pre>]]></d>
+        <e><![CDATA[<pre>12</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int z = 0;
+for(int i = 0; i < 22; i=i+4)
+   z = z + i;
+out.print( z );</pre>]]></code>
+        <a><![CDATA[<pre>75</pre>]]></a>
+        <b><![CDATA[<pre>65</pre>]]></b>
+        <c><![CDATA[<pre>0</pre>]]></c>
+        <d><![CDATA[<pre>60</pre>]]></d>
+        <e><![CDATA[<pre>66</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int j=32;
+while( j > 0){
+   j-=4;
+}
+out.println(j);</pre>]]></code>
+        <a><![CDATA[<pre>-1</pre>]]></a>
+        <b><![CDATA[<pre>0</pre>]]></b>
+        <c><![CDATA[<pre>-2</pre>]]></c>
+        <d><![CDATA[<pre>1</pre>]]></d>
+        <e><![CDATA[<pre>0</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int count = 1;
+for(int i = 1;i < 24; i*=2)
+   ++count;
+out.println(count++);</pre>]]></code>
+        <a><![CDATA[<pre>24</pre>]]></a>
+        <b><![CDATA[<pre>25</pre>]]></b>
+        <c><![CDATA[<pre>5</pre>]]></c>
+        <d><![CDATA[<pre>4</pre>]]></d>
+        <e><![CDATA[<pre>6</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is a possible output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int sum = 100;
+for(int i=1; sum > 50; i+=5)
+   sum-=2*i;
+out.println(sum);</pre>]]></code>
+        <a><![CDATA[<pre>64</pre>]]></a>
+        <b><![CDATA[<pre>50</pre>]]></b>
+        <c><![CDATA[<pre>45</pre>]]></c>
+        <d><![CDATA[<pre>32</pre>]]></d>
+        <e><![CDATA[<pre>The code creates an infinite loop.</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int w = 2;
+for(;w<=7;)
+   out.print(w+=2);
+out.println();</pre>]]></code>
+        <a><![CDATA[<pre>246</pre>]]></a>
+        <b><![CDATA[<pre>2468</pre>]]></b>
+        <c><![CDATA[<pre>2467</pre>]]></c>
+        <d><![CDATA[<pre>468</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to a compile error.</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int x = 0;
+for (int y = 0; y <= 10; y += 2)
+   x += y;
+out.println(x);</pre>]]></code>
+        <a><![CDATA[<pre>20</pre>]]></a>
+        <b><![CDATA[<pre>30</pre>]]></b>
+        <c><![CDATA[<pre>55</pre>]]></c>
+        <d><![CDATA[<pre>45</pre>]]></d>
+        <e><![CDATA[<pre>100</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is the last line of output by the code to the right?]]></question>
+        <code><![CDATA[<pre>for(int i=0,j=100;j>0;)
+   out.println(i++ +" "+ (j/=2)+" ");</pre>]]></code>
+        <a><![CDATA[<pre>6 1</pre>]]></a>
+        <b><![CDATA[<pre>5 1</pre>]]></b>
+        <c><![CDATA[<pre>7 0</pre>]]></c>
+        <d><![CDATA[<pre>6 0</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to a compile error.</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+</practice>

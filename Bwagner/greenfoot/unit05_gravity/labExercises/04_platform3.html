@@ -1,0 +1,66 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Platform3</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/PlatForm3.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Platform3</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Platform3</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Platform3 Scenario, and click Open.</p></li>
+</ol>
+
+<h1>Moving Platforms</h1>
+<p>Looking at the World for this lesson you will notice that there is now 6 platforms instead of 3.</p>
+<div><img src="greenfoot/images/Platform3_01.png"></div>
+
+<h1>Program Modifications</h1>
+<p>In this lesson you are going to modify the game by having the platforms move down one unit every execution cycle. When the 
+   platforms reach the bottom of the world they are moved to the top of the world so they can again move down through the world. This
+   is the same behavior we used to move stars in unit 3.</p>
+   
+<p>The class structure in this scenario has been modified. A new class named <strong>Platform</strong> has been added and both the TopPlatform
+   class and the BottomPlatform class are now declared as subclasses of this new class.</p>
+   
+   <div><img src="greenfoot/images/Platform3_03.png"></div>
+   
+<p>By making TopPlatform and BottomPlatform subclasses of the Platform class any code placed in the Platform class's act method will effect both
+   TopPlatform objects and BottomPlatform objects. In other words, if I want to make both TopPlatforms and BottomPlatforms move all
+    I have to do is place the code in the Platform class's act method and both TopPlatform objects and BottomPlatform objects will 
+   automatically move.</p>
+   
+<ol id="csList">
+<li><p>Modify the Platform class's <strong>act</strong> method so that both top platforms and bottom platforms move down one
+     unit every time the act method is called. 
+</p></li>
+<li><p>Moving the platforms one unit every time the act method is called causes the platforms to move to fast. One way to slow them down 
+    is to create a <strong>counter</strong> variable that is incremented in the act method each time the act method is called, then include an if statement 
+	that will only allow the platforms to move when the counter equals a multiple of 5. An example is shown below:</p>
+	
+	<div id="csCode" style="width:600px"><pre>if(counter % 5 == 0)  // counter is a multiple of 5
+{
+   setLocation(getX(), getY() + 1);
+}
+counter++;    // increment counter
+</pre></div>
+<p>Include this behavior in your code. Make sure to declare the counter variable as an instance variable in the Platform class.</p></li>
+<li><p>When a platform reaches the bottom of the world move the platform to the top of the world so that it can continue to move through the 
+	world from top to bottom. Here is the pseudocode for this process:</p>
+<div id="csOutput" style="width:600px"><pre>
+if getY() is greater than the height of the world then
+   use setLocation to move platform to top of world
+</pre></div></li>
+<li><p>The <strong>endGameTest</strong> method that you implemented in the last lesson is included in this version of the program. 
+   However while testing the code for the platform classes we do not want to end the game each time the frog touches the ground
+   this could make testing the code difficult and inefficient. So to temporarily deactivate the endGameTest method the call to
+   it in the act method was converted to a comment. Look at the act method below.</p></li>
+<div><img src="greenfoot/images/Platform3_02.png"></div>
+<p>Once you've tested the new code and you have verified that the platforms work properly, then activate the endGameTest method 
+   by removing the comment symbols.</p>
+</ol>
+   
+   
+	<br>
+</div>

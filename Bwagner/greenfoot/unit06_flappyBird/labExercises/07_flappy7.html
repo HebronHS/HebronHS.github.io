@@ -1,0 +1,81 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">FlappyBird7</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/FlappyBird7.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >FlappyBird7</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>FlappyBird7</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the FlappyBird7 Scenario, and click Open.</p></li>
+</ol>
+<br>
+<p>In this lesson a parallax background is added. Parallax is a special effect where multiple layers of a background are
+   scrolled at different speeds. Another trick you can do to enhance the parallax effect and give your game the illusion of depth is to change the transparency
+   levels of images that make up the background.</p>
+
+<h1>Parallax Background</h1>
+<p>In our FlappyBird game parallax is introduced by adding a ground image to the world that sits on top of the background image. This
+   ground image is not part of the background image, instead it is a sprite(actor) that is added to the world. Since the ground is in the 
+   foreground it scrolls a little faster than the background image.</p>
+
+<div><img src="greenfoot/images/FlappyBird7_01.png"></div>
+
+<p>The following <strong>Ground</strong> class was added to the scenario. It uses the same scrolling technique that was used to scroll the background 
+   image. </p>
+
+<div><img src="greenfoot/images/FlappyBird7_02.png"></div>
+
+<h1>Program Modifications</h1>
+<p>Add a pause game feature that will pause the game when the user presses the "space" key. To continue the game the user presses the
+   "space" key again. To complete this task do the following:</p>
+<ol id="csList">
+<li><p>Add the following variable declaration to the FlappyWorld class.</p>
+<div id="csCode" style="width:550px"><pre>static boolean paused = false;</pre></div>
+<p>Notice the use of the keyword <strong>static</strong> in the front of the variable declaration. The static keyword is used to define
+   a special kind of variable called a <strong>class</strong> variable. Class variables are different from instance variables in that they
+   belong to the class they are defined whereas instance variables belong to an object and are created when an object is instantiated(created).
+   Each object has is own set of instance variables and these variables belong only to that object, whereas a class contains only one version of a class
+   variable and it can be shared among all the objects of that class. Class variables can also be accessed in other classes by using dot notation
+   similar to the way objects access methods but instead of using (object.method) notation use (class.variable) notation.
+   For example suppose you would like to use the paused variable created in FlappyWorld class in the Flappy class. This can be accomplished by 
+   using code like the following:</p>
+   <div id="csCode" style="width:300px"><pre>if(<div id="csHighlight"><pre>FlappyWorld</pre></div>.paused == false)</pre></div>
+</li>
+<br>
+<li><p>Add the following method to the FlappyWorld class.</p>
+<div id="csCode" style="width:550px"><pre>
+public void pauseTest()
+{
+   if("space".equals(Greenfoot.getKey()))
+   {
+      if(paused == true)       // toggle paused
+         paused = false;
+      else
+         paused = true;
+   }
+}
+</pre></div>
+</li>
+<li><p>Add a call to the <strong>pauseTest</strong> method in the FlappyWorld's act method. Then wrap an if statement around all of 
+   the code in the act method, except the call to pauseTest, so that the code will not be executed when the game is paused. When both
+   of the tasks are complete the act method should look like the following:</p>
+   
+ <div><img src="greenfoot/images/FlappyBird7_03.png"></div>  
+</li>
+<li><p>Add an if statement to the act method for each of the following classes: Background, Ground, Pipe, and Flappy so that the 
+       code in these act methods will not be executed when the game is paused.</p>
+	<p>The if statement should be similar to one added to the act method of the FlappyWorld class except when referencing the
+	   paused variable the FlappyWorld class name needs to be included with dot notation like the example below:</p>
+	   
+	   <div id="csCode" style="width:300px"><pre>if(<div id="csHighlight"><pre>FlappyWorld</pre></div>.paused == false)</pre></div>
+	   
+	   </li>
+</ol>
+	
+	
+	<br>
+</div>
+

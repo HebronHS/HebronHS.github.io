@@ -1,0 +1,56 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Platform5</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/PlatForm5.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Platform5</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Platform5</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Platform5 Scenario, and click Open.</p></li>
+</ol>
+
+<h1>Release Shark</h1>
+<P>This version of the program modifies the way the game ends. Instead of just ending the game when the frog lands on the ground 
+   like previous versions, this version releases a shark to eat the frog when it lands on the ground.</P>
+   
+   <p>Look at the Frog method <strong>endGameTest</strong>.</p>
+   <div><img src="greenfoot/images/Platform5_01.png"></div>
+
+<p>When the frog touches the ground a Shark object is created and added to the world. The shark's initial position is off the screen
+   to the right.</p>
+<p>Notice the use of the boolean variable <strong>releaseShark</strong> in the if statement. This variable, called a flag, is 
+   necessary to prevent more than one shark from being created each time the endGameTest method is called. Recall that the act method, and any code
+   placed inside the act method, is executed over and over again as the program is running. Without this flag in the if statement the code
+   that creates a Shark object would be called repeatedly as long as the frog is touching the ground resulting in numerous sharks being
+   added to the world.</p>
+   
+   <p>The act method in the <strong>Shark</strong> class causes the shark to swim across the world from right to left.</p>
+
+<br><hr>
+<h1>Program Modifications</h1>
+<ol id="csList">
+<li><p>Add a method named <strong>sharkTest</strong> to the Frog class. This method, when called, should test to 
+   see if the shark is touching the frog. If the shark is touching the frog, the frog should be placed in the shark's mouth and carried
+   off the screen.</p>
+   
+   <p>Use the following pseudocode:</p>
+   <div id="csOutput" style="width:650px"><pre>
+if frog is touching a shark then
+   get reference to the shark
+   move frog to shark's location
+end if
+</pre></div>
+<p>The following code can be used to get a reference to the shark and move the frog to the shark's location: </p>
+<div id="csCode"><pre>Actor shark = getOneIntersectingObject(Shark.class);     // get the shark
+setLocation(shark.getX(), shark.getY());     // move frog to shark's location</pre></div>
+</li>
+<li><p>Make a call to the sharkTest method in the act method.</p></li>  
+<li><p>Compile and run the program. Notice that the frog is positioned in the center of the shark.</p></li>
+<li><p>Adjust the frog's location so that the frog is positioned inside the shark's mouth.</p></li>
+</ol>   
+ 
+	<br>
+</div>

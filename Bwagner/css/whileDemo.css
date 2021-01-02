@@ -1,0 +1,121 @@
+
+            #demomain.demo {
+                margin-left: auto;
+                margin-right: auto;
+                //width: 45%;
+				width: 580px;
+                border-style: solid;
+                border-collapse: collapse;
+            }
+            #demoheader.demo {
+                padding: 10px;
+                background-color: #EEEEEE;
+                border-bottom: #999999;
+                border-bottom-style: solid;
+                
+            }
+			
+			#demobody.demo {
+                padding: 10px;
+                background-color: #EEEEEE;
+                border-top: #999999;
+                border-top-style: solid;
+            }
+			
+            #demofooter.demo {
+                padding: 10px;
+                background-color: #EEEEEE;
+                border-top: #999999;
+                border-top-style: solid;
+            }
+			
+            td.demo{
+                padding: 1px;
+				border-width: 0;
+            }
+			tr.demo
+			{
+			  border-width: 0;
+			}
+			
+            #var1, #var2, #condition {
+                font-size: 22px;
+                font-family: "Consolas","Courier New";
+                visibility: hidden;
+            }
+            #box1{
+                font-size: 22px;
+                font-family: "Consolas","Courier New"; 
+                border-style: inset;
+                border-width: 0;
+                border-color: gray;
+                background: white;
+                display: block;
+                width: 50px;
+                visibility: hidden;
+				padding-left: 3px;
+            }
+            #box2{
+                font-size: 22px;
+                font-family: "Consolas","Courier New"; 
+                border-style: inset;
+                border-width: 0;
+                border-color: gray;
+                background: white;
+                display: block;
+                width: 50px;
+                visibility: hidden;
+				padding-left: 3px;
+            }
+            #box3{
+                font-size: 22px;
+                font-family: "Consolas","Courier New"; 
+                border-style: inset;
+                border-width: 0;
+                border-color: gray;
+                background: white;
+                display: block;
+                width: 90px;
+                visibility: hidden;
+				padding-left: 3px;
+            }
+            #buttonPanel.demo {
+                margin-left: auto;
+                margin-right: auto;
+                width: 34%;
+            }
+            
+            pre.code {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                font-size: 22px;
+                font-family: "Consolas","Courier New"; 
+				background: white;
+				border-width: 0;
+                padding: 1px;
+            }
+			
+			span.code {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                font-size: 22px;
+                font-family: "Consolas","Courier New"; 
+				background: white;
+				border-width: 0;
+                padding: 1px;
+            }
+			
+            pre.var
+            {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                font-size: 22px;
+                font-family: "Consolas","Courier New";  
+				border-width: 0;
+                padding: 1px;
+            }
+            button.demo
+            {
+                font-size: 22px;
+				padding: 3px;
+            }

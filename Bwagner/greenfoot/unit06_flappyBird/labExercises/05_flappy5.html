@@ -1,0 +1,61 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">FlappyBird5</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/FlappyBird5.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >FlappyBird5</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>FlappyBird5</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the FlappyBird5 Scenario, and click Open.</p></li>
+</ol>
+
+<h1>Animate Flappy</h1>
+<p>In this lesson we animate Flappy by making his wings move up and down (flap) as he flies.</p>
+<p>To animate Flappy we are going to use the following four images:</p>
+<div align="center"><img src="greenfoot/images/FlappyBird5_01.png"></div>
+	
+<h1>Flappy Class</h1>
+<p>The code used to animate Flappy can be explained in four steps:</p>
+<ol id="csList">
+<li><p><strong>Declare Instance Variables</strong></p>
+<p>Look at the new instance variables added to the Flappy class.</p>
+<div align="center"><img src="greenfoot/images/FlappyBird5_02.png"></div>
+<p>The four image variables are used to store the new images.</p>
+<p>The <strong>frame</strong> variable is used to track which image(frame) is currently visible.</p>
+<p>The <strong>animationCounter</strong> variable is a simple counter that is used to flip the frames at regular intervals.</p>
+<p>The <strong>ANIMATION_SPEED</strong> constant establishes how often the frames are flipped (frame rate).</p>
+</li>
+<li><p><strong>Define a Flappy Constructor</strong></p>
+<div align="center"><img src="greenfoot/images/FlappyBird5_03.png"></div>
+<p>Recall that a constructor is executed when an object is first created. This constructor loads all the image files
+   and stores them in variables so that Flappy can use them. Since the 2nd image and the 4th image are identical the constructor assigns
+   the reference of the 2nd image to the 4th image variable. By doing it this way only 3 images have to be loaded from a file
+   instead of four.</p>
+</li>
+<li><p><strong>Define animateFlappyBird Method</strong></p>
+<div align="center"><img src="greenfoot/images/FlappyBird5_04.png"></div>
+<p>The animateFlappyBird method is responsible for animating Flappy by cycling through its 4 images at regular intervals. Study
+   the code and see if you can understand how it works.</p>
+</li>
+
+<li><p><strong>Make Call to animateFlappyBird</strong></p>
+<p>To animate Flappy the method animateFlappyBird is called in the act method. Placing this call in the act method will cause
+   Flappy to "flap" his wings continually.</p>
+<div align="center"><img src="greenfoot/images/FlappyBird5_05.png"></div>
+</li>
+</ol>
+
+<h1>Program Modifications</h1>
+<p>Compile and execute the program. Notice that Flappy "flaps" his wings the entire time he is in flight. Modify the program 
+   so that Flappy only "flaps" his wings when he is going up.</p>
+   
+<br>
+<br>
+
+
+	<br>
+</div>
+

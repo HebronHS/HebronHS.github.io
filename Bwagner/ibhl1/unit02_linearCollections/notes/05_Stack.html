@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Computer Science</title>
+<BASE href="http://bwagner.dentonisd.org">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" src="scripts/menu.js"></script>
+<script language="JavaScript" src="scripts/menu_items.js"></script>
+<script language="JavaScript" src="scripts/menu_tpl.js"></script>
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csHeader">Linear Collection: Stack</div>
+	<div id="obj">
+		<table>
+			<tr><th>What You Will Learn</th></tr>
+			<tr>
+			    <td>
+					<ul>		
+          				<li></li>
+						<li></li>
+						<li></li>		
+					</ul>
+				</td>
+			</tr>		
+		</table>
+</div>	
+<div id="csContent"> 	
+<h1>Linear Collection: Stack</h1>
+      <p><strong>Stacks</strong> are linear collections in which access is completely restricted 
+        to just one end, called the <strong>top</strong>. The classical example 
+        is the stack of clean trays found in every cafeteria. Whenever a tray 
+        is needed, it is removed from the top of the stack, and whenever clean 
+        ones come back from the scullery, they are again placed on the top. No 
+        one ever takes some particular fine tray from the middle of the stack, 
+        and it is even possible that trays near the bottom are never used. Stacks 
+        are said to adhere to a last-in, first-out protocol <strong>(LIFO)</strong>. 
+        The last tray brought back from the scullery is the first one taken by 
+        a customer.</p>
+      <h3>JCF - Java Collections Framework</h3>
+      <p>The java.util package includes a <strong>Stack</strong> class. The methods used 
+        to manipulate a stack are shown below. The operations for putting items 
+        on and removing items from a stack are called <strong>push</strong> and 
+        <strong>pop</strong>, respectively.</p>
+		
+      <h3>class java.util.Stack&lt;E&gt;</h3>
+      <table id="csTable">
+        <tr> 
+          <td width="40%">E <strong>push</strong>(E item)</td>
+          <td width="69%">pushes item onto the top of the 
+            stack; returns item</td>
+        </tr>
+        <tr> 
+          <td>E <strong>pop</strong>()</td>
+          <td>removes and returns the element at the top 
+            of the stack</td>
+        </tr>
+        <tr> 
+          <td>E <strong>peek</strong>()</td>
+          <td>returns the element at the top of the stack</td>
+        </tr>
+        <tr> 
+          <td>boolean <strong>isEmpty</strong>()</td>
+          <td>throws an exception if the stack is empty</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>* Note: The Stack class provided by the JCF is a subclass of another 
+        class called Vector (similar to an ArrayList). An unfortunate side effect 
+        of this implementation is that clients can treat stacks as vectors by 
+        inserting, replacing, or removing an element at <strong>any</strong> position, 
+        thus violating the spirit of a stack which only allows manipulation from 
+        the <strong>top</strong>.</p>
+		
+      <h2>Using a Stack</h2>
+      <h3>Creating a Linked List Object</h3>
+      <div id="csCode"><pre>
+Stack&lt;Integer&gt; myStack = new Stack();
+        </pre>
+      </div>
+      <p>or</p>
+      <div id="csCode"><pre>
+List&lt;Integer&gt; myStack = new Stack();
+        </pre>
+      </div>
+      <h3>Adding an Object to a Stack</h3>
+      <div id="csCode"><pre>
+myStack.push(57);
+        </pre>
+      </div>
+      <h3>Removing an Object from a Stack</h3>
+      <div id="csCode"><pre>
+int num = myStack.pop();
+        </pre>
+      </div>
+      <h3>Viewing the Top of a Stack</h3>
+      <div id="csCode"><pre>
+int num = myStack.peek();  <font color="#009900">// does not remove the item</font>
+        </pre>
+      </div>
+      <h3>Traversing a Stack</h3>
+      <div id="csCode"><pre>
+while(!myStack.isEmpty())
+{
+   System.out.println(myStack.pop());
+}
+        </pre>
+      </div>
+      <p>&nbsp;</p>
+      <h1>Applications of Stacks</h1>
+      <p>Applications of stacks in computer science are numerous. Following are 
+        just a few examples:</p>
+      <div id="csTable"><ul>
+        <li>Parsing expressions in context-free programming languages - a problem 
+          in compiler design</li>
+        <li>Translating infix expressions to postfix form and evaluating postfix 
+          expressions</li>
+        <li>Backtracking algorithms</li>
+        <li>Managing computer memory in support of method calls</li>
+        <li>Supporting the &quot;undo&quot; feature in text editors, word processors, 
+          spreadsheet programs, etc.</li>
+        <li>Maintaining a history of the links visited by a Web browswer</li>
+      </ul></div>
+      <p>&nbsp;</p>
+      <h1>Analyzing the Performance of Stack Implementations</h1>
+      <p>The run-time performance of a stack implementation depends on the run-time 
+        performance of the operations on the data structure contained in it. Stacks 
+        are linear collections, so the natural choices for implementation are 
+        based on arrays (ArrayLists) and linked structures (LinkedList).</p>
+      <p>A stack that uses an array list or an array can push or pop elements 
+        in constant time O(1), with one exception. When the underlying array runs 
+        out of room, it must be resized, and this operation takes linear time.</p>
+      <p>On the other hand, elements can always be added to the end or the beginning 
+        of a linked structure in constant time. A linked structure requires three 
+        times the memory to represent the links and references to the data but 
+        no extra memory to represent the data themselves. Thus, where time is 
+        of the essence, a linked implementation is usually preferable.</p>
+
+<br>
+</div>

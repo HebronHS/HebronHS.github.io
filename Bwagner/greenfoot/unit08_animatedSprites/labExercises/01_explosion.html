@@ -1,0 +1,96 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Explosion</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the scenario: <a href="greenfoot/scenarios/Explosion.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Explosion</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Explosion</strong> and paste it in your <strong>myGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Explosion scenario, and click Open.</p></li>
+</ol>
+<br>
+<p>In this lesson we introduce a new class named <strong>AnimatedActor</strong>. AnimatedActor enables actors to be animated 
+   by allowing them to have multiple images assigned to them. AnimatedActors retrieve 
+   their images from <strong>sprite sheets</strong>.</p>
+   
+   
+<p>To demonstrate how the AnimatedActor class works let's walk through the steps needed to animate a series of explosion images.</p>
+
+<h1>AnimatedActor Class</h1>
+<p>Double-click the AnimatedActor class to view its code. Familiarize yourself with the methods that are provided by this class. 
+The AnimatedActor class was written by me and is not part of the Greenfoot environment so it must be added to projects that want to use it.</p>
+
+ 
+<h1>Sprite Sheet</h1>
+<p>A <strong>sprite sheet</strong> is a file that contains a series of images with each image having the same dimensions. Placing all
+   of the images into one file makes it easier to load the images into a program. Look at the sprite sheet for an explosion. (The image has been
+   reduce in size so that it will fit on this page.)</p>
+<div><img src="greenfoot/images/Explosion_01.png"></div>
+<p>Each image on the sprite sheet must be the same size. For example all 13 images on this sheet have dimensions of 196 x 190. </p>
+<div><img src="greenfoot/images/Explosion_02.png"></div>
+
+<h1>Explosion Class</h1>
+<p>Double-click the Explosion class to view its code. Look at the Explosion class constructor shown below.</p>
+<div><img src="greenfoot/images/Explosion_03.png"></div>
+<p>The constructor includes 4 parameters used in creating an AnimatedActor.</p>
+<ul id="csList">
+<li><p><strong>imageFile</strong> - the name of the sprite sheet file</p></li>
+<li><p><strong>numFrames</strong> - the number of images(frames) contained in the sprite sheet</p></li>
+<li><p><strong>frameWidth</strong> - the width of each frame in the sheet</p></li>
+<li><p><strong>frameHeight</strong> - the height of each frame in the sheet</p></li>
+</ul>
+<p>Every class that is a subclass of AnimatedActor must include this four parameter constructor and the first line of the constructor
+   must include the following line of code.</p>
+<div id="csCode"><pre>super(imageFile, numframes, frameWidth, frameHeight);</pre></div>
+<p>The keyword <strong>super</strong> is used to pass the information about the sprite sheet onto the superclass (AnimatedActor) so that
+   it can be used by the AnimatedActor class to animate the actor.</p>
+   
+<h1>MyWorld Class</h1>
+<p>The MyWorld class is where the Explosion object is created. Several AnimatedActor methods are called to do some initial setup
+   for the animation. Let's look at this code line by line.</p>
+<div id="csCode"><pre>explosion = new Explosion("explosion_sheet.png", 13, 196, 190);</pre></div>
+<p>This line of code creates the Explosion object. "explosion_sheet.png" is the name of the sprite sheet. 13 is the number of frames
+   in the sprite sheet, 196 is the width of each image(frame) in the sheet, and 190 is the height of each frame in the sheet.</p>
+<div id="csCode"><pre>addObject(explosion, getWidth()/2, getHeight()/2);</pre></div>
+<p>This code adds the Explosion object to the world positioned at its center.</p>
+<div id="csCode"><pre>explosion.setAutoAdvance(true);</pre></div>
+<p>The method <strong>setAutoAdvance</strong> turns on or off the auto advance feature. When set to "true" this method enables the
+   frames to be cycled through automatically which allows the actor to be animated.</p>
+<div id="csCode"><pre>explosion.setAdvanceSpeed(10);</pre></div>
+<p>The method <strong>setAdvanceSpeed</strong> sets the animation speed for the actor. The larger the number passed as a parameter
+   the slower the animation will advance through its frames. A value of zero represents the fastest animation speed.</p>
+<div id="csCode"><pre>explosion.setLooping(true);</pre></div>
+<p>The method <strong>setLooping</strong> turns on or off the looping feature. If looping is set to "true" when the animation
+   reaches its last frame it advances back to the first frame and starts the animation over again.</p>
+   
+ <h1>Program Modifications</h1> 
+ <ol id="csList">
+ <li><p>If you have not already done so compile and run the program.</p></li>
+ <li><p>Modify the animation speed by setting it to 0. Compile and run the program.</p></li>
+ <li><p>Modify the animation speed by setting it to 100. Compile and run the program.</p></li>
+ <li><p>Set the looping feature to false. Compile and run the program.</p></li>
+ <li><p>Set the auto advance feature to false. Compile and run the program.</p></li>
+ <li><p>Add the following act method to the <strong>Explosion</strong> class.</p>
+ 
+ <div id="csCode" style="width: 550px"><pre>public void act()
+ {
+     super.act();  // call AnimatedSprite's act method
+        
+     String key = Greenfoot.getKey();
+     if("right".equals(key))
+     {
+         setFrame(getFrame() + 1);  // advance to next frame
+     }
+}</pre></div>
+ <p>Notice the command <strong>super.act()</strong>. This line of code is required and must be the first line of the
+    act method.</p>
+ <p>Compile and run the program. Use the right arrow key to advance the frames.</p>
+ </li>
+ <li><p>Turn the looping feature on then compile and run the program.</p></li>
+ </ol>
+	<br>
+</div>	
+

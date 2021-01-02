@@ -1,0 +1,62 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">SortPractice</div>
+
+<div id="csContent">
+<h1>NetBeans Workspace: <a href="apFreeResponse/SortPracticeNB.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >SortPractice</a></h1> 
+
+<h1>Directions</h1>
+  <p>The starter code for this exercise includes both the selection sort and insertion sort algorithms. The selection sort is implemented so that it sorts an array of Strings and the insertion sort is implemented so that it sorts an array of integers. </p>
+
+  <p><strong>Add code</strong> to each of the sorting algorithms so that each pass through the array is displayed on the console. A pass through the array is defined as one iteration through the inner loop. 
+   <p>For example, suppose you have an array consisting of 5 random integers, one pass through an array using the selection sort algorithm would result in the following changes to ordering of the array:</p>
+
+   <div id="csHTML" style="width:300px"><pre>Original Array: 9 4 7 2 6
+1st Pass      : 2 4 7 9 6</pre></div>
+
+   <p>The selection sort starts by traversing the entire array from beginning to end searching for the smallest value. When it reaches the end of the array it swaps the current number 9, located at index 0, with the current smallest number 2. The number 2 is now in its proper position in the array after 1st Pass.</p> 
+
+   <p>A 2nd pass through the array would result in the following changes to the array:</p>
+
+   <div id="csHTML" style="width:300px"><pre>Original Array: 9 4 7 2 6
+2nd Pass      : 2 4 7 9 6</pre></div>
+
+   <p>There were actually not any changes to the array with the 2nd pass because the number 4 was the next smallest number in the array, so after traversing the list starting at index 1 the value 4 was replaced with the value 4. After pass 2 the numbers 2 and 4 are now in their correct positions in the array.</p>
+
+   <p>A 3rd pass through the array produces the following changes to the array:</p>
+
+   <div id="csHTML" style="width:300px"><pre>Original Array: 9 4 7 2 6
+3rd Pass      : 2 4 6 9 7</pre></div>
+
+   <p>During the 3rd pass through the array the algorithm started traversing the array starting at index 2. With two more passes through the array it will be sorted.</p>
+
+  <p>The <strong>program's output</strong> should match the Sample Run below.</p>
+<h1>Sample Run</h1>
+<div id="csSampleRun">
+<pre>
+Selection Sort
+==============
+Original : Garth Cher Pink Madonna Rihanna Prince Adele 
+Pass - 1 : Adele Cher Pink Madonna Rihanna Prince Garth 
+Pass - 2 : Adele Cher Pink Madonna Rihanna Prince Garth 
+Pass - 3 : Adele Cher Garth Madonna Rihanna Prince Pink 
+Pass - 4 : Adele Cher Garth Madonna Rihanna Prince Pink 
+Pass - 5 : Adele Cher Garth Madonna Pink Prince Rihanna 
+Pass - 6 : Adele Cher Garth Madonna Pink Prince Rihanna 
+
+Insertion Sort
+==============
+Original : 20 70 40 90 10 60 30 80 50 
+Pass - 1 : 20 70 40 90 10 60 30 80 50 
+Pass - 2 : 20 40 70 90 10 60 30 80 50 
+Pass - 3 : 20 40 70 90 10 60 30 80 50 
+Pass - 4 : 10 20 40 70 90 60 30 80 50 
+Pass - 5 : 10 20 40 60 70 90 30 80 50 
+Pass - 6 : 10 20 30 40 60 70 90 80 50 
+Pass - 7 : 10 20 30 40 60 70 80 90 50 
+Pass - 8 : 10 20 30 40 50 60 70 80 90
+</pre>
+</div>
+	<br>
+</div>	
+

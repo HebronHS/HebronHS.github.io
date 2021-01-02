@@ -1,0 +1,191 @@
+<practice>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>
+String s1 = "A";
+String s2 = "B";
+System.out.print(s1.compareTo(s2));</pre>]]></code>
+        <a><![CDATA[A]]></a>
+        <b><![CDATA[B]]></b>
+        <c><![CDATA[1]]></c>
+        <d><![CDATA[0]]></d>
+        <e><![CDATA[-1]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is the output?]]></question>
+        <code><![CDATA[<pre>String s = "COMPUTER SCIENCE";
+out.println(s.indexOf("C"));</pre>]]></code>
+        <a><![CDATA[1]]></a>
+        <b><![CDATA[14]]></b>
+        <c><![CDATA[9]]></c>
+        <d><![CDATA[10]]></d>
+        <e><![CDATA[0]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is the output?]]></question>
+        <code><![CDATA[<pre>String s = "CONCATENATION";
+out.println(s.substring(2,5));</pre>]]></code>
+        <a><![CDATA[CATE]]></a>
+        <b><![CDATA[NCATE]]></b>
+        <c><![CDATA[CATEN]]></c>
+        <d><![CDATA[CAT]]></d>
+        <e><![CDATA[NCA]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>String s = "MONSTER";
+String t = "MASH";
+s = t;
+out.println(s + t);</pre>]]></code>
+        <a><![CDATA[MONSTERMASH]]></a>
+        <b><![CDATA[MONSTERMONSTER]]></b>
+        <c><![CDATA[MASHMASH]]></c>
+        <d><![CDATA[MASHMONSTER]]></d>
+        <e><![CDATA[MASHMASHMASH]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>String s = "ABCDEFGHIJ";
+out.println(s.substring(2,6).substring(1,2));</pre>]]></code>
+        <a><![CDATA[D]]></a>
+        <b><![CDATA[DE]]></b>
+        <c><![CDATA[CDEF]]></c>
+        <d><![CDATA[CD]]></d>
+        <e><![CDATA[runtime error]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>String best="aplusccompsci";
+out.println(best.charAt(4));</pre>]]></code>
+        <a><![CDATA[p]]></a>
+        <b><![CDATA[1]]></b>
+        <c><![CDATA[u]]></c>
+        <d><![CDATA[s]]></d>
+        <e><![CDATA[c]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by line1 in the code to the right?]]></question>
+        <code><![CDATA[<pre>String s1 = "glass_blowing_class";
+int loc1 = s1.indexOf("ss");
+String s2 = s1.substring(loc1);
+int loc2 = s1.indexOf("ss",loc1 + 1 );
+String s3 = s1.substring( loc1 + 2,loc2 );
+System.out.print( s1 ); //line 1
+System.out.print( s2 ); //line 2
+System.out.print( s3 ); //line 3</pre>]]></code>
+        <a><![CDATA[ss_blowing_class]]></a>
+        <b><![CDATA[_blowing_cla]]></b>
+        <c><![CDATA[_blowing_class]]></c>
+        <d><![CDATA[glass_blowing_class]]></d>
+        <e><![CDATA[gla]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by line2 in the code to the right?]]></question>
+        <code><![CDATA[<pre>String s1 = "glass_blowing_class";
+int loc1 = s1.indexOf("ss");
+String s2 = s1.substring(loc1);
+int loc2 = s1.indexOf("ss",loc1 + 1 );
+String s3 = s1.substring( loc1 + 2,loc2 );
+System.out.print( s1 ); //line 1
+System.out.print( s2 ); //line 2
+System.out.print( s3 ); //line 3</pre>]]></code>
+        <a><![CDATA[s_blowing_class]]></a>
+        <b><![CDATA[_blowing_class]]></b>
+        <c><![CDATA[glass_blowing_class]]></c>
+        <d><![CDATA[ss_blowing_class]]></d>
+        <e><![CDATA[glass_blowing_clas]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by line3 in the code to the right?]]></question>
+        <code><![CDATA[<pre>String s1 = "glass_blowing_class";
+int loc1 = s1.indexOf("ss");
+String s2 = s1.substring(loc1);
+int loc2 = s1.indexOf("ss",loc1 + 1 );
+String s3 = s1.substring( loc1 + 2,loc2 );
+System.out.print( s1 ); //line 1
+System.out.print( s2 ); //line 2
+System.out.print( s3 ); //line 3</pre>]]></code>
+        <a><![CDATA[_blowing_class]]></a>
+        <b><![CDATA[_blowing_cla]]></b>
+        <c><![CDATA[ss_blowing_class]]></c>
+        <d><![CDATA[_blowing_]]></d>
+        <e><![CDATA[There is no output due to a runtime error]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>String d = "8 bits in a byte bud";
+System.out.print(d.lastIndexOf('b'));</pre>]]></code>
+        <a><![CDATA[0]]></a>
+        <b><![CDATA[-1]]></b>
+        <c><![CDATA[3]]></c>
+        <d><![CDATA[7]]></d>
+        <e><![CDATA[17]]></e>
+        <answer>e</answer>
+    </problem>
+        <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>String d = "what up doc";
+System.out.print(d.endsWith("doc"));</pre>]]></code>
+        <a><![CDATA[0]]></a>
+        <b><![CDATA[-1]]></b>
+        <c><![CDATA[true]]></c>
+        <d><![CDATA[false]]></d>
+        <e><![CDATA[no]]></e>
+        <answer>c</answer>
+    </problem>
+        <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>String d = "goet-dome-teaf";
+System.out.print(d.contains("t-t"));</pre>]]></code>
+        <a><![CDATA[0]]></a>
+        <b><![CDATA[-1]]></b>
+        <c><![CDATA[true]]></c>
+        <d><![CDATA[false]]></d>
+        <e><![CDATA[no]]></e>
+        <answer>d</answer>
+    </problem>
+        <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>System.out.println("elephant".length());</pre>]]></code>
+        <a><![CDATA[8]]></a>
+        <b><![CDATA[7]]></b>
+        <c><![CDATA[9]]></c>
+        <d><![CDATA[6]]></d>
+        <e><![CDATA[There is no output due to a syntax error]]></e>
+        <answer>a</answer>
+    </problem>
+            <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>String mid = "sc";
+String result = 1 + 2 + mid + 1 + 2;
+System.out.print( result );</pre>]]></code>
+        <a><![CDATA[3sc12]]></a>
+        <b><![CDATA[3sc3]]></b>
+        <c><![CDATA[12sc12]]></c>
+        <d><![CDATA[sc]]></d>
+        <e><![CDATA[1+2+mid+1+2]]></e>
+        <answer>a</answer>
+    </problem>
+            <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>String name = "jim_gray";
+String st;
+st = name.substring(1, 5).substring(2);
+System.out.print( st );</pre>]]></code>
+        <a><![CDATA[_gr]]></a>
+        <b><![CDATA[_gray]]></b>
+        <c><![CDATA[m_]]></c>
+        <d><![CDATA[_gra]]></d>
+        <e><![CDATA[_g]]></e>
+        <answer>e</answer>
+    </problem>
+</practice>

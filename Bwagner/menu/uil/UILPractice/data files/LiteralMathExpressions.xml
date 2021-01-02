@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <practice>
+        <problem>
+            <question>What is output by the code to the right?</question>
+            <code><![CDATA[<pre>
+int x = 10;
+int y = 4;
+x = y / x;
+System.out.println( x );
+</pre>]]>
+            </code>
+            <a>0</a>
+            <b>0.4</b>
+            <c>40</c>
+            <d>2</d>
+            <e>2.5</e>
+            <answer>a</answer>
+        </problem>
+        <problem>
+            <question><![CDATA[What is the value of z after executing the code to the right?]]></question>
+            <code><![CDATA[<pre>
+int x = 10;
+int y = x * 3 + 7;
+int z = y + 3 * 7;</pre>]]></code>
+            <a><![CDATA[10]]></a>
+            <b><![CDATA[221]]></b>
+            <c><![CDATA[1491]]></c>
+            <d><![CDATA[58]]></d>
+            <e><![CDATA[280]]></e>
+            <answer>d</answer>
+        </problem>
+        <problem>
+            <question><![CDATA[What is output by the code to the right?]]></question>
+            <code><![CDATA[<pre>int x1 = 3;
+int y1 = 2;
+x1 = y1 * 3;
+y1 = x1 * 2;
+System.out.print( y1 );</pre>]]></code>
+            <a><![CDATA[6]]></a>
+            <b><![CDATA[2]]></b>
+            <c><![CDATA[18]]></c>
+            <d><![CDATA[12]]></d>
+            <e><![CDATA[3]]></e>
+            <answer>d</answer>
+        </problem>
+        <problem>
+            <question><![CDATA[What is the output?]]></question>
+            <code><![CDATA[<pre>
+int x = 21, y = 4;
+double z = 5;
+z = x / y / z;
+out.println(z);</pre>]]></code>
+            <a><![CDATA[1.0]]></a>
+            <b><![CDATA[1.05]]></b>
+            <c><![CDATA[1.5]]></c>
+            <d><![CDATA[23.25]]></d>
+            <e><![CDATA[division by zero error]]></e>
+            <answer>a</answer>
+        </problem>
+        <problem>
+            <question><![CDATA[What is the output?]]></question>
+            <code><![CDATA[<pre>
+int x = 34, y = 5;
+double z;
+z = x / y;
+out.println(z);</pre>]]></code>
+            <a><![CDATA[6]]></a>
+            <b><![CDATA[6.4]]></b>
+            <c><![CDATA[6.8]]></c>
+            <d><![CDATA[4]]></d>
+            <e><![CDATA[6.0]]></e>
+            <answer>e</answer>
+        </problem>
+        <problem>
+            <question><![CDATA[What is output by the code to the right?]]></question>
+            <code><![CDATA[<pre>
+int x = 14, y = 3;
+double z = x / 3 % 2 + 17 % y;
+out.println(z);</pre>]]></code>
+            <a><![CDATA[2]]></a>
+            <b><![CDATA[5]]></b>
+            <c><![CDATA[2.0]]></c>
+            <d><![CDATA[5.0]]></d>
+            <e><![CDATA[16]]></e>
+            <answer>c</answer>
+        </problem>
+        <problem>
+            <question><![CDATA[What is output by the code to the right?]]></question>
+            <code><![CDATA[<pre>
+int x = 5, y = 12;
+int z = x % y + y % x;
+out.println((double) z + y / x);</pre>]]></code>
+            <a><![CDATA[0]]></a>
+            <b><![CDATA[7.0]]></b>
+            <c><![CDATA[9.0]]></c>
+            <d><![CDATA[9.4]]></d>
+            <e><![CDATA[2.4]]></e>
+            <answer>c</answer>
+        </problem>
+        <problem>
+            <question><![CDATA[What is output by the code to the right?]]></question>
+            <code><![CDATA[<pre>
+int e = (((11+5)/5) - (3*-2));
+out.println(e);</pre>]]></code>
+            <a><![CDATA[-1]]></a>
+            <b><![CDATA[3]]></b>
+            <c><![CDATA[-6]]></c>
+            <d><![CDATA[8]]></d>
+            <e><![CDATA[9]]></e>
+            <answer>e</answer>
+        </problem>
+        <problem>
+            <question><![CDATA[What is output by the code to the right?]]></question>
+            <code><![CDATA[<pre>
+int x = 3 * 6;
+int y = x / 5 + x % 5;
+out.println( y );</pre>]]></code>
+            <a><![CDATA[6.6]]></a>
+            <b><![CDATA[7]]></b>
+            <c><![CDATA[5]]></c>
+            <d><![CDATA[18]]></d>
+            <e><![CDATA[6]]></e>
+            <answer>e</answer>
+        </problem>
+        <problem>
+            <question><![CDATA[What is output by the code to the right?]]></question>
+            <code><![CDATA[<pre>
+int a = 10;
+int b = -3;
+System.out.println(a % b);</pre>]]></code>
+            <a><![CDATA[-1]]></a>
+            <b><![CDATA[1]]></b>
+            <c><![CDATA[0]]></c>
+            <d><![CDATA[3]]></d>
+            <e><![CDATA[-3]]></e>
+            <answer>b</answer>
+        </problem>
+    </practice>   
+</root>

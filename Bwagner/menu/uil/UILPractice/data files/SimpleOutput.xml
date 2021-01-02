@@ -1,0 +1,194 @@
+<practice>
+    <problem>
+        <question><![CDATA[What is output by the code at right?]]></question>
+        <code><![CDATA[<pre>System.out.print("red");
+System.out.println("green");
+System.out.print("blue");</pre>]]>
+        </code>
+        <a><![CDATA[<pre>redgreenblue</pre>]]></a>
+        <b><![CDATA[<pre>
+red
+green
+blue</pre>]]></b>
+        <c><![CDATA[<pre>
+redgreen
+blue</pre>]]></c>
+        <d><![CDATA[<pre>
+red
+greenblue</pre>]]></d>
+        <e><![CDATA[<pre>
+red green blue</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code at right?]]></question>
+        <code><![CDATA[<pre>System.out.println("a\naa\naaa");</pre>]]></code>
+        <a><![CDATA[<pre>a\naa\naaa</pre>]]></a>
+        <b><![CDATA[<pre>anaanaaa</pre>]]></b>
+        <c><![CDATA[<pre>a aa aaa</pre>]]></c>
+        <d><![CDATA[<pre>a
+aa
+aaa</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to a syntax error</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+	<problem>
+        <question><![CDATA[What is output by the code at right?]]></question>
+        <code><![CDATA[<pre>out.println("\"\"\b\\");</pre>]]></code>
+        <a><![CDATA[<pre>""\</pre>]]></a>
+        <b><![CDATA[<pre>""b\</pre>]]></b>
+        <c><![CDATA[<pre>""\b\</pre>]]></c>
+        <d><![CDATA[<pre>"\</pre>]]></d>
+        <e><![CDATA[<pre>\"\"\b\\</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>System.out.printf("%4.2f", 33.1);</pre>]]></code>
+        <a><![CDATA[33.10]]></a>
+        <b><![CDATA[33.1000]]></b>
+        <c><![CDATA[33.100]]></c>
+        <d><![CDATA[4.2f]]></d>
+        <e><![CDATA[33.10000]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>System.out.printf("%b", 12);</pre>]]></code>
+        <a><![CDATA[true]]></a>
+        <b><![CDATA[false]]></b>
+        <c><![CDATA[0]]></c>
+        <d><![CDATA[1]]></d>
+        <e><![CDATA[12]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>System.out.printf("%+3d", 275);</pre>]]></code>
+        <a><![CDATA[275.000]]></a>
+        <b><![CDATA[275]]></b>
+        <c><![CDATA[+300]]></c>
+        <d><![CDATA[+275]]></d>
+        <e><![CDATA[+000275]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>System.out.printf("%05.2f", 3.1);</pre>]]></code>
+        <a><![CDATA[03.10]]></a>
+        <b><![CDATA[3.10000]]></b>
+        <c><![CDATA[0x3.10]]></c>
+        <d><![CDATA[3.10x8]]></d>
+        <e><![CDATA[003.10]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>System.out.printf("%(4.3f", .315);</pre>]]></code>
+        <a><![CDATA[0.315]]></a>
+        <b><![CDATA[.315]]></b>
+        <c><![CDATA[(0.315)]]></c>
+        <d><![CDATA[-(0.315)]]></d>
+        <e><![CDATA[.3150]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>System.out.printf("%+06d", 2009);</pre>]]></code>
+        <a><![CDATA[2009]]></a>
+        <b><![CDATA[+2009]]></b>
+        <c><![CDATA[002009]]></c>
+        <d><![CDATA[d+2009]]></d>
+        <e><![CDATA[+02009]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>System.out.printf("%4.2f", 2.559);</pre>]]></code>
+        <a><![CDATA[2.55]]></a>
+        <b><![CDATA[2.56]]></b>
+        <c><![CDATA[2.559]]></c>
+        <d><![CDATA[2]]></d>
+        <e><![CDATA[%4.2f 2.559]]></e>
+        <answer>b</answer>
+    </problem>
+        <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>System.out.printf("%04d", 19);</pre>]]></code>
+        <a><![CDATA[0019]]></a>
+        <b><![CDATA[19.0]]></b>
+        <c><![CDATA[000019]]></c>
+        <d><![CDATA[19.00]]></d>
+        <e><![CDATA[19]]></e>
+        <answer>a</answer>
+    </problem>
+        <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>System.out.printf( "%+3d", 12 );</pre>]]></code>
+        <a><![CDATA[+C]]></a>
+        <b><![CDATA[12.0]]></b>
+        <c><![CDATA[+12]]></c>
+        <d><![CDATA[-12]]></d>
+        <e><![CDATA[012]]></e>
+        <answer>c</answer>
+    </problem>
+        <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>System.out.printf("%4.2f", 1.3679);</pre>]]></code>
+        <a><![CDATA[.3679]]></a>
+        <b><![CDATA[3679]]></b>
+        <c><![CDATA[1.3600]]></c>
+        <d><![CDATA[1.37]]></d>
+        <e><![CDATA[+1.3]]></e>
+        <answer>d</answer>
+    </problem>
+        <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>String format = "%3.1f";
+double v = 1.789;
+System.out.printf( format, v );</pre>]]></code>
+        <a><![CDATA[1.8]]></a>
+        <b><![CDATA[1.800]]></b>
+        <c><![CDATA[1.789]]></c>
+        <d><![CDATA[1]]></d>
+        <e><![CDATA[2.0]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>String format = "%0(5d";
+int val = 12;
+System.out.printf( format, val );</pre>]]></code>
+        <a><![CDATA[(012)]]></a>
+        <b><![CDATA[00010]]></b>
+        <c><![CDATA[00012]]></c>
+        <d><![CDATA[(((12]]></d>
+        <e><![CDATA[(00012)]]></e>
+        <answer>c</answer>
+    </problem>
+            <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>double u = 9.1234f;
+String v = String.format("%.2f",u);
+out.println(v);</pre>]]></code>
+        <a><![CDATA[9.14]]></a>
+        <b><![CDATA[9.1]]></b>
+        <c><![CDATA[9.1234]]></c>
+        <d><![CDATA[9.12]]></d>
+        <e><![CDATA[9.13]]></e>
+        <answer>d</answer>
+    </problem>
+            <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>double n = 8.1735f;
+String o = String.format("%.3f",n);
+out.println(o);</pre>]]></code>
+        <a><![CDATA[8.173]]></a>
+        <b><![CDATA[8.2]]></b>
+        <c><![CDATA[8.17]]></c>
+        <d><![CDATA[8.174]]></d>
+        <e><![CDATA[8.1]]></e>
+        <answer>d</answer>
+    </problem>
+</practice>
+

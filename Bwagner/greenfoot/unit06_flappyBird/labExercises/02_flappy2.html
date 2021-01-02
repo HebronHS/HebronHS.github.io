@@ -1,0 +1,48 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">FlappyBird2</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/FlappyBird2.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >FlappyBird2</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>FlappyBird2</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the FlappyBird2 Scenario, and click Open.</p></li>
+</ol>
+
+<h1>Program Modifications</h1>
+<p>In this lesson you are going to implement the method <strong>rotateFlappyBird</strong>. This method should adjust
+   Flappy's rotation angle depending upon whether he is going up, down, or flying level. The illustration below shows
+   five rotation angles Flappy can be in relative to his flying direction (2 up, 2 down, and 1 level).</p>
+   
+   <div><img src="greenfoot/images/FlappyBird2_01.png"></div>
+   
+<p>The illustration below shows some of the rotation angles for objects added to a world. When an object is facing East its rotation angle is 0. 
+   When it is facing North its rotation angle is 270. When it is facing South its rotation angle is 90. </p>
+   
+   <div><img src="greenfoot/images/FlappyBird2_02.png"></div>
+   
+<p>Use the following pseudocode to help you with your implementation:</p>
+<div id="csOutput" style="width:650px"><pre>
+if vertical velocity is less than -8 then
+    set Flappy's rotation angle to 300
+end if
+if vertical velocity is greater than or equal to -8 and less than -4 then
+    set Flappy's rotation angle to 320
+end if
+if vertical velocity is greater than or equal to -4 and less than 4 then
+    set Flappy's rotation angle to 0
+end if
+if vertical velocity is greater than 4 and less than or equal to 8 then
+    set Flappy's rotation angle to 40
+end if
+if vertical velocity is greater than 8 then
+    set Flappy's rotation angle to 80
+end if
+</pre></div>
+<p>*Remember a negative vertical velocity means Flappy is going up(climbing) and a positive vertical velocity means he is going down(falling).</p>
+	<br>
+</div>
+

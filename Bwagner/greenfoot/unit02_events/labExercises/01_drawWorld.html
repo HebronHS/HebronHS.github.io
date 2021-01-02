@@ -1,0 +1,93 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Draw</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/Draw.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Draw</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Draw</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Draw Scenario, and click Open.</p></li>
+</ol>
+
+<h1>DrawWorld class</h1>
+<p>The purpose of the <strong>DrawWorld</strong> class is to demonstrate how to check for mouse events in a program. Mouse events occur when a user moves the mouse, clicks a mouse button, 
+   or drags the mouse while a button is pressed.</p>
+<ol id="csList">
+<li><p>Click on the Help menu and select <strong>Greenfoot Documentation</strong>.</p></li>
+<div><img src="greenfoot/images/Draw_01.png"></div>
+<li><p>On the left side of the document select <strong>Greenfoot</strong> to view the documentation for the Greenfoot class. Scroll down to the section <strong>Method Summary</strong> to view the list of methods the class provides.</p></li>
+<li><p>Go back to the Greenfoot environment. Compile and run the Draw scenario. While the program is running click the left mouse button and drag the mouse around the world.
+  What happens when you click the right mouse button?</p></li>
+<li><p>Click on the DrawWorld class to view its code. Notice the use of the Greenfoot class methods <strong>mousePressed</strong>, <strong>mouseDragged</strong>, and <strong>mouseClicked</strong>.</p></li>
+<li><p>What is the difference between a mousePressed event and a mouseClicked event? Go back to the Greenfoot class documentation to find out.</p></li>
+<li><p>Notice the use of the class <strong>MouseInfo</strong>. What is its purpose? Go to its documentation to find out.</p></li>
+<li><p>Study the code for the <strong>DrawWorld</strong> class to see if you understand how it works. Discuss it with your neighbor.</p></li>
+</ol>
+
+<h1>Program Modifications</h1>
+<p>The World class provides a method named <strong>showText</strong>. This method will display a string in the world at the specified
+          location (x, y). For example, the following code will display the string "Hello" at location (50, 100):</p>
+		<div id="csCode" style="width:300px"><pre>
+showText("Hello", 50, 100);</pre></div>
+<ol id="csList">
+   <li>  
+	   <p>Modify the act method in the DrawWorld class so that when the user presses the left mouse button the location of the mouse click will appear
+	      on the screen in the following format: (x,y) where x is the x-coordinate of the mouse when the button was pressed and y is the
+		  y-coordinate of the mouse when the button was pressed.</p>
+	   <p>To accomplish this task do the following:</p>
+	   
+	   <ul id="csList">
+	   <li><p>Decide where the new code should be placed in the DrawWorld act method. The act method currently uses three Greenfoot class methods:
+	          <strong>mousePressed</strong>, <strong>mouseClicked</strong>, and <strong>mouseDragged</strong>. The mousePressed method returns true
+			  if a mouse button has been <strong>pressed</strong>. The mouseClicked method returns true if a mouse button has been <strong>pressed</strong> and <strong>released</strong>. 
+			  The mouseDragged method returns true if the mouse is being <strong>moved</strong> while holding down a mouse button. Which if statement
+			  should your new code be placed? Right, the mousedPressed method.</p></li>
+	   <li><p>Create a string representation of the mouse's location when pressed. Look at the following code from the DrawWorld act method</p>
+	   <div id="csCode"><pre>if(Greenfoot.mousePressed(this) == true)
+{
+   greenfoot.MouseInfo info = Greenfoot.getMouseInfo();  // get info about mouse
+   int button = info.getButton();                        // get button press info
+            
+   if(button == 1)  // 1 = left button was pressed
+   {
+      startX = info.getX();
+      startY = info.getY();
+   }
+}</pre></div>
+<p>When the left mouse button is pressed this code stores the location of the mouse in the two variables <strong>startX</strong> and <strong>startY</strong>.
+Therefore you need to create a string using these two values. The following code creates a string named <strong>str</strong> that stores the mouse's
+location in the following format: (x, y).</p>
+<div id="csCode" style="width:400px"><pre>String str = "(" + startX + "," + startY + ")";</pre></div>
+<p><strong>Add</strong> this code to the DrawWorld's act method.</p>
+</li>
+<li><p>The last step is use the <strong>showText</strong> method to display the string in the world.</p>
+<div id="csCode" style="width:400px"><pre>showText(str, startX, startY);</pre></div>
+<p><strong>Add</strong> this code to the DrawWorld's act method.</p>
+</li>
+</ul></li>
+
+    <li><p>The Greenfoot class provides another method named <strong>mouseDragEnded</strong> that returns true when the left mouse button is released to mark the
+	       end of a mouse drag event. Look at the following code segment</p>
+	<div id="csCode"><pre>
+if(Greenfoot.mouseDragEnded(this) == true)
+{
+   greenfoot.MouseInfo info = Greenfoot.getMouseInfo();
+   int button = info.getButton();
+            
+   if(button == 1)  // 1 = left button
+   {
+      int endX = info.getX();
+      int endY = info.getY();
+   }
+}</pre></div>
+<p>When a drag event has ended this code stores the location of the mouse in the two variables <strong>endX</strong> and <strong>endY</strong>.</p>  
+<p><strong>Add</strong> the code above to the act method then modify the code so that the coordinates of the mouse's location are displayed
+		   when the user stops a mouse drag event. The coordinates displayed should use the same format as startX and startY.</p></li>
+		   <div><img src="greenfoot/images/Draw_02.png"></div>
+</ol>
+	<br>
+</div>	
+

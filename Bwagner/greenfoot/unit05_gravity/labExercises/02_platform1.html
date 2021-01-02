@@ -1,0 +1,129 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Platform1</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/PlatForm1.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Platform1</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Platform1</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Platform1 Scenario, and click Open.</p></li>
+</ol>
+
+<p>In this 5 part series we are going to build a simple platform game that demonstrates jumping, gravity, and landing on a platform. The program
+   we are going to develop uses a frog to demonstrate these techniques.</p>
+
+<p>To help you better understand how it all works I am going to walk you through the code highlighting the most important parts.</p>
+
+<h1>Platform Design</h1>
+<p>Let's start our discussion with the platform design. Look at the game's world layout below.</p>
+<div><img src="greenfoot/images/Platform1_01.png"></div>
+  <p>The platforms the frog will be landing on are actually made from two separate 
+    actor classes named <strong>TopPlatform</strong> and <strong>BottomPlatform</strong>. 
+    The reason the platform was designed this way is because a frog has a different 
+    behavior depending upon which side of the platform it comes in contact with. 
+    If the frog touches the top of the platform it should perform a landing and 
+    if it touches the bottom of the platform it should just fall straight down. 
+    By dividing the platform into two parts it was easy to determine which side 
+    of the platform the frog collided with.</p>
+<p>Another way to design a platform is to use only one platform object. When a platform is designed in this manner you have to calculate which part of 
+   the platform the frog comes into contact with. This technique seemed more complicated so I opted for the first option.</p>
+   
+<h1>Instance Variables</h1>
+<p>All of the interesting code is contained within the Frog class so let's take a look there first starting with the instance variables.</p>  
+<div><img src="greenfoot/images/Platform1_02.png"></div>
+<p>The variable <strong>initialVelocity</strong> is used to give the frog jumping ability. When a frog jumps this value is assigned to the frog's
+   <strong>vertical velocity(dy)</strong> which causes the frog to explode upward at a force of negative 9 units. As <strong>gravity</strong> is applied to the vertical velocity this
+   value eventually becomes positive which causes the frog to fall back to the ground.</p>
+   
+<p>When a frog jumps it should not be able to jump again while it is in the air or change its direction. The purpose of the <strong>jumping</strong> variable is
+   to monitor frog jumps. When a frog jumps this variable is set to <strong>true</strong>. When a frog lands from a jump this variable is set to <strong>false</strong>.
+   A frog cannot jump while <strong>jumping</strong> is true.</p>
+   
+<p>The GreenfootImage variables <strong>faceRight1</strong> and <strong>faceLeft1</strong> store the frog image. The faceRight1 variable 
+   stores the original frog image. A copy of this image is flipped horizontally and stored in the faceLeft1 variable. By doing it this
+   way I did not have to create two frog image files. When a frog is facing 
+   right the faceRight1 image is displayed and when the frog is facing left the faceLeft1 image is displayed. </p>
+  
+<h1>Constructor</h1>
+<p>Recall that the Frog constructor is executed when the frog is first created. Any code placed in the constructor will be executed
+   before the frog is displayed on the screen. Look at the Frog constructor.</p>
+<div><img src="greenfoot/images/Platform1_03.png"></div> 
+<p>This code assigns the frog image to the two GreenfootImage variables <strong>faceRight1</strong> and <strong>faceLeft1</strong>.</p>
+
+<h1>act Method</h1>
+<p>Alot of things happen inside the Frog's <strong>act</strong> method. Instead of writing all of the code inside this method I chose to split it up
+   into four methods named <strong>platformTest</strong>, <strong>movementTest</strong>, <strong>jumpTest</strong>, and <strong>updateLocation.</strong></p>
+   <div><img src="greenfoot/images/Platform1_04.png"></div>
+   <p>The order these methods are called in is important. Changing the order could cause the act method to not work properly.</p>
+<h1>platFormTest Method </h1>
+<p>The <strong>platformTest</strong> method tests to see if the frog collided with a platform. 
+   If the frog collides with a TopPlatform the method causes the frog to "land" on the platform by setting its
+   <strong>vertical(dy)</strong> and <strong>horizontal(dx)</strong> velocities to zero. Since the frog has "landed" the 
+   <strong>jumping</strong> variable is set to false so the frog can perform a jump again.
+   If the frog hits a BottomPlatform it sets the vertical velocity(dy) and gravity to 2 and .3 respectively 
+   so the frog's action will be to fall straight down.</p>
+<div><img src="greenfoot/images/Platform1_05.png"></div>
+
+<h1>movementTest Method</h1>
+<p>This method provides the ability for a frog to move right or left if the right or left arrow keys are pressed. The <strong>jumping</strong> variable
+   is also tested to see that it is false. If <strong>jumping</strong> is true pressing the arrow keys have no effect which prevents the frog from moving
+   horizontally while it is performing a jump.</p>
+<p>To move the frog the horizontal velocity(dx) is set to either -3 or 3.</p>
+<div><img src="greenfoot/images/Platform1_06.png"></div>
+
+<h1>jumpTest Method</h1>
+<p>This method tests to see if the up arrow key has been pressed. If it has been pressed the frog performs a "jump" by
+   setting the frog's <strong>vertical velocity</strong> to <strong>initial velocity</strong> and setting <strong>gravity</strong> to .3. 
+   The <strong>jumping</strong> variable is also tested to
+   make sure a frog cannot perform a "jump" while it is currently "jumping".</p>
+   
+   <div id="csOutput">The implementation of the <strong>jumpTest</strong> method is left as an exercise.</div>
+   
+<h1>updateLocation Method</h1>
+<p>This method updates the frog's location according to its current horizontal(dx) and vertical(dy)
+   velocities. It also applies the force of gravity to the frog's vertical velocity(dy).</p>
+ <div><img src="greenfoot/images/Platform1_07.png"></div> 
+ 
+ <p>The frog's vertical velocity(dy) is not constant. Because of the force of gravity its velocity decelerates as it goes up and accelerates
+    as it goes down. This acceleration can cause a problem when the frog lands on the ground in that, depending upon its last
+	vertical location before it reaches the ground, it might not stop falling for several units below the ground. To prevent this 
+	from happening the following test is performed before the frog is moved:</p> 
+  <div><img src="greenfoot/images/Platform1_08.png"></div> 
+  <p>The if statement checks to see if the current vertical velocity(dy) is added to the frog's current position(getY()) will this 
+     cause the frog's
+     new location to be below the established stopping point of 380. If the answer is yes then the vertical velocity is ignored and the
+	 frog's vertical position is set to 380; otherwise the frog's location is updated normally by adding the vertical velocity(dy) to
+	 its current vertical position(getY()). </p>
+	 
+<p>The second if statement checks to see if the frog is currently performing a "jump". If it is not jumping the horizontal velocity(dx) is 
+   set to zero. Without this code segment the frog would continue to move horizontally without having pressed a left or right arrow key. If the
+   frog is "jumping" the horizontal velocity is not set to zero which allows the frog to follow its current jump path until it lands.</p>
+<div><img src="greenfoot/images/Platform1_09.png"></div> 
+<br><br><hr>
+
+<h1>Program Modifications</h1>
+<p>Implement the method <strong>jumpTest</strong>. </p>
+
+<p>The method <strong>jumpTest</strong> tests to see if the up arrow key has been pressed. If it has been pressed the frog performs a "jump" by
+   setting the frog's <strong>vertical velocity</strong> to <strong>initial velocity</strong>, setting <strong>gravity</strong> to .3 and setting
+   <strong>jumping</strong> to true. 
+   The <strong>jumping</strong> variable is also tested to make sure a frog cannot perform a "jump" while it is still currently "jumping".</p>
+   
+<p>Use the Greenfoot method <strong>getKey</strong> in your implementation.</p>
+
+<p>Here is the pseudocode for the method:</p>
+<div id="csOutput" style="width:650px"><pre>
+use <strong>Greenfoot.getKey()</strong> to retrieve the last key that was pressed
+if last key pressed was the up arrow key and jumping equals false then
+   set <strong>vertical velocity</strong> to <strong>initial velocity</strong>
+   set <strong>gravity</strong> to .3
+   set <strong>jumping</strong> to true
+end if
+</pre></div>
+	
+	<br>
+</div>
+

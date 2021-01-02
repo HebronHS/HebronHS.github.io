@@ -1,0 +1,106 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">14-2 Address Class</div>
+
+<div id="csContent"> 
+
+<h1>Person class</h1>
+<p>Below is a modified version of the Person class discussed in lesson 1.</p>
+<div id="csCode"><pre>class Person
+{
+    // constructor initializes object variables
+    constructor(firstName, lastName, address)
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+    }
+    
+    // method getFullName returns the person's name firstName lastName format
+    getFullName()
+    {
+        return this.firstName + " " + this.lastName;
+    }
+    
+    // method getFormalName returns the person's name in lastName, firstName format
+    getFormalName()
+    {
+        return this.lastName + ", " + this.firstName;
+    }
+    
+    getMailingAddress()
+    {
+        return this.getFullName() + "<br>" +  this.address.getAddress();
+    }
+}</pre></div>
+<p>The class includes the following modifications:
+<ol id="csList">
+  <li><p>The constructor includes another field named <strong>address</strong>
+         and the parameter list includes a parameter variable named <strong>address</strong>
+         as well.</p></li>
+  <li><p>A new method has been added to the class named <strong>getMailingAddress</strong>.
+         This method makes a call to a method named getAddress that is a member of a
+         class named <strong>Address</strong> you will be developing later in the lab exercise.</p></li>
+ </ol>
+ <br>
+ <hr>
+ <h1>Lab Exercise</h1>
+ <ol id="csList">
+   <li><p>Create a html file named 02_class.html and add the following code:</p>
+<div id="csOutput"><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Address Class&lt;/title&gt;
+&lt;script src="Person.js"&gt;&lt;/script&gt;
+&lt;script src="Address.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="output"&gt;&lt;/div&gt;
+        
+    &lt;script&gt;
+               
+    &lt;/script&gt; 
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+  </div>
+  </li>
+  <li><p>Either modify your current Person.js file or if you are in a different
+      project create a new Person.js file and add the Person class code shown above.</p></li>
+  <li><p>Create a new file named Address.js and define a class named <strong>Address</strong> within the file.</p></li>
+  <li><p>The <strong>Address</strong> class should include the following features:</p>
+  <ul id="csList2">
+      <li><p>A constructor that declares four fields named <strong>street</strong>,
+       <strong>city</strong>, <strong>state</strong>, and <strong>zip</strong>.</p></li>
+      <li><p>The constructor should include four parameters in it parameter list which
+             will be used to assign each of the field variables an initial value.
+      </p></li>
+      <li><p>Create a method named <strong>getAddress</strong> that returns
+             a string in the following format:</p>
+            <div style="font-size: 1.5em">street<br>
+            city, state zip</div>
+      <br><p>Use the html "&lt;br&gt;" tag to format the string into two lines. </p>
+      </li>
+  </ul>
+  <li><p>Add a function named <strong>getMailingAddress</strong> to the 02_class.html file 
+         so that the browser will display the Person class's information in the format shown
+         in the Sample Output below.</p>
+         <p>When complete your method should look like the folowing:</p>
+         <div id="csCode"><pre>getMailingAddress()
+{
+    return this.getFullName() + "<br>" +  this.address.getAddress();
+}
+</pre></div>
+  </li>
+  </li>  
+</ol>
+<br>
+<h1>Sample Output</h1>
+<div id="csOutput"><pre>
+John Wayne
+1313 Mockingbird Lane
+Denton, Tx 76201
+</pre></div>
+<br>
+</div>	

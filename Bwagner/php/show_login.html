@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<style>
+	html, body {
+    	height: 100%;
+	}
+   body {
+	   background-color:lightgray;
+   }
+   form {
+	   display:flex;
+   }
+
+   #container {
+	  height:100%;
+	  display:flex;
+	  align-items: center;
+	  justify-content: center;
+   }
+
+   #login {
+	   display:flex;
+	   flex-direction: column;
+	   border-radius: 25px;
+	   width: 500px;
+	   height: 100px;
+   }
+   #password {
+	   display:flex;
+	   flex-direction: row;
+
+   }
+   #label {
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+	   font-size:2.0em;
+	   font-weight: 800;
+	   color:black;
+	   padding-top: 5px;
+	   padding-left : 15px;
+	   padding-right: 15px;
+   }
+   #text {
+	   font-size: 1.6em;
+	   border: 4px solid white;
+	   border-radius: 25px;
+	   padding-left: 15px;
+
+   }
+
+   #button {
+	   background-color: midnightblue;
+	   color:white;
+	   border: 4px solid black;
+	   border-radius: 25px;
+	   width: 170px;
+	   height: 50px;
+	   font-size: 2.0em;
+	   margin-left: 20px;
+   }
+</style>
+
+</head>
+<body>
+	<div id="container"> 
+		<form method="POST" action="solutionsAuth.php">
+			<div id="password">
+		        <div id="label">Password</div>
+					 <input id="text" type="password" name="password">
+			    </div>
+			<input id="button" type="submit" name="submit" value="submit">
+		    </div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<practice>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>String colors = "REDBLUE";
+Stack&lt;Character&gt; st;
+st = new Stack&lt;&gt;();
+
+for(int i = 0; i < colors.length(); i++)
+  st.push( colors.charAt(i) );
+
+while( !st.isEmpty() )
+  System.out.print(st.pop());</pre>]]></code>
+        <a><![CDATA[<pre>ULBDER</pre>]]></a>
+        <b><![CDATA[<pre>EULB</pre>]]></b>
+        <c><![CDATA[<pre>EEEEEEE</pre>]]></c>
+        <d><![CDATA[<pre>REDBLUE</pre>]]></d>
+        <e><![CDATA[<pre>EULBDER</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code
+to the right?</pre>]]></question>
+        <code><![CDATA[<pre>// IntStack implements the traditional
+// stack operations for ints
+IntStack s = new IntStack();
+
+for(int i = 0; i < 10; i += 2)
+  s.push(i);
+
+while( !s.isEmpty() )
+  System.out.print( s.pop() );</pre>]]></code>
+        <a><![CDATA[<pre>86420</pre>]]></a>
+        <b><![CDATA[<pre>8642</pre>]]></b>
+        <c><![CDATA[<pre>1086420</pre>]]></c>
+        <d><![CDATA[<pre>97531</pre>]]></d>
+        <e><![CDATA[<pre>9876543210</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Which of the following correctly
+replaces <*1> in the code to 
+the right?</pre>]]></question>
+        <code><![CDATA[<pre>Stack&lt;Integer&gt; x = <*1>;
+x.push(22);
+x.push(42);
+x.push(84);
+out.print(x.peek()+x.peek()); //2
+x.push(12);
+x.push(14);
+x.pop();
+x.pop();
+out.println(x.pop() + x.peek() + x.size()); //3</pre>]]></code>
+        <a><![CDATA[<pre>new Stack&lt;&gt;();</pre>]]></a>
+        <b><![CDATA[<pre>new ArrayList&lt;&gt;();</pre>]]></b>
+        <c><![CDATA[<pre>new LinkedList&lt;&gt;();</pre>]]></c>
+        <d><![CDATA[<pre>B and C only.</pre>]]></d>
+        <e><![CDATA[<pre>A, B, and C.</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by line
+marked //2 in the code
+to the right?</pre>]]></question>
+        <code><![CDATA[<pre>Stack&lt;Integer&gt; x = <*1>;
+x.push(22);
+x.push(42);
+x.push(84);
+out.print(x.peek()+x.peek()); //2
+x.push(12);
+x.push(14);
+x.pop();
+x.pop();
+out.println(x.pop() + x.peek() + x.size()); //3</pre>]]></code>
+        <a><![CDATA[<pre>44</pre>]]></a>
+        <b><![CDATA[<pre>64</pre>]]></b>
+        <c><![CDATA[<pre>168</pre>]]></c>
+        <d><![CDATA[<pre>84</pre>]]></d>
+        <e><![CDATA[<pre>126</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by line 
+marked //3 in the code
+to the right?</pre>]]></question>
+        <code><![CDATA[<pre>Stack&lt;Integer&gt; x = <*1>;
+x.push(22);
+x.push(42);
+x.push(84);
+out.print(x.peek()+x.peek()); //2
+x.push(12);
+x.push(14);
+x.pop();
+x.pop();
+out.println(x.pop() + x.peek() + x.size()); //3</pre>]]></code>
+        <a><![CDATA[<pre>128</pre>]]></a>
+        <b><![CDATA[<pre>67</pre>]]></b>
+        <c><![CDATA[<pre>99</pre>]]></c>
+        <d><![CDATA[<pre>98</pre>]]></d>
+        <e><![CDATA[<pre>211</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code
+to the right?</pre>]]></question>
+        <code><![CDATA[<pre>Stack&lt;Integer&gt; s;
+s = new Stack&lt;&gt;();
+
+for(int i = 5; i >= 0; i--)
+  s.push(i);
+
+while(s.size()>1)
+{
+  int sum = s.pop() + s.pop();
+
+  if( sum % 3 == 1)
+    continue;
+
+  s.push( sum );
+}
+System.out.println(s.pop());</pre>]]></code>
+        <a><![CDATA[<pre>10</pre>]]></a>
+        <b><![CDATA[<pre>14</pre>]]></b>
+        <c><![CDATA[<pre>17</pre>]]></c>
+        <d><![CDATA[<pre>19</pre>]]></d>
+        <e><![CDATA[<pre>20</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What replaces <*1> in the code to
+the right to tell whether data
+member elements is empty?</pre>]]></question>
+        <code><![CDATA[<pre>public class Stack<E> {
+
+  private ArrayList&lt;E&gt; elements;
+
+  public Stack() {
+    elements = new ArrayList&lt;&gt;();
+  }
+
+  public void push(E element) {
+    elements.add(element);
+  }
+
+  public E pop() {
+    return elements.remove(
+    elements.size()-1);
+  }
+
+  public boolean isEmpty() {
+    return <*1>;
+  }
+
+  public static void test() {
+    <*2>
+    s.push(15);
+    s.push(17);
+    s.push(35);
+    System.out.print(s.pop());
+    System.out.print(s.pop());
+    System.out.print(s.pop());
+  }
+
+}</pre>]]></code>
+        <a><![CDATA[<pre>elements</pre>]]></a>
+        <b><![CDATA[<pre>elements.empty()</pre>]]></b>
+        <c><![CDATA[<pre>elements.size()=0</pre>]]></c>
+        <d><![CDATA[<pre>elements.isEmpty()</pre>]]></d>
+        <e><![CDATA[<pre>elements != null</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Which of these replaces <*2> in
+the code to the right as a valid
+declaration and initialization 
+of a stack of integer values?</pre>]]></question>
+        <code><![CDATA[<pre>public class Stack<E> {
+
+  private ArrayList&lt;E&gt; elements;
+
+  public Stack() {
+    elements = new ArrayList&lt;&gt;();
+  }
+
+  public void push(E element) {
+    elements.add(element);
+  }
+
+  public E pop() {
+    return elements.remove(
+    elements.size()-1);
+  }
+
+  public boolean isEmpty() {
+    return <*1>;
+  }
+
+  public static void test() {
+    <*2>
+    s.push(15);
+    s.push(17);
+    s.push(35);
+    System.out.print(s.pop());
+    System.out.print(s.pop());
+    System.out.print(s.pop());
+  }
+
+}</pre>]]></code>
+        <a><![CDATA[<pre>Stack&lt;Integer&gt; s = new Stack&lt;&gt;();</pre>]]></a>
+        <b><![CDATA[<pre>Stack&lt;Integer&gt; s = new Stack&lt;&gt;;</pre>]]></b>
+        <c><![CDATA[<pre>Stack&lt;int&gt; s = new Stack&lt;&gt;;</pre>]]></c>
+        <d><![CDATA[<pre>Stack&lt;int&gt; s = new Stack();</pre>]]></d>
+        <e><![CDATA[<pre>More than one of these</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Assume <*1> and <*2> are filled 
+in correctly.What is output by
+the test() static method?</pre>]]></question>
+        <code><![CDATA[<pre>public class Stack&lt;E&gt; {
+
+  private ArrayList&lt;E&gt; elements;
+
+  public Stack() {
+    elements = new ArrayList&lt;&gt;();
+  }
+
+  public void push(E element) {
+    elements.add(element);
+  }
+
+  public E pop() {
+    return elements.remove(
+    elements.size()-1);
+  }
+
+  public boolean isEmpty() {
+    return <*1>;
+  }
+
+  public static void test() {
+    <*2>
+    s.push(15);
+    s.push(17);
+    s.push(35);
+    System.out.print(s.pop());
+    System.out.print(s.pop());
+    System.out.print(s.pop());
+  }
+
+}</pre>]]></code>
+        <a><![CDATA[<pre>151735</pre>]]></a>
+        <b><![CDATA[<pre>351715</pre>]]></b>
+        <c><![CDATA[<pre>151515</pre>]]></c>
+        <d><![CDATA[<pre>353535</pre>]]></d>
+        <e><![CDATA[<pre>An exception is thrown</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+</practice>

@@ -1,0 +1,140 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Mario Danger</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the scenario: <a href="greenfoot/scenarios/MarioDanger.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Mario Danger</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Mario Danger</strong> and paste it in your <strong>myGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Mario Danger scenario, and click Open.</p></li>
+</ol>
+<br>
+
+<p>In this exercise, you going to add obstacles to the world that Mario must navigate. Two classes
+   have been added to the scenario named Barrel and GreenSnake. Barrel is a subclass of Actor and GreenSnake
+   is a subclass of AnimatedActor.</p>
+
+<h1>Program Modifications</h1>
+<h3>Barrel Obstacle</h3>
+<ol id="csList">
+<li><p>Add two Barrel objects to the world. Place one on each of the two platform levels so
+       that one is on the right edge of its platform and the other is on the left edge of its platform.
+       (Refer to image at bottom of page). To determine the exact placement of an Actor in the World, the Greenfoot environment provides some help.
+       Right-click on the Barrel class icon and select <strong>new Barrel()</strong>. Place the Barrel on the left edge
+       of the bottom level platform. Now, right-click on the Barrel and select <strong>Inspect</strong>
+       from the pop up menu. The following window should appear.</p>
+
+       <div><img src="greenfoot/images/MarioDanger02.png"></div>
+
+      <p>This window provides you with alot of useful information. The info we are interested
+         in is the x and y
+         coordinates of the Barrel's position within the world. You can record these values and use them
+         in the MyWorld constructor to create a Barrel object and add it to the world at this exact location.</p>
+      <p>The following instance variables and constructor have been included in the Barrel class:</p>
+
+      <div><img src="greenfoot/images/MarioDanger03.png"></div>
+
+      <p>Since the two barrels being added to the world are on different platforms, and these platforms have different dimensions,
+         it became necessary to add a custom <strong>constructor</strong> to the Barrel class so that when a Barrel
+         object is constructed the location of its platform's left and right edges could be provided. The ability to provide
+         the object with its horizontal velocity(dx) also became necessary since one Barrel starts off moving left 
+         and the other moves to the right.</p>
+
+      <p>I would like to make two points about the code in the constructor. First you will notice the
+         use of the keyword <strong>this</strong>. The keyword this enables an object to refer to itself.
+         There are situations in programming, when an object having a reference to itself, can be advantageous or even necessary.  
+         I'm using the this keyword here because I chose to give my instance variables and constructor parameters the same
+         names. For example, if you look at the code above I have an instance variable named <strong>dx</strong> which is used to store a 
+         barrel's horizontal velocity. Now, if you look at the constructor's parameter list, the first parameter is also named <strong>dx</strong>. Which leads to the following code.</p>
+       
+       <div id="csCode" style="width:500px"><pre>dx = dx;</pre></div>
+
+       <p>The purpose of this code is for the parameter to assign its value to its corresponding instance variable, but which dx is the instance variable and which one is the parameter?
+          Unfortunately, the compiler has no way to determine this from the code and an error will ensue. This is where the 
+          keyword this comes in. Look at the code again, notice that the keyword this has been inserted in front of the 
+          first dx.</p>
+       <div id="csCode" style="width:500px"><pre><span id="csHighlight"><pre>this</pre></span>.dx = dx;</pre></div>
+       <p>Anytime you see <strong>this</strong> in front of a variable name it means that the
+          variable is an <strong>instance variable</strong> of the class and it belongs to "this" object. The other dx variable is the
+          parameter and therefore is a local variable only available for use in the constructor.</p>
+       <p>Incidentally, there is another way to prevent this problem. Just don't give your instance variables and parameters
+          the same name. 
+       <p>Second, the instance variable <strong>rotationSpeed</strong> controls how fast and in which direction 
+          (clockwise or counter-clockwise) a barrel rotates. A negative value means it will rotate counter-clockwise(left) and a positive 
+          value means it will rotate clockwise(right). By knowing the value of dx, the constructor is able to assign a value to the rotationSpeed variable. 
+          If dx is a negative number then the rotationSpeed also needs to be a negative number and
+          if dx is a positive number then the rotationSpeed needs to be a positive number. After experimenting
+          with different speeds, I settled on a rotationSpeed of 3, but that can be changed.</p> 
+</li>
+<li><p>The following code uses the Barrel <strong>constructor</strong> to create a Barrel object and then adds the new object
+       to the world at location (127, 233). These x and y values were the ones identified in the Inspect Window mentioned above.
+       The 3 arguments specified in the Barrel constructor's parameter list
+       are used to assign specific values to the three instance variable declared in the Barrel class: <strong>dx</strong> = 1, 
+       <strong>platformLeftX</strong> = 116, and <strong>platformRightX</strong> = 490.</p>
+<div id="csCode" style="width:500px"><pre>Barrel barrel1 = new Barrel(1, 116, 490);
+addObject(barrel1, 127, 233);<pre></div>
+</li>
+<p><strong>Add</strong> this code the bottom of the MyWorld constructor.
+<li><p>Follow the same procedure above to add a second Barrel object to the world at the right edge of the
+       top level platform. Use the following values as arguments for the Barrel class's constructor:
+       dx = -1, platformLeftX = 180, and platformRightX = 425.</p></li>
+
+<li><p>Modify the Barrel class's act method. You will need to use the following Actor methods in your implementation.
+<table id="csTable">
+   <tr>
+     <th>Method</th><th>Description</th>
+   </tr>
+   <tr>
+      <td>getX()</td><td>returns the x-coordinate of the actor's current location</td>
+   </tr>
+   <tr>
+      <td>getY()</td><td>returns the y-coordinate of the actor's current location</td>
+   </tr>
+   <tr>
+      <td>setLocation(int x, int y)</td><td>assigns a new location for this actor</td>
+   </tr>
+   <tr>
+      <td>getRotation()</td><td>returns the current rotation (in degrees) of this actor</td>
+   </tr>
+   <tr>
+      <td>setRotation(int rotation)</td><td>sets the rotation (in degrees) of this actor</td>
+   </tr>
+</table>
+ <p>   When completed, your code should allow the two barrels to move back and forth across their platforms. When they
+       reach the edge of their platform they need to reverse their direction so that they move in the
+       opposite direction.</p></li>
+<li><p>Animate the Barrel's movement, by continually modifying
+       its rotation direction, so that it appears to be rolling. When the Barrel reaches a platform edge,
+       its rotation direction should be changed so that it will rotate in the opposite direction.</p></li>
+</ol>
+
+<h3>GreenSnake Obstacle</h3>
+<ol id="csList">
+<li><p>Temporarily create a GreenSnake object and position it on the ground at the right edge of the world.
+   Use the Inspect Window to record its x and y coordinates, then create a GreenSnake object in the 
+   MyWorld constructor and add it to the world at the identified location.</p>
+</li>
+<li><p>Modify the Snake class so that the Snake continually moves across the world from the right
+       edge of the world to the left edge. When the Snake reaches the left edge it should
+       disappear and then reappear on the right edge of the world.</p></li>
+<li><p>The Snake is an AnimatedActor so there is a sprite sheet associated with it named
+       "greenSnake6x90x42.png". Use this sprite sheet to
+       animate the Snake as it moves across the screen.</p></li>
+<li><p>I thought the snake moved to fast so I slowed it down by using the following code in the
+       act method:
+<div id="csCode" style="width:500px"><pre>if(counter % 2 == 0)
+   move(-1);   // move 1 pixel to the left
+counter++;</pre></div>
+</ol>
+<div><img src="greenfoot/images/MarioDanger01.png"></div>
+
+<h3>Collision Detection</h3>
+<p>Provide collision detection in the Mario class so that if Mario touches either a Barrel or
+   a Snake he is pushed off the world and falls through the bottom of the world ending the game.</p>
+
+	<br>
+</div>	
+

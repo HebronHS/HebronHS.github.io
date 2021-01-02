@@ -1,0 +1,85 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Alien Attack</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the scenario: <a href="greenfoot/scenarios/AlienAttack.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >AlienAttack</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>AlienAttack</strong> and paste it in your <strong>myGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the AlienAttack scenario, and click Open.</p></li>
+</ol>
+<br>
+<p>In this lesson we use the shooting techniques learned in the previous lesson to create a shooting game called AlienAttack. The game 
+   is played by shooting a phaser cannon at aliens that try to drop bombs on your space station (fort). The fort has a force field that can be
+   activated a maximum of 3 times. The force field can prevent bombs from landing on the fort. If the fort is hit by a bomb 3 times
+   the game is over.</p>
+
+<h1>Cannon Class</h1>
+<p>The Cannon class contains code that implements a phaser cannon. When the cannon is shot a beam of light is created and projected
+   in the direction the cannon is facing. The following pseudocode can be used to implement the method <strong>shootCannon</strong>.</p>
+<div id="csOutput" style="width:550px"><pre>
+Create a Phaser object passing it a reference to the cannon
+Set direction of phaser to the same direction as cannon
+Add phaser to world at cannon's location
+Move phaser location to end of cannon barrel
+Play phaser sound
+</pre></div>
+<p><strong>Implement</strong> the method <strong>shootCannon</strong>. The method should look like the following when completed.</p> 
+<div><img src="greenfoot/images/AlienAttack_01.png"></div>
+<p>There is an interesting line of code in the shootCannon method. When the method creates a Phaser object it passes the phaser a reference to
+   the cannon by using the keyword <strong>this</strong>.</p>
+   <div><img src="greenfoot/images/AlienAttack_02.png"></div>
+   <p>Why does the phaser to need a reference to the cannon? Well it has to do with the 
+      way the scoring for the game works. When a Phaser object hits an Alien object the score is increased by one. Which class, Cannon or
+	  Phaser, should keep track of the score? It seems logical that since the Phaser class is checking for a collision between
+	  itself and an alien that it should be the one responsible for storing the score. However, there is are two problems with this
+	  scenario. First, every time the cannon fires a new Phaser object is created. This means that each Phaser object would have it's 
+	  own score variable. In order to correctly calculate a score the game would have to tally up all the score variables in each
+	   of the Phaser objects, which although possible, would be very difficult to do. Secondly, Phaser objects only
+	  exist for a short while. When they hit an alien or go off the screen they are removed from the world. This presents a whole
+	  other set of problems. Therefore the Phaser class is not the best place to keep track of the score. Since the game only has one
+	  Cannon object and this object exists for the entirety of the game it is the best place to store the score.</p>
+	<p>This brings us back to the question: Why does the phaser need a reference to the cannon? We just concluded from our discussion
+	   above that the score should be stored in the Cannon class, however there is another problem. Which class tests to see if a phaser
+	   has collided with an alien? Yes, the Phaser class. So the Phaser class needs some way of notifying the Cannon class when a 
+	   collision occurs so that it can update the score. <strong>The purpose of the reference to the cannon in the Phaser class is to establish a
+	   communication channel between the phaser and the cannon</strong>.</p>
+	 <p>This communication channel is established in three steps:</p>
+	 <ol id="csList">
+	 <li><p>A <strong>Cannon variable</strong> is declared in the Phaser class.</p></li>
+	 <li><p>A parameter of type Cannon is added to the Phaser constructor so that the Cannon variable can be assigned the reference
+	        to the Cannon object.</p></li>
+	 <li><p>Using the Cannon variable a call is made to the Cannon method <strong>updateScore</strong>. This is how the Phaser class
+	        communicates with the Cannon class.</p></li>
+	 </ol>
+     <p>Here is the 3 steps highlighted in the Phaser class.</p>
+	 <div><img src="greenfoot/images/AlienAttack_03.png"></div>
+	 
+ <h1>Alien Class</h1>
+ <p>In the game, aliens move across the world randomly from either left to right or right to left. They are designed to drop a bomb every
+    3 seconds. The code below is part of the Alien class's act method. This code creates a timer so that the <strong>dropBomb</strong>
+	method is called every 3 seconds.</p>
+
+    <div><img src="greenfoot/images/AlienAttack_04.png"></div>
+	
+  <p>The method <strong>System.currentTimeMillis()</strong> retrieves the current time on the computer's clock in milliseconds.</p>
+	
+  <p><strong>Implement</strong> the Alien class's <strong>dropBomb</strong> method using the following pseudocode:</p>
+  <div id="csOutput" style="width:550px"><pre>
+Create a Bomb object
+Add the bomb to world at this alien's current location
+Set rotation of bomb to 90 (90 degrees is South)
+Move bomb's location to bottom of alien (use 20)
+</pre></div>
+
+<p>To make the game more challenging instead of having the bombs drop straight down let's have them also move horizontally as they drop.
+   To do this modify the dropBomb method by replacing the code that creates a bomb with the
+   following:</p>
+<div id="csCode"><pre>Bomb bomb = new Bomb(speed);</pre></div>
+<p>This code passes the alien's speed to the bomb so that the bomb can move horizontally at the same speed as the alien.</p>
+	<br>
+</div>	
+

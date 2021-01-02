@@ -1,0 +1,212 @@
+<practice>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>PriorityQueue<Integer> pq;
+pq = new PriorityQueue<Integer>();
+
+pq.add(9);
+pq.add(4);
+pq.add(9);
+pq.add(1);
+
+while( !pq.isEmpty() )
+  System.out.print( pq.remove() );</pre>]]></code>
+        <a><![CDATA[<pre>9491</pre>]]></a>
+        <b><![CDATA[<pre>1949</pre>]]></b>
+        <c><![CDATA[<pre>1499</pre>]]></c>
+        <d><![CDATA[<pre>149</pre>]]></d>
+        <e><![CDATA[<pre>941</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>PriorityQueue<Integer> pq;
+pq = new PriorityQueue<Integer>();
+int [] toAdd = {12, 5, 7, 5, 8};
+
+for(int i : toAdd)
+  pq.add(i);
+
+pq.remove();
+System.out.println( pq.peek() );</pre>]]></code>
+        <a><![CDATA[<pre>12</pre>]]></a>
+        <b><![CDATA[<pre>5</pre>]]></b>
+        <c><![CDATA[<pre>7</pre>]]></c>
+        <d><![CDATA[<pre>8</pre>]]></d>
+        <e><![CDATA[<pre>null</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>How does the priority queue
+to the right behave like?</pre>]]></question>
+        <code><![CDATA[<pre>PriorityQueue<Integer> pq;
+pq = new PriorityQueue<Integer>();
+
+Integer[] x = {17, 38, 2, 22, 30, 10};
+
+for(Integer i : x)
+  pq.add(i); 
+
+System.out.println(pq);</pre>]]></code>
+        <a><![CDATA[<pre>binary search tree</pre>]]></a>
+        <b><![CDATA[<pre>
+min heap tree</pre>]]></b>
+        <c><![CDATA[<pre>max heap tree</pre>]]></c>
+        <d><![CDATA[<pre>a queue</pre>]]></d>
+        <e><![CDATA[<pre>a linked list</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What replaces <*1> in the code
+to the right to decrement
+the value stored inside the
+variable p?</pre>]]></question>
+        <code><![CDATA[<pre>public class Structure{
+  private ArrayList<Integer> ks;
+  private ArrayList<Object> vs;
+
+  public Structure(){
+    ks = new ArrayList<Integer>();
+    vs = new ArrayList<Object>();
+  }
+
+  public void add(int k, Object v){
+    int p = ks.size();
+    while(p > 0 && k <= ks.get(p - 1) )
+    <*1>;
+    ks.add(p, k);
+    vs.add(p, v);
+  }
+
+  public boolean isEmpty(){
+    return ks.size() == 0;
+  }
+
+  public Object access(){
+    return vs.get( ks.size() - 1 );
+  }
+
+  public Object remove(){
+    ks.remove(ks.size() - 1);
+    return vs.remove( vs.size() - 1 );
+  }
+}
+
+//////////////////////////////////////////
+// client code
+Structure str = new Structure();
+str.add(10, "GG");
+str.add(12, "MM");
+str.add(12, "GG");
+str.add(5, "UU");
+System.out.print( str.access() );</pre>]]></code>
+        <a><![CDATA[<pre>p -= 1</pre>]]></a>
+        <b><![CDATA[<pre>p *= -1</pre>]]></b>
+        <c><![CDATA[<pre>p >> 2</pre>]]></c>
+        <d><![CDATA[<pre>p << 1</pre>]]></d>
+        <e><![CDATA[<pre>p++</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Assume <*1> is filled 
+in correctly.
+
+What is output by the client
+code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>public class Structure{
+  private ArrayList<Integer> ks;
+  private ArrayList<Object> vs;
+
+  public Structure(){
+    ks = new ArrayList<Integer>();
+    vs = new ArrayList<Object>();
+  }
+
+  public void add(int k, Object v){
+    int p = ks.size();
+    while(p > 0 && k <= ks.get(p - 1) )
+    <*1>;
+    ks.add(p, k);
+    vs.add(p, v);
+  }
+
+  public boolean isEmpty(){
+    return ks.size() == 0;
+  }
+
+  public Object access(){
+    return vs.get( ks.size() - 1 );
+  }
+
+  public Object remove(){
+    ks.remove(ks.size() - 1);
+    return vs.remove( vs.size() - 1 );
+  }
+}
+
+//////////////////////////////////////////
+// client code
+Structure str = new Structure();
+str.add(10, "GG");
+str.add(12, "MM");
+str.add(12, "GG");
+str.add(5, "UU");
+System.out.print( str.access() );</pre>]]></code>
+        <a><![CDATA[<pre>MM</pre>]]></a>
+        <b><![CDATA[<pre>UU GG MM GG</pre>]]></b>
+        <c><![CDATA[<pre>GG</pre>]]></c>
+        <d><![CDATA[<pre>12</pre>]]></d>
+        <e><![CDATA[<pre>UU</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What type of data structure
+does the Structure class
+implement?</pre>]]></question>
+        <code><![CDATA[<pre>public class Structure{
+  private ArrayList<Integer> ks;
+  private ArrayList<Object> vs;
+
+  public Structure(){
+    ks = new ArrayList<Integer>();
+    vs = new ArrayList<Object>();
+  }
+
+  public void add(int k, Object v){
+    int p = ks.size();
+    while(p > 0 && k <= ks.get(p - 1) )
+    <*1>;
+    ks.add(p, k);
+    vs.add(p, v);
+  }
+
+  public boolean isEmpty(){
+    return ks.size() == 0;
+  }
+
+  public Object access(){
+    return vs.get( ks.size() - 1 );
+  }
+
+  public Object remove(){
+    ks.remove(ks.size() - 1);
+    return vs.remove( vs.size() - 1 );
+  }
+}
+
+//////////////////////////////////////////
+// client code
+Structure str = new Structure();
+str.add(10, "GG");
+str.add(12, "MM");
+str.add(12, "GG");
+str.add(5, "UU");
+System.out.print( str.access() );</pre>]]></code>
+        <a><![CDATA[<pre>a stack</pre>]]></a>
+        <b><![CDATA[<pre>a heap</pre>]]></b>
+        <c><![CDATA[<pre>a list</pre>]]></c>
+        <d><![CDATA[<pre>a binary search tree</pre>]]></d>
+        <e><![CDATA[<pre>a priority queue</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+</practice>

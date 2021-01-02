@@ -1,0 +1,147 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">World and Actor</div>
+
+<div id="csContent"> 
+<h1>Greenfoot Classes</h1>
+<p>The Greenfoot environment consists of nine core classes:</p>
+<div id="csList"><p>
+<ul>
+<li>Actor</li>
+<li>Color</li>
+<li>Font</li>
+<li>Greenfoot</li>
+<li>GreenfootImage</li>
+<li>GreenfootSound</li>
+<li>MouseInfo</li>
+<li>UserInfo</li>
+<li>World</li>
+</ul></p>
+</div>
+<p>These classes are specifically designed to make writing games and graphical simulations easier. In this assignment you are introduced to the
+   <strong>World</strong> and <strong>Actor</strong> classes.</p>
+<h1>Directions</h1>
+  <p>In Greenfoot a <strong>scenario</strong> is a computer program consisting of Java classes, images, and sounds.
+     Follow the steps below to create your first Greenfoot scenario.</p>
+
+
+<div id="csList"><p><ol>
+<h2>Initial Setup</h2>
+<li>Navigate to your Desktop and create a new folder named <strong>MyGreenfoot</strong>.</li>
+<li>Click on the Greenfoot icon to open the Greenfoot Environment.</li>
+<li>Select Scenario --> New Java Scenario</li>
+<li>Use the <strong>Choose...</strong>button to navigate to the MyGreenfoot folder you created in step 1. 
+    Type <strong>MyFirst</strong> in the Name box, and click the create button.<br><br>
+    The following screen should appear:<br><br>
+	<div align="center"><img src="greenfoot/images/MyFirst1.png" height="80%" width="80%"></div>
+	</li>
+
+<h2>Creating a World</h2>
+<p>A world in Greenfoot is a two-dimensional grid that you can place
+    "actors" on. From a programming perspective a world is a class that contains variables and methods. Double-click on the <strong>World</strong> button to 
+	see the methods defined in the World class.</p>
+	<p>The World class contains a subclass named <strong>MyWorld</strong>. In this version of Greenfoot this
+	   subclass is created automatically by the Greenfoot environment when you create a new Java Senario.</p>
+	<div><img src="greenfoot/images/MyFirst4.png"></div>
+	<p><strong>What is a <strong>subclass</strong> and why do we make one?</strong></p>
+	<p>Because of the way the World class was designed it cannot be modified. That means no code can be added or removed. However to make our own programs
+	    do new and different things we need to be able to add our own code to this class. In Java, this can be accomplished by making a subclass.
+		A subclass is a class that is a copy of another class with the new class having the same capabilities as the original class (i.e. same methods), but with the 
+		added benefit of being able to add new code.</p></li>
+<li><p>Double-click on MyWorld to view this class.</p>
+<div><img src="greenfoot/images/MyFirst5.png"></div>
+<p>Notice the use of the keyword <strong>extends</strong> on the line of code that defines the MyWorld class. The process of one class
+   extending another class is called <strong>inheritance</strong>. Inheritance is one of the most important features of object-oriented 
+   programming because it allows a class to inherit all of the capabilities of another class plus include additional code that extends the new
+   class's capabilities beyond that of its parent class. The importance of this feature will become more apparent as we explore Greenfoot further.
+</li>
+
+<h2>Creating an Actor</h2>
+<li>
+<p>The next step in building a Greenfoot scenario is to add actors to your new world. Greenfoot provides an <strong>Actor</strong> class for this purpose.
+   Double-click on the Actor button to see the methods defined in the Actor class.</p>
+</li>
+<li><p>Like the World class, the Actor class cannot be modified so we must create a new class that is a subclass of the 
+   Actor class. To create a new subclass right-click on the Actor button and select <strong>New subclass...</strong></p></li>
+<li><p>Give the new subclass the name <strong>Bug</strong>.</p></li>
+<li><p>Greenfoot allows you to assign a graphic to an Actor subclass. Under <strong>Images Categories:</strong> select animals then scroll down the list
+   on the right until you see the image <strong>ladybug_02</strong>. Select the image and click Ok.</p>
+   <div><img src="greenfoot/images/MyFirst6.png" height="70%" width="70%"></div>
+   </li>
+<h2>Adding Code to Bug Class</h2>
+<li><p>Double-click on the Bug button to see the Bug class.</p></li>
+<li><p>Notice that the Bug class extends the Actor class. This means a Bug can do everything an Actor can do. For example,
+an Actor can do things like move and turn. What's cool is that our Bug class can now can do these things as well.</p></li>
+<li><p>One of the most important methods the Bug class inherits from the Actor class is the <strong>act</strong> method.</p>
+<div><img src="greenfoot/images/MyFirst7.png"></div>
+<p>The act method is important because when you execute a scenario the act method is called repeatedly the entire time the program is
+   running. Any code placed in the act method will be executed many times every second. This is what makes animations and games possible.</p>
+<p>The act method, as it is written in the Actor class, doesn't really do anything useful, therefore in our Bug class we are going to 
+   need to add some of our own code to this method. In programming terminology, we say we are <strong>overriding</strong> the act method.</p>
+<p>To demonstrate how this works add the following line of code to the act method:</p>
+<div id="csCode" style="width:150px"><pre>move(1);</pre></div>
+<div><img src="greenfoot/images/MyFirst8.png"></div>
+<p>Each time the act method is called our Bug will move one unit ahead. Remember our Bug knows how to move because
+   it inherited this behavior from the Actor class.</p></li>
+<li><p>Press the <strong>close</strong> button.</p>
+<div><img src="greenfoot/images/MyFirst9.png"></div></li>
+<h2>Compile Scenario</h2>
+<li><p>With this version of Greenfoot compiling is done automatically by the Greenfoot environment.</li>
+<div><img src="greenfoot/images/MyFirst10.png"></div></li>
+<h2>Place Bug in the World</h2>
+<li><p>So far you have created a Bug class and added code to make a bug move. The next step is to add a bug to the world.
+       To do this you need to create a Bug object, using the Bug class, and then add this Bug object to the world.</p>
+		<p>There are three ways you can add an Actor to the world. <strong>Use each technique to add a Bug object to the world.</strong></p>
+		<h3>Method 1</h3>
+		<ul id="csList">
+			<li><p>Right-click mouse on Bug class</p></li>
+			<li><p>Select <strong>New Bug()</strong></p></li>
+			<li><p>Use the mouse to place the Bug object in the world.</strong></p></li>
+		<div><img src="greenfoot/images/MyFirst11.png"></div></li>
+		</ul>	   
+		
+		<h3>Method 2</h3>
+		<ul id="csList">
+			<li><p>Click the mouse on the Bug class to select it.</p></li>
+			<li><p>Hold down the <strong>shift key</strong>. A Bug object will appear.</strong></p></li>
+			<li><p>Drag the Bug object to the world and click the left mouse button to place it in the world.</strong></p></li>
+		<div><img src="greenfoot/images/MyFirst12.png"></div></li>
+		</ul>
+		<h3>Method 3</h3>
+		<ul id="csList">
+			<li><p>Double click on the MyWorld class to view its code.</p></li>
+			<li><p>Inside the MyWorld constructor place the following code:</p>
+			
+			<div id="csCode" style="width:600px"><pre>Bug bug = new Bug();                            // create bug object
+addObject(bug, getWidth()/2, getHeight()/2);    // add bug object to world</pre></div>
+
+<p>This code will place a Bug object in the center of the world.</p></li>
+<div><img src="greenfoot/images/MyFirst13.png"></div>
+			<li><p>To see the Bug you must compile the program.</strong></p></li>
+		
+		</ul>
+</li>	
+
+<h2>Execute Scenario</h2>
+<li><p>Click the <strong>Act</strong> button to execute the Act method one time.</p></li>
+<li><p>Click the <strong>Run</strong> button to execute the Act method repeatedly.</p></li>
+<div><img src="greenfoot/images/MyFirst14.png"></div>
+<h2>Create Your Own SubClass</h2>
+<li><p>Create a subclass of the Actor class. Give it a name and assign it an image.</p></li>
+<li><p>Create an object of your new Actor subclass using <strong>Method 3</strong> and add it to the world as described above.</p></li>
+<li><p>Compile and execute the scenario.</p></li>
+<li><p>Use <strong>Method 3</strong> to add a second object of your new Actor subclass to the world at a different location.</p> For example, the following code would add a new Bug object
+       at location (100, 200):</p>
+<div id="csCode" style="width:600px"><pre>Bug bug2 = new Bug();     // create bug object
+addObject(bug2, 100, 200);     // add bug object to world</pre></div>
+	   </li>
+<li><p>Compile and execute the scenario.</p></li>
+<li><p>What is the benefit of using Method 3 for adding actors to a world as opposed to Method 1 or Method 2?</p></li>
+</ol></div>
+
+	 
+	 
+	 
+	<br>
+</div>	
+

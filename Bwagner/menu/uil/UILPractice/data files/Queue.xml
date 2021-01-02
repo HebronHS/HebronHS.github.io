@@ -1,0 +1,103 @@
+<practice>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code
+to the right?</pre>]]></question>
+        <code><![CDATA[<pre>Queue<String> q = new LinkedList<String>();
+q.add( "Z" );
+q.add( "X" );
+q.add( "Y" );
+System.out.print( q.remove() );</pre>]]></code>
+        <a><![CDATA[<pre>X</pre>]]></a>
+        <b><![CDATA[<pre>Y</pre>]]></b>
+        <c><![CDATA[<pre>Z</pre>]]></c>
+        <d><![CDATA[<pre>ZY</pre>]]></d>
+        <e><![CDATA[<pre>YX</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Which of the following can 
+replace <*1> in the code to
+the right so that the code
+segment compiles without error?
+
+ I.   Collection<Integer>
+ II.  Object
+ III. Queue<Integer></pre>]]></question>
+        <code><![CDATA[<pre><*1> tally = new LinkedList<Integer>();</pre>]]></code>
+        <a><![CDATA[<pre>I only</pre>]]></a>
+        <b><![CDATA[<pre>II only</pre>]]></b>
+        <c><![CDATA[<pre>III only</pre>]]></c>
+        <d><![CDATA[<pre>I,II,and III</pre>]]></d>
+        <e><![CDATA[<pre>None of the choices.</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code
+to the right?</pre>]]></question>
+        <code><![CDATA[<pre>Queue<Integer> q;
+q = new LinkedList<Integer>();
+
+for(int i = 0; i < 10; i += 2)
+  q.add(i);
+
+for(int i = 0; i < q.size(); i++)
+  System.out.print( q.remove() );</pre>]]></code>
+        <a><![CDATA[<pre>02468</pre>]]></a>
+        <b><![CDATA[<pre>0</pre>]]></b>
+        <c><![CDATA[<pre>10</pre>]]></c>
+        <d><![CDATA[<pre>0246810</pre>]]></d>
+        <e><![CDATA[<pre>024</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>What is output by the code to the right?</pre>]]></question>
+        <code><![CDATA[<pre>// Assume Queue<E>
+// is implemented correctly.
+Queue<String> q1 = new Queue<String>();
+Queue<String> q2 = new Queue<String>();
+Queue<String> q3 = new Queue<String>();
+String st = "BLUE";
+
+for(int i = 0; i < st.length(); i++){
+  int pos = st.length() - i - 1;
+  q1.enqueue( st.substring(i, i+1 ) );
+  q2.enqueue( st.substring(pos, pos+1) );
+}
+
+while( !q1.isEmpty() )
+  q3.enqueue( q2.dequeue() +
+    q1.dequeue() );
+
+while( !q3.isEmpty() )
+  System.out.print( q3.dequeue() );</pre>]]></code>
+        <a><![CDATA[<pre>EBULLUBE</pre>]]></a>
+        <b><![CDATA[<pre>BLUE</pre>]]></b>
+        <c><![CDATA[<pre>BELUULEB</pre>]]></c>
+        <d><![CDATA[<pre>BLUEBLUE</pre>]]></d>
+        <e><![CDATA[<pre>BLUEEULB</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Assume the MyQueue class is 
+implemented correctly and that
+the dequeue() method returns 
+the item being dequeued. What 
+is output by the code to 
+the right?</pre>]]></question>
+        <code><![CDATA[<pre>MyQueue<String> q = new MyQueue<String>;
+
+q.enqueue("This");
+q.enqueue("is");
+q.enqueue("a test");
+
+System.out.print(q.dequeue());
+System.out.print(q.dequeue());
+System.out.print(q.dequeue());</pre>]]></code>
+        <a><![CDATA[<pre>Thisisa test</pre>]]></a>
+        <b><![CDATA[<pre>a testisThis</pre>]]></b>
+        <c><![CDATA[<pre>Thisisatest</pre>]]></c>
+        <d><![CDATA[<pre>sihTsitset a</pre>]]></d>
+        <e><![CDATA[<pre>tset asisihT</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+</practice>

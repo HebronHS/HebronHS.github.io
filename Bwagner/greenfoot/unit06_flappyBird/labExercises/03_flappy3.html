@@ -1,0 +1,76 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">FlappyBird3</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/FlappyBird3.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >FlappyBird3</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>FlappyBird3</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the FlappyBird3 Scenario, and click Open.</p></li>
+</ol>
+
+<h1>Adding Pipes</h1>
+  <p>In this lesson pipes are added to the world that FlappyBird has to fly between. 
+    There is a top pipe and a bottom pipe that scroll across the world from right 
+    to left at regular intervals. The two pipes are positioned vertically at random 
+    with the distance between them defined by a constant in the FlappyWorld class 
+    named SPACE_BETWEEN_PIPES.</p>
+   
+<div><img src="greenfoot/images/FlappyBird3_01.png"></div>
+
+<p>The pipes are organized into three separate classes: <strong>Pipe</strong>, <strong>TopPipe</strong>, and <strong>BottomPipe</strong>.</p>
+
+<div><img src="greenfoot/images/FlappyBird3_02.png"></div>
+
+<p>TopPipe and BottomPipe are subclasses of Pipe. This means they both "act" like a Pipe since they inherit the Pipe class's act method.
+   The reason for organizing the pipes this way is so that all pipes, regardless if they are a TopPipe or BottomPipe, move in the same way
+   but they can have different images associated with them.</p>
+
+<p>A method named <strong>createPipes</strong> is defined in the FlappyWorld class. Each time it is called in the FlappyWorld act method it creates
+   both a BottomPipe object and a TopPipe object and adds them to the world just out of view to the right.</p>
+   
+<h1>FlappyBird act Method</h1>
+<p>There is some interesting code in the FlappyBird act method. Notice that the <strong>Pipe</strong> class is an argument(parameter) for the method call
+   <strong>getOneIntersectingObject</strong>.</p>
+   
+   <div><img src="greenfoot/images/FlappyBird3_04.png"></div>
+   
+<p>This code makes use of one of the benefits of inheritance. Since BottomPipe and TopPipe are subclasses of Pipe this if statement
+   will cause the game to end if Flappy collides with any pipe, regardless if the pipe is a BottomPipe or TopPipe. There is no 
+   need to check them for collisions separately.</p>
+
+<h1>Program Modifications</h1>
+
+  <p>Implement the FlappyWorld's <strong>act</strong> method so that the method 
+    <strong>createPipes</strong> is called at regular intervals resulting in the pipes being spaced 
+    100 units a part. To accomplish this task follow these steps:</p>
+   
+<ol id="csList">
+  <li><p>Define an integer variable named <strong>counter</strong> as an instance variable for the FlappyWorld class.</p></li>
+  <li><p>Add the following code to the FlappyWorld act method.</p>
+  <div id="csCode" style="width:500px"><pre>counter++;
+System.out.println(counter);</pre></div>
+  <p>Compile and execute the program. A console window should appear that displays counter.</p>
+  <div><img src="greenfoot/images/FlappyBird3_03.png"></div>
+  </li>
+  <li><p>Add the following if statement to the act method below the println statement:</p>
+  <div id="csCode" style="width:500px"><pre>if(counter == 100)
+{
+   counter = 0;
+}</pre></div>
+<p>Compile and execute the program. Notice that counter is reset to zero each time it reaches 100. We can use this to create pipes every 100 steps.</p>
+  </li>
+  <li><p>Add the following line of code inside the if statement.</p></li>
+  <div id="csCode" style="width:500px"><pre>createPipes();</pre></div>
+<p>Compile and execute the program.</p>
+<li><p>Remove the println statement you added in step 2.</p></li>
+<li><p>Remove the comment symbols from the addObject method call in the FlappyBird constructor so that the 
+     FlappyBird will appear. Compile and execute the program.</p></li>
+</ol>
+
+	<br>
+</div>
+

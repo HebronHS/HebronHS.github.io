@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Select Practice</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style>
+body
+{
+   margin: 0;
+   height: 150%;
+   background-color:#4aa5ff;
+   background-image: -webkit-gradient(linear, 0% 0%, 0% 150%, from(#4aa5ff), to(#d9ecff));
+   background-image: -webkit-linear-gradient(top, #4aa5ff, #d9ecff); 
+   background-image:    -moz-linear-gradient(top, #4aa5ff, #d9ecff);
+   background-image:     -ms-linear-gradient(top, #4aa5ff, #d9ecff);
+   background-image:      -o-linear-gradient(top, #4aa5ff, #d9ecff);
+} 
+table
+{
+     margin-left: auto;
+	 margin-right: auto;
+	 width: 45%;
+    /*border-collapse : collapse;
+	*/	
+}
+table, tr, td
+{
+    border : 0px solid blue;
+	padding : 0px;
+	font-size: 1.0em;
+	font-weight: bold;
+	font-family: Consolas, Courier New, serif;
+	text-align: center;
+	background: blue;
+	color: white;
+}
+button
+{
+    width: 100%;
+	margin: 0;
+	font-size: 1.0em;
+	background: white;
+	text-align: left;
+}
+h1
+{
+    text-align: center;
+}
+
+
+
+</style>
+<script>
+function toggleColor(id, num)
+{
+   if(num === 0)
+      document.getElementById('button'+id).style.color = 'red';
+   else
+      document.getElementById('button'+id).style.color = 'black';
+}
+</script>
+</head>
+<body>
+<h1>UIL Practice</h1>
+<table>
+<tr><td width="30px">1</td><td><button id="button1" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/NumberSystems.html'" onMouseOver="toggleColor(1,0)" onMouseOut="toggleColor(1,1)">Number Systems</button></td></tr>
+<tr><td>2</td><td><button id="button2" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/LiteralMathExpressions.html'" onMouseOver="toggleColor(2,0)" onMouseOut="toggleColor(2,1)">Literal Math Expressions</button></td></tr>
+<tr><td>3</td><td><button id="button3" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/SimpleOutput.html'" onMouseOver="toggleColor(3,0)" onMouseOut="toggleColor(3,1)">Simple Output (print, println, printf, escape sequences)</button></td></tr>
+<tr><td>4</td><td><button id="button4" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/StringClass.html'" onMouseOver="toggleColor(4,0)" onMouseOut="toggleColor(4,1)">String Class</button></td></tr>
+<tr><td>5</td><td><button id="button5" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/BooleanLogic.html'" onMouseOver="toggleColor(5,0)" onMouseOut="toggleColor(5,1)">Simple Boolean Logic (AND, OR, XOR, NOT)</button></td></tr>
+<tr><td>6</td><td><button id="button6" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/MathClass.html'" onMouseOver="toggleColor(6,0)" onMouseOut="toggleColor(6,1)">Math Class</button></td></tr>
+<tr><td>7</td><td><button id="button7" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/VariableExpressions.html'" onMouseOver="toggleColor(7,0)" onMouseOut="toggleColor(7,1)">Simple Variable Expressions</button></td></tr>
+<tr><td>8</td><td><button id="button8" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/Conditionals.html'" onMouseOver="toggleColor(8,0)" onMouseOut="toggleColor(8,1)">Conditionals (if, if-else, switch)</button></td></tr>
+<tr><td>9</td><td><button id="button9" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/OutputLoops.html'" onMouseOver="toggleColor(9,0)" onMouseOut="toggleColor(9,1)">Simple Output Loop</button></td></tr>
+<tr><td>10</td><td><button id="button10" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/Arrays.html'" onMouseOver="toggleColor(10,0)" onMouseOut="toggleColor(10,1)">1 Dimensional Arrays</button></td></tr>
+<tr><td>11</td><td><button id="button11" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/Input.html'" onMouseOver="toggleColor(11,0)" onMouseOut="toggleColor(11,1)">Input Concepts(Scanner, File)</button></td></tr>
+<tr><td>12</td><td><button id="button12" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/AdvancedLoops.html'" onMouseOver="toggleColor(12,0)" onMouseOut="toggleColor(12,1)">Accumulation Loops (accumulation, summation) </button></td></tr>
+<tr><td>13</td><td><button id="button13" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/OrderOfOperations.html'" onMouseOver="toggleColor(13,0)" onMouseOut="toggleColor(13,1)">Java Order of Operations</button></td></tr>
+<tr><td>14</td><td><button id="button14" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/DataTypes.html'" onMouseOver="toggleColor(14,0)" onMouseOut="toggleColor(14,1)">Java Data Types (memory, min/max limits, wraparound, ~compliments)</button></td></tr>
+<tr><td>15</td><td><button id="button15" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/ArrayList.html'" onMouseOver="toggleColor(15,0)" onMouseOut="toggleColor(15,1)">ArrayList (generics only)</button></td></tr>
+</table>
+<br>
+<table>
+<tr><td width="30px">16</td><td><button id="button16" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/Bitwise.html'" onMouseOver="toggleColor(16,0)" onMouseOut="toggleColor(16,1)">Bitwise Operators</button></td></tr>
+<tr><td width="30px">17</td><td><button id="button17" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/Regex.html'" onMouseOver="toggleColor(17,0)" onMouseOut="toggleColor(17,1)">Regular Expressions</button></td></tr>
+<tr><td width="30px">18</td><td><button id="button18" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/Recursion.html'" onMouseOver="toggleColor(18,0)" onMouseOut="toggleColor(18,1)">Recursion</button></td></tr>
+<tr><td width="30px">19</td><td><button id="button19" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/Prefix_Postfix.html'" onMouseOver="toggleColor(19,0)" onMouseOut="toggleColor(19,1)">PreFix, InFix, PostFix</button></td></tr>
+<tr><td width="30px">20</td><td><button id="button20" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/Searching.html'" onMouseOver="toggleColor(20,0)" onMouseOut="toggleColor(20,1)">Searching</button></td></tr>
+<tr><td width="30px">21</td><td><button id="button21" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/2DArrays.html'" onMouseOver="toggleColor(21,0)" onMouseOut="toggleColor(21,1)">2DArray</button></td></tr>
+<tr><td width="30px">22</td><td><button id="button22" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/Stack.html'" onMouseOver="toggleColor(22,0)" onMouseOut="toggleColor(22,1)">Stack</button></td></tr>
+<tr><td width="30px">23</td><td><button id="button23" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/Queue.html'" onMouseOver="toggleColor(23,0)" onMouseOut="toggleColor(23,1)">Queue</button></td></tr>
+<tr><td width="30px">24</td><td><button id="button24" onclick="location.href='http://bwagner.org/menu/uil/UILPractice/PriorityQueue.html'" onMouseOver="toggleColor(24,0)" onMouseOut="toggleColor(24,1)">PriorityQueue</button></td></tr>
+
+</table>
+</body>
+</html>

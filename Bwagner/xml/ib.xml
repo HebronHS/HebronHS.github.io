@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<course>
+	<unit>
+	    <unitName>Unit 1 Number Systems</unitName>
+		<category> 
+		    <categoryName>Notes</categoryName>
+			<description>1.1 Number Systems</description><url>csregular/unit01_binary/notes/01_binary.html</url>
+			<description>1.2 Number Conversions</description><url>csregular/unit01_binary/notes/02_numberConversion.html</url>
+			<description>1.3 Data Representation</description><url>csregular/unit01_binary/notes/03_dataRepresentation.html</url>
+			<description>1.4 Numeric Representation</description><url>csregular/unit01_binary/notes/04_numericData.html</url>
+		    <description>1.5 Representing Text</description><url>csregular/unit01_binary/notes/05_textData.html</url>
+		    <description>1.6 Representing Audio Data</description><url>csregular/unit01_binary/notes/06_audioData.html</url>
+		    <description>1.7 Representing Images and Graphics</description><url>csregular/unit01_binary/notes/07_graphicData.html</url>
+		    <description>1.8 Representing Video</description><url>csregular/unit01_binary/notes/08_videoData.html</url>
+		</category>
+		<category> 
+		    <categoryName>Worksheets</categoryName> 
+			<description>Number Systems(pdf)</description><url>csregular/unit01_binary/worksheets/Number Systems.pdf</url>
+			<description>Number Systems(docx)</description><url>csregular/unit01_binary/worksheets/Number Systems.docx</url>
+			<description>Data Representation(pdf)</description><url>csregular/unit01_binary/worksheets/Data Representation.pdf</url>
+			<description>Data Representation(docx)</description><url>csregular/unit01_binary/worksheets/Data Representation.docx</url>
+		</category>
+		<category> 
+		    <categoryName>Quizzes</categoryName> 
+			<description>Number Systems Quiz(pdf)</description><url>csregular/unit01_binary/quizzes/Number Systems Quiz.pdf</url>
+			<description>Number Systems Quiz(docx)</description><url>csregular/unit01_binary/quizzes/Number Systems Quiz.docx</url>
+		</category>
+	</unit>
+	<unit>
+	    <unitName>Unit 2 System Fundamentals</unitName>
+		<category> 
+		    <categoryName>Notes</categoryName>
+			<description>2.0 What is a System</description><url>ibsl/unit01_systems/notes/01_systemBasics.html</url>
+			<description>2.1 System Planning</description><url>ibsl/unit01_systems/notes/02_planning.html</url>
+			<description>2.2 System Design</description><url>ibsl/unit01_systems/notes/03_design.html</url>
+		</category>
+		<category> 
+		    <categoryName>Worksheets</categoryName>
+			<description>2.1 System Planning(pdf)</description><url>ibsl/unit01_systems/worksheets/System Planning.pdf</url>
+			<description>2.1 System Planning(doc)</description><url>ibsl/unit01_systems/worksheets/System Planning.docx</url>
+			<description>2.2 System Design(pdf)</description><url>ibsl/unit01_systems/worksheets/System Design.pdf</url>
+			<description>2.2 System Design(doc)</description><url>ibsl/unit01_systems/worksheets/System Design.docx</url>
+		</category>
+	</unit>
+	<unit>
+	    <unitName>Unit 3 PseudoCode/FlowCharts</unitName>
+		<category> 
+		    <categoryName>Notes</categoryName>
+			<description>3.1 Pseudocode</description><url>ibsl/unit02_pseudocode/notes/01_pseudocode.html</url>
+			<description>3.2 Flowchart</description><url>ibsl/unit02_pseudocode/notes/02_flowchart.html</url>
+		</category>
+		<category> 
+		    <categoryName>Worksheets</categoryName>
+			<description>3.1 Pseudocode(pdf)</description><url>ibsl/unit02_pseudocode/worksheets/Pseudocode.pdf</url>
+			<description>3.1 Pseudocode(doc)</description><url>ibsl/unit02_pseudocode/worksheets/Pseudocode.docx</url>
+		</category>
+	</unit>
+	<unit>
+	    <unitName>Unit 4 Tracing an Algorithm</unitName>
+		<category> 
+		    <categoryName>Notes</categoryName>
+			<description>4.1 Trace Tables</description><url>ibsl/unit14_tracing/notes/01_tracing.html</url>
+		</category>
+		<category> 
+		    <categoryName>Worksheets</categoryName>
+			<description>4.1 Trace Tables(pdf)</description><url>ibsl/unit14_tracing/worksheets/Trace Tables.pdf</url>
+			<description>4.1 Trace Tables(docx)</description><url>ibsl/unit14_tracing/worksheets/Trace Tables.docx</url>
+		</category>
+	</unit>
+	<unit>
+	    <unitName>Unit 5 Computational Thinking</unitName>
+		<category> 
+		    <categoryName>Notes</categoryName>
+			<description>5.1 Thinking Procedurally</description><url>ibsl/unit15_computationalThinking/notes/01_procedurally.html</url>
+			<description>5.2 Thinking Logically</description><url>ibsl/unit15_computationalThinking/notes/02_logically.html</url>
+			<description>5.3 Thinking Ahead</description><url>ibsl/unit15_computationalThinking/notes/03_ahead.html</url>
+			<description>5.4 Thinking Concurrently</description><url>ibsl/unit15_computationalThinking/notes/04_concurrently.html</url>
+			<description>5.5 Thinking Abstractly</description><url>ibsl/unit15_computationalThinking/notes/05_abstractly.html</url>
+		</category>
+		<category> 
+		    <categoryName>Worksheets</categoryName>
+		</category>
+	</unit>
+	<unit>
+    <unitName>Unit 6 Two-Dimensional Arrays</unitName>
+		<category> 
+		    <categoryName>Notes</categoryName>
+			<description>6.1 2DArrays</description><url>ap/unit04_2DArrays/notes/01_2DArrays.html</url>
+			<description>6.2 Manipulating 2DArrays</description><url>ap/unit04_2DArrays/notes/02_manipulate.html</url>
+		</category>
+		<category> 
+		    <categoryName>Lab Exercises</categoryName> 
+			<description>6.1 LessThan100</description><url>ap/unit04_2DArrays/labExercises/01_lessThan100.html</url>
+			<description>6.2 Transpose</description><url>ap/unit04_2DArrays/labExercises/02_transpose.html</url>
+			<description>6.3 StoreLargest</description><url>ap/unit04_2DArrays/labExercises/03_storeLargest.html</url>
+			<description>6.4 SumMatrix</description><url>ap/unit04_2DArrays/labExercises/04_sumMatrix.html</url>
+		</category>
+		<category> 
+		    <categoryName>AP Free Response</categoryName> 
+			<description>6.1 TreasureMap</description><url>ap/unit04_2DArrays/apFreeResponse/01_treasureMap.html</url>
+		</category>
+	</unit>
+    <unit>
+	    <unitName>Unit 7 Recursion</unitName>
+		<category> 
+		    <categoryName>Notes</categoryName>
+			<description>7.1 Recursive Thinking</description><url>ap/unit10_recursion/notes/01_intro.html</url>
+			<description>7.2 Recursive Programming</description><url>ap/unit10_recursion/notes/02_recursion.html</url>
+		</category>
+		<category> 
+		    <categoryName>Lab Exercises</categoryName> 
+			<description>7.1 CountDown</description><url>ap/unit10_recursion/labExercises/01_countDown.html</url>
+			<description>7.2 Song</description><url>ap/unit10_recursion/labExercises/02_song.html</url>
+			<description>7.3 Fibonnaci</description><url>ap/unit10_recursion/labExercises/03_fibonnaci.html</url>
+			<description>7.4 ReverseString</description><url>ap/unit10_recursion/labExercises/04_reverseString.html</url>
+			<description>7.5 Palindrome</description><url>ap/unit10_recursion/labExercises/05_palindrome.html</url>
+			<description>7.6 RecursiveSearch</description><url>ap/unit11_searching/labExercises/03_recursiveSearch.html</url>
+		</category>
+		<category> 
+		    <categoryName>Worksheets</categoryName> 
+			<description>Recursion(pdf)</description><url>ap/unit10_recursion/worksheets/Recursion.pdf</url>
+			<description>Recursion(docx)</description><url>ap/unit10_recursion/worksheets/Recursion.docx</url>
+		</category>
+	</unit>
+	<unit>
+	    <unitName>Unit 8 Abstract Data Types</unitName>
+		<category> 
+		    <categoryName>Notes</categoryName>
+			<description>8.1 ADT</description><url>ibhl2/unit03_ADT/notes/01_ADT.html</url>
+			<description>8.2 List</description><url>ibhl2/unit03_ADT/notes/02_list.html</url>
+			<description>8.3 Stack</description><url>ibhl2/unit03_ADT/notes/03_stack.html</url>
+			<description>8.4 Queue</description><url>ibhl2/unit03_ADT/notes/04_queue.html</url>
+			<description>8.5 Tree</description><url>ibhl2/unit03_ADT/notes/05_tree.html</url>
+		</category>
+		<category> 
+		    <categoryName>Lab Exercises</categoryName> 
+			<description>8.1 LinkedList1</description><url>ibhl2/unit03_ADT/labExercises/01_linkedList1.html</url>
+			<description>8.2 LinkedList2</description><url>ibhl2/unit03_ADT/labExercises/02_linkedList2.html</url>
+			<description>8.3 BracketChecker</description><url>ibhl2/unit03_ADT/labExercises/03_bracketChecker.html</url>
+			<description>8.4 PostFixEvaluator</description><url>ibhl2/unit03_ADT/labExercises/04_postFixEval.html</url>
+			<description>8.5 Queue1</description><url>ibhl2/unit03_ADT/labExercises/05_queue1.html</url>
+			<description>8.6 Palindrome</description><url>ibhl2/unit03_ADT/labExercises/06_palindrome.html</url>
+		</category>
+	</unit>
+		<unit>
+	    <unitName>Unit 9 LinkedList</unitName>
+		<category> 
+		    <categoryName>Notes</categoryName>
+			<description>9.1 Linked List</description><url>ibhl2/unit04_list/notes/01_list.html</url>
+			<description>9.2 Generics</description><url>ibhl2/unit04_list/notes/02_generics.html</url>
+
+		</category>
+		<category> 
+		    <categoryName>Lab Exercises</categoryName> 
+			<description>9.1 BuildList</description><url>ibhl2/unit04_list/labExercises/01_buildList.html</url>
+			<description>9.2 Replicate</description><url>ibhl2/unit04_list/labExercises/02_replicate.html</url>
+			<description>9.3 RemoveOdds</description><url>ibhl2/unit04_list/labExercises/03_removeOdds.html</url>
+			<description>9.4 LinkedRecursion</description><url>ibhl2/unit04_list/labExercises/04_linkedRecursion.html</url>
+			<description>9.5 LinkedDuplicates</description><url>ibhl2/unit04_list/labExercises/05_linkedDuplicates.html</url>
+			<description>9.6 MyArrayList</description><url>ibhl2/unit04_list/labExercises/06_myArrayList.html</url>
+			<description>9.7 MyLinkedList</description><url>ibhl2/unit04_list/labExercises/07_myLinkedList.html</url>
+		</category>
+	</unit>
+	<unit>
+	    <unitName>Unit 10 Stack</unitName>
+		<category> 
+		    <categoryName>Notes</categoryName>
+			<description>10.1 Stack</description><url>ibhl2/unit05_stack/notes/01_stack.html</url>
+		</category>
+		<category> 
+		    <categoryName>Lab Exercises</categoryName> 
+			<description>10.1 ArrayStack</description><url>ibhl2/unit05_stack/labExercises/01_arrayStack.html</url>
+			<description>10.2 LinkedStack</description><url>ibhl2/unit05_stack/labExercises/02_linkedStack.html</url>
+		</category>
+	</unit>
+	<unit>
+	    <unitName>Unit 11 Queue</unitName>
+		<category> 
+		    <categoryName>Notes</categoryName>
+			<description>11.1 Queue</description><url>ibhl2/unit06_queue/notes/01_queue.html</url>
+		</category>
+		<category> 
+		    <categoryName>Lab Exercises</categoryName> 
+			<description>11.1 ArrayQueue</description><url>ibhl2/unit06_queue/labExercises/01_arrayQueue.html</url>
+			<description>11.2 LinkedQueue</description><url>ibhl2/unit06_queue/labExercises/02_linkedQueue.html</url>
+		</category>
+	</unit>
+	<unit>
+	    <unitName>Unit 12 Binary Tree</unitName>
+		<category> 
+		    <categoryName>Notes</categoryName>
+			<description>12.1 Binary Tree</description><url>ibhl2/unit07_tree/notes/01_tree.html</url>
+			<description>12.2 Binary Search Tree</description><url>ibhl2/unit07_tree/notes/02_searchTree.html</url>
+		</category>
+		<category> 
+		    <categoryName>Lab Exercises</categoryName> 
+			<description>12.1 Traversals</description><url>ibhl2/unit07_tree/labExercises/01_traversals.html</url>
+			<description>12.2 Counters</description><url>ibhl2/unit07_tree/labExercises/02_counters.html</url>
+			<description>12.3 BTreeUtilities</description><url>ibhl2/unit07_tree/labExercises/03_bTreeUtilities.html</url>
+			<description>12.4 TreePriorityQueue</description><url>ibhl2/unit07_tree/labExercises/04_treePriorityQueue.html</url>
+			<description>12.5 CodeTree</description><url>ibhl2/unit07_tree/labExercises/05_codeTree.html</url>
+		</category>
+	</unit>
+		<unit>
+	    <unitName>Unit 13 Hash Table</unitName>
+		<category> 
+		    <categoryName>Notes</categoryName>
+			<description>13.1 Hashing</description><url>ibhl2/unit08_hashTable/notes/01_hashing.html</url>
+			<description>13.2 Collisions</description><url>ibhl2/unit08_hashTable/notes/02_collision.html</url>
+		</category>
+		<category> 
+		    <categoryName>Lab Exercises</categoryName> 
+			<description>13.1 Linear Probing</description><url>ibhl2/unit08_hashTable/labExercises/01_linearProbing.html</url>
+			<description>13.2 SpellCheck</description><url>ibhl2/unit08_hashTable/labExercises/02_spellCheck.html</url>
+		</category>
+	</unit>
+</course>

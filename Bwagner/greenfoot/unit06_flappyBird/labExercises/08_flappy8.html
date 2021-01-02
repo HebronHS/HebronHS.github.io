@@ -1,0 +1,72 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">FlappyBird8</div>
+
+<div id="csContent"> 
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/FlappyBird8.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >FlappyBird8</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>FlappyBird8</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the FlappyBird8 Scenario, and click Open.</p></li>
+</ol>
+<br>
+<p>In this lesson a startup screen is added to the game.</p>
+
+<h1>StartUpScreen Class</h1>
+<p>This scenario includes three new classes: <strong>StartUpScreen</strong>, <strong>Title</strong>, and <strong>StartButton</strong>.</p>
+ <p>The StartUpScreen class is a subclass of World. When the game is started an object of this class is created and its world 
+   appears on the screen. The purpose of this class is to provide a screen with information about the game such as which keys to use or the
+   current high score.</p>
+<p>Two actors are added to the StartUpScreen class named Title and StartButton. The Title class provides a title graphic
+   for the startup screen. The StartButton actor is used as a button that the user clicks on to exit the startup screen and 
+   play the game.</p>
+   
+<h3>Multiple Worlds</h3>
+<p>When a scenario contains multiple World subclasses how does it know which one to display first? The answer is you have tell it.
+   To notify the scenario of which class should be displayed first do the following: </p>
+   <ol id="csList"> 
+   <li><p>In our game we want the StartUpScreen world to appear first so you would right-click on it and select <strong>new StartUpScreen()</strong>.
+   This process selects StartupScreen as the first world to appear when the scenario is executed.</p>
+   
+   <div><img src="greenfoot/images/FlappyBird8_01.png"></div>
+   
+   </li>
+   <li><p>The Greenfoot environment remembers which world is the startup world so you only have to do this selection process once.</p></li>
+   </ol>
+	
+	<h1>Program Modifications</h1>
+	<p>Add sound to the FlappyBird game. In the FlappyBird8 Scenario folder there is a sound folder that contains three sound files
+	   named <strong>flap.wav</strong>, <strong>score.wav</strong>, and <strong>smack.wav</strong>. Use the flap sound when Flappy is
+	   flying, use score sound when Flappy passes through a set of pipes, and use smack sound when Flappy collides with a pipe.</p>
+	   
+	<p>To add sound to the game do the following:</p>
+	<ol id="csList">
+	<li><p>From the <strong>Help</strong> menu select <strong>Greenfoot Class Documentation.</strong></p></li>
+	<li><p>Click on the class <strong>GreenfootSound</strong> to view its API(available methods).</p></li>
+	<li><p>In our game we will be using two of the available methods: the GreenfootSound <strong>constructor</strong> and the method <strong>play</strong>.</p></li>
+	<li><p>The <strong>constructor</strong> creates a GreenfootSound object and assigns it a sound from a file.</p>
+	<div id="csCode" style="width:550px"><pre>GreenfootSound flapSound = new GreenfootSound("flap.wav");</pre></div>
+	<p><strong>Add</strong> this line of code to the Flappy class in its instance variable section.</p>
+	</li>
+	<li><p>The <strong>play</strong> method plays the sound.</p>
+	<div id="csCode" style="width:550px"><pre>flapSound.play();</pre></div>
+	<p><strong>Add</strong> this line of code in the Flappy class's act method inside the if statement that tests
+	   to see if the "up" arrow key has been pressed.</p>
+	</li>
+	<li><p><strong>Add</strong> the two other sounds to the game with the behavior described above. Use the <strong>score sound</strong> in the FlappyWorld class and use
+	       the <strong>smack sound</strong> in the Flappy class.</p></li>
+
+	<h3>Found a Bug</h3>
+	<p>As you know, a bug in computer jargon means an error. While doing my final testing 
+	   of the finished game I discovered a bug. Flappy has the ability to fly above the
+		pipes, not die, and the score continues to update.</p>
+	<li><p>Your final task is to correct this bug. Which class do you need to modify? How are you going
+	   to prevent Flappy from flying above the pipes?</p></li>
+	</ol>
+
+	
+	<br>
+</div>
+

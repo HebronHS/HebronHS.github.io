@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<head></head>
+    <script>
+         window.location = "http://bwagner.org/main.html" + "?" + Math.random();
+    </script>
+</head>
+</html>

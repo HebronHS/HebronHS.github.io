@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Mario
+comment1.params=filename\ numFrames\ frameWidth\ frameHeight
+comment1.target=Mario(java.lang.String,\ int,\ int,\ int)
+comment10.params=
+comment10.target=void\ elevatorTest()
+comment11.params=dy
+comment11.target=void\ setDy(int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ movementTest()
+comment4.params=
+comment4.target=void\ wrapAroundTest()
+comment5.params=
+comment5.target=void\ jumpTest()
+comment6.params=
+comment6.target=void\ updateLocation()
+comment7.params=
+comment7.target=void\ collideWithGroundTest()
+comment8.params=
+comment8.target=void\ willCollideWithGroundTest()
+comment9.params=
+comment9.target=void\ platformTest()
+numComments=12

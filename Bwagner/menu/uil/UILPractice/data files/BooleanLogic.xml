@@ -1,0 +1,221 @@
+<practice>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>boolean p = true;
+boolean q = false;
+out.println((p&&q||p) + " " + (p||q&&p));</pre>]]></code>
+        <a><![CDATA[<pre>true true</pre>]]></a>
+        <b><![CDATA[<pre>true false</pre>]]></b>
+        <c><![CDATA[<pre>false true</pre>]]></c>
+        <d><![CDATA[<pre>false false</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to syntax error.</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>boolean a = false, b = true, c = false;
+a = b && c || b && !a;
+System.out.println( a==true );</pre>]]></code>
+        <a><![CDATA[<pre>yes</pre>]]></a>
+        <b><![CDATA[<pre>no</pre>]]></b>
+        <c><![CDATA[<pre>yikes</pre>]]></c>
+        <d><![CDATA[<pre>true</pre>]]></d>
+        <e><![CDATA[<pre>false</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+        <problem>
+        <question><![CDATA[What values for a, b, and c make the output to the right true?]]></question>
+        <code><![CDATA[<pre>boolean a, b, c, d;
+d = b && c || a;
+out.println(d);</pre>]]></code>
+        <a><![CDATA[<pre>b is true</pre>]]></a>
+        <b><![CDATA[<pre>a is true</pre>]]></b>
+        <c><![CDATA[<pre>d will always be false</pre>]]></c>
+        <d><![CDATA[<pre>d will always be true</pre>]]></d>
+        <e><![CDATA[<pre>c is true</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[When is the variable d true?]]></question>
+        <code><![CDATA[<pre>boolean x,y,z,d;
+d = x && z || z && (!x || x && y);
+out.println(d);</pre>]]></code>
+        <a><![CDATA[<pre>only when x is true and z is false</pre>]]></a>
+        <b><![CDATA[<pre>only when all values are true</pre>]]></b>
+        <c><![CDATA[<pre>only when x is false</pre>]]></c>
+        <d><![CDATA[<pre>only when z is true</pre>]]></d>
+        <e><![CDATA[<pre>d is never true</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>How many combinations of values for the boolean variables a
+and b will result in c being set to true?</pre>]]></question>
+        <code><![CDATA[<pre>boolean a, b;
+//code to initialize a and b
+boolean c = (!a || !b) || a;</pre>]]></code>
+        <a><![CDATA[<pre>2</pre>]]></a>
+        <b><![CDATA[<pre>3</pre>]]></b>
+        <c><![CDATA[<pre>1</pre>]]></c>
+        <d><![CDATA[<pre>4</pre>]]></d>
+        <e><![CDATA[<pre>0</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>How many combinations of values for the boolean variables, j, k,
+and l will result in s being set to true</pre>]]></question>
+        <code><![CDATA[<pre>boolean j, k, l;
+//code to initialize j, k, and l
+boolean s;
+s = !(l ^ !j) && k && (l == j)
+out.println(s);</pre>]]></code>
+        <a><![CDATA[<pre>0</pre>]]></a>
+        <b><![CDATA[<pre>6</pre>]]></b>
+        <c><![CDATA[<pre>2</pre>]]></c>
+        <d><![CDATA[<pre>4</pre>]]></d>
+        <e><![CDATA[<pre>1</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Which answer is logically equivalent to the following Boolean expression,
+where a, b, and c are boolean variables?</pre>]]></question>
+        <code><![CDATA[<pre>!(!c || a) && !(a && b && a || c)</pre>]]></code>
+        <a><![CDATA[<pre>b || c</pre>]]></a>
+        <b><![CDATA[<pre>true</pre>]]></b>
+        <c><![CDATA[<pre>!a || !b</pre>]]></c>
+        <d><![CDATA[<pre>c && (!a || !b)</pre>]]></d>
+        <e><![CDATA[<pre>false</pre>]]></e>
+        <answer>e</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Which answer is logically equivalent to the following 
+Boolean expression, where x, y and z are int variables?</pre>
+]]></question>
+        <code><![CDATA[<pre>(x > y) && !(y <= z)</pre>]]></code>
+        <a><![CDATA[<pre>!(x <= y) && (y > z)</pre>]]></a>
+        <b><![CDATA[<pre>!(x > y) && !(y <= z)</pre>]]></b>
+        <c><![CDATA[<pre>(x > y) || !(y <= z)</pre>]]></c>
+        <d><![CDATA[<pre>(x <= y) && !(y <= z)</pre>]]></d>
+        <e><![CDATA[<pre>!( (x > y) && !(y <= z) )</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[Which statement is represented by the truth table to the right?]]></question>
+        <code><![CDATA[<pre>a      b       c
+true   true    true
+true   false   true
+false  true    true
+false  false   false</pre>]]></code>
+        <a><![CDATA[<pre>c = a && b || !a</pre>]]></a>
+        <b><![CDATA[<pre>c = a && !b</pre>]]></b>
+        <c><![CDATA[<pre>c = (a || b) && !a</pre>]]></c>
+        <d><![CDATA[<pre>c = a || b</pre>]]></d>
+        <e><![CDATA[<pre>more than one of these</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Which statement below represents the truth table to the right?
+ a, b, and c are all variables of type boolean.</pre>]]></question>
+        <code><![CDATA[<pre>a       b       c
+false   false   false
+false   true    true
+true    false   true
+true    true    false</pre>]]></code>
+        <a><![CDATA[<pre>c = (a || b) && !(a || b);</pre>]]></a>
+        <b><![CDATA[<pre>c = (a && b) || !(a && b);</pre>]]></b>
+        <c><![CDATA[<pre>c = (a || b) && (a || !b);</pre>]]></c>
+        <d><![CDATA[<pre>c = (a || b) && !(a && b);</pre>]]></d>
+        <e><![CDATA[<pre>c = a ~ b;</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>Assume x, y, and z are int variables. 
+Which answer is logically equivalent to this Boolean expression?</pre>]]></question>
+        <code><![CDATA[<pre>!( x + y < z && x * y >= z )</pre>]]></code>
+        <a><![CDATA[<pre>!(x + y < z) && !( x * y >= z)</pre>]]></a>
+        <b><![CDATA[<pre>x + y < z || x * y >= z</pre>]]></b>
+        <c><![CDATA[<pre>x + y >= z || !(x * y >= z)</pre>]]></c>
+        <d><![CDATA[<pre>!( x + y >= z) || !(x * y < z)</pre>]]></d>
+        <e><![CDATA[<pre>!(x + y >= z) && (x * y < z)</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>How many combinations of values for the boolean
+variables a, b, and c will result in d being set
+to true?</pre>]]></question>
+        <code><![CDATA[<pre>boolean a, b, c;
+//code to initialize a, b, and c
+
+boolean d = ( a && b || c );</pre>]]></code>
+        <a><![CDATA[<pre>16</pre>]]></a>
+        <b><![CDATA[<pre>0</pre>]]></b>
+        <c><![CDATA[<pre>5</pre>]]></c>
+        <d><![CDATA[<pre>8</pre>]]></d>
+        <e><![CDATA[<pre>3</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[Which of these statements sets b to true?]]></question>
+        <code><![CDATA[<pre>int x = 1, y = 2, z = 3;
+boolean b;</pre>]]></code>
+        <a><![CDATA[<pre>b = (x < y) && !(z < y);</pre>]]></a>
+        <b><![CDATA[<pre>b = !(x < y) || !(y < z);</pre>]]></b>
+        <c><![CDATA[<pre>b = !( (x > y) || (y < z) );</pre>]]></c>
+        <d><![CDATA[<pre>b = !( !(x > y) && (y < z) );</pre>]]></d>
+        <e><![CDATA[<pre>b = x < y < z;</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>int x2 = 3;
+double a2 = 2.5;
+boolean b2 = x2 < a2 || x2 * a2 < 100;
+System.out.print( b2 );</pre>]]></code>
+        <a><![CDATA[<pre>false</pre>]]></a>
+        <b><![CDATA[<pre>true</pre>]]></b>
+        <c><![CDATA[<pre>falsetrue</pre>]]></c>
+        <d><![CDATA[<pre>false||true</pre>]]></d>
+        <e><![CDATA[<pre>There is no output due to a 
+syntax error in the code.</pre>]]></e>
+        <answer>b</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>boolean one = true;
+boolean two = false;
+out.println(!two&&(!two||!one));</pre>]]></code>
+        <a><![CDATA[<pre>true</pre>]]></a>
+        <b><![CDATA[<pre>false</pre>]]></b>
+        <c><![CDATA[<pre>null</pre>]]></c>
+        <d><![CDATA[<pre>one&&two</pre>]]></d>
+        <e><![CDATA[<pre>true&&false</pre>]]></e>
+        <answer>a</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[What is output by the code to the right?]]></question>
+        <code><![CDATA[<pre>boolean w = false;
+boolean y = true;
+boolean u = false;
+u = (!(w||y)||((w&&!(w&&y))));
+out.println(u==true?"yes":"no");</pre>]]></code>
+        <a><![CDATA[<pre>true</pre>]]></a>
+        <b><![CDATA[<pre>false</pre>]]></b>
+        <c><![CDATA[<pre>yes</pre>]]></c>
+        <d><![CDATA[<pre>no</pre>]]></d>
+        <e><![CDATA[<pre>error</pre>]]></e>
+        <answer>d</answer>
+    </problem>
+    <problem>
+        <question><![CDATA[<pre>How many combinations of values for
+the boolean variables a, b, and c will
+result in d being set to true?</pre>]]></question>
+        <code><![CDATA[<pre>boolean a, b, c;
+//code to initialize a, b, and c
+boolean d = ( a || b || c );</pre>]]></code>
+        <a><![CDATA[<pre>1</pre>]]></a>
+        <b><![CDATA[<pre>4</pre>]]></b>
+        <c><![CDATA[<pre>7</pre>]]></c>
+        <d><![CDATA[<pre>0</pre>]]></d>
+        <e><![CDATA[<pre>3</pre>]]></e>
+        <answer>c</answer>
+    </problem>
+</practice>

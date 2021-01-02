@@ -1,0 +1,98 @@
+<img src="images/empty.gif" onload="doScrollTop(); this.parentNode.removeChild(this);" />
+
+<div id="csAssignmentTitle" align="center">Stars</div>
+
+<div id="csContent">
+<p>In this lesson we are going to create a space scenario with stars that move on a black background. However instead of creating a scrolling background by moving a background image we are going
+   to create a more dynamic background by moving Star actors on top of the black background. This will give us more flexibility by being able move the stars with different speeds and different levels of
+   brightness.</p>
+   
+<h1>Download and Open Scenario</h1>
+<ol id="csList">
+<li><p>Click on the following link to download the Scenario: <a href="greenfoot/scenarios/Stars.zip" style="color:#00F; font-size:1.0em; font-weight:600;" >Stars</a></p></li>
+<li><p>Select <strong>Open</strong>.</p></li>
+<li><p>Copy the folder <strong>Stars</strong> and paste it in your <strong>MyGreenfoot</strong> folder.</p></li>
+<li><p>Launch Greenfoot and select Open from the Scenario menu.</p></li>
+<li><p>Navigate to your MyGreenfoot folder, select the Stars Scenario, and click Open.</p></li>
+</ol>
+
+<h1>Star Class</h1>
+<p>Double-click on the <strong>Star class</strong> to view its code.</p>
+<p>The Star class does not include an image file because its image will be created when the star is added to the world.</p>
+<h3>Instance variables</h3>
+<p>The Star class includes two instance variables.  The <strong>SIZE</strong> variable represents the size of the image. Notice  the use of the keyword <strong>final</strong>
+   in its declaration.</p>
+   <div id="csCode"><pre>private <div id="csHighlight"><pre>final</pre></div> int SIZE = 3;   // size of star</pre></div>
+   <p>The <strong>final</strong> keyword turns a variable into a constant. A constant's value cannot be changed once it has been assigned a value. By convention, Java programmers
+      typically declare constants using all uppercase letters. This makes them easily identifiable within your code. Technically using constants within your code is not a requirement.
+	  Programmers use them to make the code more readable and some compilers will optimize the code when they encounter them.</p>
+   <p>The <strong>speed</strong> variable is used to store the speed of each individual star.</p>
+<h3>Constructor</h3>
+<p>The <strong>Star constructor</strong> contains code that will be executed when a Star object is created. Study the following code then add it to the <strong>constructor</strong>.</p>
+<div id="csCode"><pre>GreenfootImage image = new GreenfootImage(SIZE, SIZE);   // create new image
+        
+int c = Greenfoot.getRandomNumber(255);  // random color value
+image.setColor(new Color(c, c, c));      // set color to shade of gray
+image.fillOval(0, 0, SIZE, SIZE);        // draw star
+        
+speed = Greenfoot.getRandomNumber(5) + 1;  // assign a random speed
+        
+setImage(image);      // set star image to image we just created above
+</pre></div>
+<h3>Method act</h3>
+<p>The <strong>act</strong> method contains code that will be executed continually while the program is running. The act method moves the Star object toward the left edge of the world.
+   It monitors the star's location so that when it reaches the left edge of the world it picks it up and moves it to the right edge of the world at a random vertical
+   location. Study the following code then add it to the <strong>act</strong> method.</p>
+<div id="csCode"><pre>setLocation(getX() - speed, getY());     // update stars location
+        
+if(getX() < SIZE)  // if star reaches left edge of world
+{
+    int x = getWorld().getWidth() - getX() - SIZE;   // move star to right edge
+    int y =  Greenfoot.getRandomNumber(getWorld().getHeight());  // at random y position
+    setLocation(x, y);  // move star
+} 
+</pre></div>
+<p>The Star class should look like the following.</p>
+<div><img src="greenfoot/images/Stars_01.png"></div>
+<h1>Space Class</h1>
+<p>Double-click on the <strong>Space class</strong> to view its code.</p>  
+<h3>Constructor</h3>
+<p>The <strong>Space constructor</strong> contains code that will be executed when the world is created. Study the code below then added it to the <strong>constructor</strong>.</p>
+<div id="csCode"><pre>setPaintOrder(Rocket.class, Star.class);   // make rocket appear on top of stars
+        
+getBackground().setColor(Color.BLACK);    // set Background color to black
+getBackground().fill();
+        
+Rocket rocket = new Rocket();
+addObject(rocket, getWidth()/2, getHeight()/2);   // add rocket
+        
+addStars(100);   // add a hundred stars to world</pre></div>
+<p>This code introduces a new World method called <strong>setPaintOrder</strong>. </p>
+<div id="csCode"><pre>setPaintOrder(Rocket.class, Star.class);   // make rocket appear on top of stars</pre></div>
+<p>This method sets the paint order of objects within a world. In the declaration the Rocket class
+   is listed first so it will be painted on top of any Star objects it passes over. All Star objects will pass behind the Rocket as they move across the screen.</p>
+<h1>Method addStars</h1>
+<p>The method <strong>addStars</strong> creates Star objects and adds them to the world at random locations. The parameter <strong>howMany</strong> determines how
+   many stars are added to the world. In the constructor the following call is made to the <strong>addStars</strong> method:</p>
+<div id="csCode"><pre>addStars(<div id="csHighlight"><pre>100</pre></div>);   // add a hundred stars to world</pre></div>
+<p>The value 100 is called an <strong>actual parameter</strong>. It is the value assigned to the parameter <strong>howMany</strong> when the method is executed.</p>
+<br>
+<hr>
+<h1>Program Modifications</h1>
+<ol id="csList">
+<li><p>Complete the method <strong>addStars</strong>.</p>
+    <p>Step 1: Create a for loop that executes <strong>howMany</strong> times.</li>
+    <p>Step 2: Inside the for loop create a star object with the following code.<br>
+    <div id="csCode" style="width:400px"><pre>Star star = new Star();</pre></div>
+    <p>Step 3: Add the star object to the world at a random x and y location within the boundaries of the world. Use the
+       method <strong>Greenfoot.getRandomNumber</strong> in your implementation. The dimensions of the world can be
+       accessed by calling the World class's <strong>getWidth</strong> and <strong>getHeight</strong> methods.
+
+<li><p>When the addStars method is completed compile and execute the program.</p></li>
+<li><p>Change the actual parameter of the <strong>addStars</strong> method call to a 1000 and run the program again.</p></li>
+</ol>
+
+<br>
+</div>	
+
+
